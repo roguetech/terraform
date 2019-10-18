@@ -47,3 +47,26 @@ resource "aws_security_group" "elasticsearch-elb-securitygroup" {
     Name = "elasticsearch-elb"
   }
 }
+
+resource "aws_security_group" "elasticsearch-node-communication" {
+  vpc_id     = aws_vpc.main.id
+  name       = "elasticsearch-node-comms"
+  description = "security group so nodes can form a cluster"
+  egress {
+    from_port = 0
+    to_port = 0
+    protocol = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port   = 9300
+    to_port     = 9300
+    protocol    = "tcp"
+    cidr_blocks = ["10.0.1.0/24"]
+  }
+  tags = {
+    Name = "elasticsearch-node-comms"
+  }
+}
+
