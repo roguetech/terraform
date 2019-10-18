@@ -1,0 +1,78 @@
+[
+  {
+    "essential": true,
+    "memory": 2048,
+    "name": "elasticsearch",
+    "cpu": 512,
+    "image": "${REPOSITORY_URL}:1",
+    "containerName": "elasticsearch",
+    "environment": [
+        {
+          "name": "cluster.name",
+          "value": "docker-cluster"
+        },
+        {
+          "name": "bootstrap.memory_lock",
+          "value": "true"
+        },
+        {
+          "name": "ES_JAVA_OPTS",
+          "value": "-Xms512m -Xmx512m"
+        },
+        {
+          "name": "LimitMEMLOCK",
+          "value": "infinity"
+        },
+        {
+          "name": "network.publish_host",
+          "value": "_ec2:privateIp_"
+        },
+        {
+          "name": "transport.publish_host",
+          "value": "_ec2:privateIp_"
+        },
+        {
+          "name": "discovery.zen.hosts_provider",
+          "value": "ec2"
+        },
+        {
+          "name": "discovery.ec2.tag.ElasticSearch",
+          "value": "Elasticsearch6"
+        },
+        {
+          "name": "discovery.ec2.endpoint",
+          "value": "ec2.eu-west-1.amazonaws.com"
+        },
+        {
+          "name": "cloud.node.auto_attributes",
+          "value": "true"
+        },
+        {
+          "name": "cluster.routing.allocation.awareness.attributes",
+          "value": "aws_availability_zone"
+        }
+      ],
+    "ulimits": [
+        {
+          "softLimit": -1,
+          "hardLimit": -1,
+          "name": "memlock"
+        },
+        {
+          "softLimit": 65535,
+          "hardLimit": 65535,
+          "name": "nofile"
+        }
+   ],
+    "portMappings": [
+        {
+            "containerPort": 9200,
+            "hostPort": 9200
+        },
+	{
+	    "containerPort": 9300,
+            "hostPort": 9300
+	}
+    ]
+  }
+]

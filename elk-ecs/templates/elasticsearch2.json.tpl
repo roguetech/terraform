@@ -2,14 +2,26 @@
   {
     "essential": true,
     "memory": 2048,
-    "name": "elasticsearch",
+    "name": "elasticsearch2",
     "cpu": 512,
     "image": "${REPOSITORY_URL}:1",
-    "containerName": "elasticsearch",
+    "containerName": "elasticsearch2",
     "environment": [
+        {
+          "name": "cluster.name",
+          "value": "docker-cluster"
+        },
+        {
+          "name": "bootstrap.memory_lock",
+          "value": "true"
+        },
         {
           "name": "ES_JAVA_OPTS",
           "value": "-Xms512m -Xmx512m"
+        },
+        {
+          "name": "discovery.zen.ping.unicast.hosts",
+          "value": "elasticsearch"
         },
         {
           "name": "LimitMEMLOCK",

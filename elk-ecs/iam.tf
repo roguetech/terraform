@@ -66,7 +66,8 @@ policy = <<EOF
               "ecr:GetDownloadUrlForLayer",
               "ecr:BatchGetImage",
               "logs:CreateLogStream",
-              "logs:PutLogEvents"
+              "logs:PutLogEvents",
+              "ec2:DescribeInstances"
             ],
             "Resource": "*"
         },

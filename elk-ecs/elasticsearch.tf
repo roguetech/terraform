@@ -35,7 +35,8 @@ resource "aws_elb" "elasticsearch-elb" {
   connection_draining         = true
   connection_draining_timeout = 400
 
-  subnets         = [aws_subnet.main-public-1.id, aws_subnet.main-public-2.id]
+  subnets         = [aws_subnet.main-public-1.id] 
+#aws_subnet.main-public-2.id]
   security_groups = [aws_security_group.elasticsearch-elb-securitygroup.id]
 
   tags = {
@@ -47,7 +48,7 @@ resource "aws_ecs_service" "elasticsearch-service" {
   name            = "elasticsearch"
   cluster         = aws_ecs_cluster.elk-cluster.id
   task_definition = aws_ecs_task_definition.elasticsearch-task-definition.arn
-  desired_count   = 1
+  desired_count   = 2
   iam_role        = aws_iam_role.ecs-service-role.arn
   depends_on      = [aws_iam_policy_attachment.ecs-service-attach1]
 

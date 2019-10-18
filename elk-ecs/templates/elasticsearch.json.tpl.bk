@@ -5,18 +5,25 @@
     "name": "elasticsearch",
     "cpu": 512,
     "image": "${REPOSITORY_URL}:1",
-    "containerName": "elasticsearch",
     "environment": [
+        {
+          "name": "cluster.name",
+          "value": "docker-cluster"
+        },
+        {
+          "name": "bootstrap.memory_lock",
+          "value": "true"
+        },
         {
           "name": "ES_JAVA_OPTS",
           "value": "-Xms512m -Xmx512m"
         },
         {
-          "name": "LimitMEMLOCK",
-          "value": "infinity"
+          "name": "discovery.type",
+          "value": "single-node"
         }
       ],
-    "ulimits": [
+    "ulimit": [
         {
           "softLimit": -1,
           "hardLimit": -1,
