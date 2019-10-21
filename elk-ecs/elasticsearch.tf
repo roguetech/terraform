@@ -10,6 +10,19 @@ data "template_file" "elasticsearch-task-definition-template" {
 resource "aws_ecs_task_definition" "elasticsearch-task-definition" {
   family                = "elasticsearch"
   container_definitions = data.template_file.elasticsearch-task-definition-template.rendered
+
+  volume {
+    name = "esdata"
+    docker_volume_configuration {
+                autoprovision = true
+                driver = "cloudstor:aws"
+                driver_opts = {
+                    size = "10"
+                    volumetype = "gp2"
+                    backing = "relocatable"
+                }
+    }
+  } 
 }
 
 resource "aws_elb" "elasticsearch-elb" {
