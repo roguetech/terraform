@@ -6,6 +6,12 @@
     "cpu": 512,
     "image": "${REPOSITORY_URL}:1",
     "containerName": "elasticsearch",
+    "mountPoints": [
+        {
+          "sourceVolume": "esdata",
+          "containerPath": "/var/lib/elasticsearch"
+        }
+    ],
     "environment": [
         {
           "name": "ES_JAVA_OPTS",

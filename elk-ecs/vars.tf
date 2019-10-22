@@ -21,6 +21,8 @@ variable "ECS_AMIS" {
 	}
 }
 
+#variable "private_subnet_ids" {}
+
 variable "ebs_block_device" {
   default     = "/dev/xvdcz"
   description = "EBS block devices to attach to the instance. (default: /dev/xvdcz)"
