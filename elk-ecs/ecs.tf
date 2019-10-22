@@ -11,7 +11,13 @@ resource "aws_launch_configuration" "ecs-elk-launchconfig" {
 	iam_instance_profile	= aws_iam_instance_profile.ecs-ec2-role.id
 	security_groups	= [aws_security_group.ecs-securitygroup.id, aws_security_group.elasticsearch-node-communication.id]
 	user_data	= "#!/bin/bash\necho 'ECS_CLUSTER=elk-cluster' > /etc/ecs/ecs.config\nstart ecs\nsysctl -w vm.max_map_count=262144"
-	lifecycle {
+	ebs_block_device {
+          device_name           = "${var.ebs_block_device}"
+          volume_size           = "${var.docker_storage_size}"
+          volume_type           = "gp2"
+          delete_on_termination = false
+        }
+        lifecycle {
 		create_before_destroy = true
 	}
 }

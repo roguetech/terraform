@@ -13,15 +13,7 @@ resource "aws_ecs_task_definition" "elasticsearch-task-definition" {
 
   volume {
     name = "esdata"
-    docker_volume_configuration {
-                autoprovision = true
-                driver = "cloudstor:aws"
-                driver_opts = {
-                    size = "10"
-                    volumetype = "gp2"
-                    backing = "relocatable"
-                }
-    }
+    host_path = "/var/lib/elasticsearch"
   } 
 }
 

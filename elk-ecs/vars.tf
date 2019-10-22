@@ -21,5 +21,15 @@ variable "ECS_AMIS" {
 	}
 }
 
+variable "ebs_block_device" {
+  default     = "/dev/xvdcz"
+  description = "EBS block devices to attach to the instance. (default: /dev/xvdcz)"
+}
+
+variable "docker_storage_size" {
+  default     = "22"
+  description = "EBS Volume size in Gib that the ECS Instance uses for Docker images and metadata "
+}
+
 variable "AWS_ACCESS_KEY" {}
 variable "AWS_SECRET_KEY" {}
