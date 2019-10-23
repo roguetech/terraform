@@ -32,11 +32,10 @@ resource "aws_ecs_task_definition" "elasticsearch-task-definition" {
       scope = "shared"
       driver = "cloudstor:aws"
       driver_opts = {
-        size = "10"
+        size = "11"
         volumetype = "gp2"
         backing = "relocatable"
       }
-    #host_path = "/mnt/ebs/esdata"
     }
   } 
 }
@@ -77,7 +76,7 @@ resource "aws_ecs_service" "elasticsearch-service" {
   name            = "elasticsearch"
   cluster         = aws_ecs_cluster.elk-cluster.id
   task_definition = aws_ecs_task_definition.elasticsearch-task-definition.arn
-  desired_count   = 2
+  desired_count   = 1
   iam_role        = aws_iam_role.ecs-service-role.arn
   depends_on      = [aws_iam_policy_attachment.ecs-service-attach1]
 
