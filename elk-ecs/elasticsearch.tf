@@ -1,9 +1,16 @@
 # app
 
-data "template_file" "elasticsearch-task-definition-template" {
-  template = file("templates/elasticsearch.json.tpl")
+data "template_file" "elasticsearch-task-definition-template1" {
+  template = file("templates/elasticsearch1.json.tpl")
   vars = {
-    REPOSITORY_URL = replace(aws_ecr_repository.elk.repository_url, "https://", "")
+    REPOSITORY_URL = replace("483452016940.dkr.ecr.eu-west-1.amazonaws.com/elk", "https://", "")
+  }
+}
+
+data "template_file" "elasticsearch-task-definition-template2" {
+  template = file("templates/elasticsearch2.json.tpl")
+  vars = {
+    REPOSITORY_URL = replace("483452016940.dkr.ecr.eu-west-1.amazonaws.com/elk", "https://", "")
   }
 }
 
@@ -21,12 +28,12 @@ data "template_file" "elasticsearch-task-definition-template" {
 #  subnet_id      = "${aws_subnet.main-public-1.id}"
 #}
 
-resource "aws_ecs_task_definition" "elasticsearch-task-definition" {
-  family                = "elasticsearch"
-  container_definitions = data.template_file.elasticsearch-task-definition-template.rendered
+resource "aws_ecs_task_definition" "elasticsearch1-task-definition" {
+  family                = "elasticsearch1"
+  container_definitions = data.template_file.elasticsearch-task-definition-template1.rendered
 
   volume {
-    name = "esdata"
+    name = "esdata1"
     docker_volume_configuration {
       autoprovision = true
       scope = "shared"
@@ -38,6 +45,25 @@ resource "aws_ecs_task_definition" "elasticsearch-task-definition" {
       }
     }
   } 
+}
+
+resource "aws_ecs_task_definition" "elasticsearch2-task-definition" {
+  family                = "elasticsearch2"
+  container_definitions = data.template_file.elasticsearch-task-definition-template2.rendered
+
+  volume {
+    name = "esdata2"
+    docker_volume_configuration {
+      autoprovision = true
+      scope = "shared"
+      driver = "cloudstor:aws"
+      driver_opts = {
+        size = "11"
+        volumetype = "gp2"
+        backing = "relocatable"
+      }
+    }
+  }
 }
 
 resource "aws_elb" "elasticsearch-elb" {
@@ -72,11 +98,11 @@ resource "aws_elb" "elasticsearch-elb" {
   }
 }
 
-resource "aws_ecs_service" "elasticsearch-service" {
-  name            = "elasticsearch"
+resource "aws_ecs_service" "elasticsearch-service1" {
+  name            = "elasticsearch1"
   cluster         = aws_ecs_cluster.elk-cluster.id
-  task_definition = aws_ecs_task_definition.elasticsearch-task-definition.arn
-  desired_count   = 2
+  task_definition = aws_ecs_task_definition.elasticsearch1-task-definition.arn 
+  desired_count   = 1
   iam_role        = aws_iam_role.ecs-service-role.arn
   depends_on      = [aws_iam_policy_attachment.ecs-service-attach1]
 
@@ -89,3 +115,22 @@ resource "aws_ecs_service" "elasticsearch-service" {
     ignore_changes = [task_definition]
   }
 }
+
+resource "aws_ecs_service" "elasticsearch-service2" {
+  name            = "elasticsearch2"
+  cluster         = aws_ecs_cluster.elk-cluster.id
+  task_definition = aws_ecs_task_definition.elasticsearch2-task-definition.arn
+  desired_count   = 1
+  iam_role        = aws_iam_role.ecs-service-role.arn
+  depends_on      = [aws_iam_policy_attachment.ecs-service-attach1]
+
+  load_balancer {
+    elb_name       = aws_elb.elasticsearch-elb.name
+    container_name = "elasticsearch"
+    container_port = 9200
+  }
+  lifecycle {
+    ignore_changes = [task_definition]
+  }
+}
+
