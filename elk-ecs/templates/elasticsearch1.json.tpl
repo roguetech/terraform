@@ -4,12 +4,12 @@
     "memory": 2048,
     "name": "elasticsearch",
     "cpu": 512,
-    "image": "${REPOSITORY_URL}:1",
+    "image": "${REPOSITORY_URL}:5",
     "containerName": "elasticsearch",
     "mountPoints": [
         {
           "sourceVolume": "esdata1",
-          "containerPath": "/var/lib/elasticsearch"
+          "containerPath": "/usr/share/elasticsearch/data"
         }
     ],
     "environment": [
