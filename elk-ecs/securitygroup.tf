@@ -15,6 +15,14 @@ resource "aws_security_group" "ecs-securitygroup" {
     protocol        = "tcp"
     security_groups = [aws_security_group.elasticsearch-elb-securitygroup.id]
   }
+
+  ingress {
+    from_port   = 5601
+    to_port     = 5601
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
   ingress {
     from_port   = 22
     to_port     = 22
@@ -43,6 +51,14 @@ resource "aws_security_group" "elasticsearch-elb-securitygroup" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
+
+  ingress {
+    from_port   = 5601
+    to_port     = 5601
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
   tags = {
     Name = "elasticsearch-elb"
   }
@@ -65,6 +81,14 @@ resource "aws_security_group" "elasticsearch-node-communication" {
     protocol    = "tcp"
     cidr_blocks = ["10.0.1.0/24"]
   }
+
+  ingress {
+    from_port   = 5601
+    to_port     = 5601
+    protocol    = "tcp"
+    cidr_blocks = ["10.0.1.0/24"]
+  }
+
   tags = {
     Name = "elasticsearch-node-comms"
   }

@@ -9,7 +9,7 @@
     "mountPoints": [
         {
           "sourceVolume": "esdata1",
-          "containerPath": "/usr/share/elasticsearch/data"
+          "containerPath": "/opt/elasticsearch/data"
         }
     ],
     "environment": [
