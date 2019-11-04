@@ -76,7 +76,8 @@ policy = <<EOF
               "ec2:DescribeVolumeStatus",
               "ec2:CreateSnapshot",
               "ec2:DeleteSnapshot",
-              "ec2:DescribeSnapshots"
+              "ec2:DescribeSnapshots",
+              "ecs:*"
             ],
             "Resource": "*"
         },

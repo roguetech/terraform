@@ -1,24 +1,39 @@
 # app
 
+# app
+
+data "template_file" "mongodb-task-definition-template" {
+  template = file("templates/mongodb.json.tpl")
+  vars = {
+    REPOSITORY_URL = replace("483452016940.dkr.ecr.eu-west-1.amazonaws.com/mongo", "https://", "")
+  }
+}
+
+#resource "aws_ecs_task_definition" "mongodb-task-definition" {
+#  family                = "mongodb"
+#  container_definitions = data.template_file.mongodb-task-definition-template.rendered
+#}
+
 data "template_file" "graylog-task-definition-template" {
   template = file("templates/graylog.json.tpl")
   vars = {
     REPOSITORY_URL = replace("483452016940.dkr.ecr.eu-west-1.amazonaws.com/graylog", "https://", "")
+    REPOSITORY_URL1 = replace("483452016940.dkr.ecr.eu-west-1.amazonaws.com/mongodb", "https://", "")
   }
 }
 
 resource "aws_ecs_task_definition" "graylog-task-definition" {
   family                = "graylog"
-  container_definitions = data.template_file.graylog-task-definition-template.rendered
+  container_definitions = data.template_file.graylog-task-definition-template.rendered 
 }
 
 resource "aws_elb" "graylog-elb" {
   name = "graylog-elb"
 
   listener {
-    instance_port     = 5601
+    instance_port     = 9000
     instance_protocol = "http"
-    lb_port           = 5601
+    lb_port           = 9000
     lb_protocol       = "http"
   }
 
@@ -26,7 +41,7 @@ resource "aws_elb" "graylog-elb" {
     healthy_threshold   = 3
     unhealthy_threshold = 3
     timeout             = 10
-    target              = "HTTP:5601/app/kibana"
+    target              = "HTTP:9000/"
     interval            = 60
   }
 
@@ -35,7 +50,7 @@ resource "aws_elb" "graylog-elb" {
   connection_draining         = true
   connection_draining_timeout = 400
 
-  subnets         = [aws_subnet.main-public-1.id, aws_subnet.main-public-2.id]
+  subnets         = [aws_subnet.main-public-1.id]
   security_groups = [aws_security_group.elasticsearch-elb-securitygroup.id]
 
   tags = {
@@ -54,7 +69,7 @@ resource "aws_ecs_service" "graylog-service" {
   load_balancer {
     elb_name       = aws_elb.graylog-elb.name
     container_name = "graylog"
-    container_port = 5601
+    container_port = 9000
   }
   lifecycle {
     ignore_changes = [task_definition]
