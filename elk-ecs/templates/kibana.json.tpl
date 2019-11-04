@@ -9,7 +9,7 @@
     "environment": [
         {
           "name": "ELASTICSEARCH_HOSTS",
-          "value": "http://elasticsearch-elb-1209153669.eu-west-1.elb.amazonaws.com:9200"
+          "value": "http://elasticsearch-elb-516327377.eu-west-1.elb.amazonaws.com:9200"
         },
         {
           "name": "SERVER_HOST",
