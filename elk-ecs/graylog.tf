@@ -24,7 +24,7 @@ data "template_file" "graylog-task-definition-template" {
 
 resource "aws_ecs_task_definition" "graylog-task-definition" {
   family                = "graylog"
-  container_definitions = data.template_file.graylog-task-definition-template.rendered 
+  container_definitions = data.template_file.graylog-task-definition-template.rendered
 }
 
 #resource "aws_elb" "graylog-elb" {
@@ -93,8 +93,8 @@ resource "aws_alb_target_group" "graylog-filebeat-group" {
   protocol        = "HTTP"
   vpc_id          = "${aws_vpc.main.id}"
   health_check {
-    path = "/"
-    port = 5600
+    path = "/api"
+    port = 9000
   }
 }
 
@@ -104,6 +104,11 @@ resource "aws_autoscaling_attachment" "graylog-web-attachment" {
   autoscaling_group_name = "${aws_autoscaling_group.ecs-elk-autoscaling.id}"
   #target_id = "$aws_instance.example-instance.id}"
   #port = 9000
+}
+
+resource "aws_autoscaling_attachment" "graylog-web-attachment" {
+  alb_target_group_arn = "${aws_alb_target_group.graylog-filebeat-group.arn}"
+  autoscaling_group_name = "${aws_autoscaling_group.ecs-elk-autoscaling.id}"
 }
 
 # 4 - Specify the listeners
@@ -133,7 +138,7 @@ resource "aws_alb_listener" "graylog-filebeat" {
 resource "aws_alb_listener_rule" "graylog-web-rule" {
   listener_arn = "${aws_alb_listener.graylog-web.arn}"
   priority = 100
- 
+
   action {
     type = "forward"
     target_group_arn = "${aws_alb_target_group.graylog-web-group.arn}"
@@ -148,7 +153,7 @@ resource "aws_alb_listener_rule" "graylog-web-rule" {
 resource "aws_ecs_service" "graylog-service" {
   name            = "graylog"
   cluster         = aws_ecs_cluster.elk-cluster.id
-  task_definition = aws_ecs_task_definition.graylog-task-definition.arn 
+  task_definition = aws_ecs_task_definition.graylog-task-definition.arn
   desired_count   = 1
   #iam_role        = aws_iam_role.ecs-service-role.arn
   #depends_on      = [aws_iam_policy_attachment.ecs-service-attach1]
