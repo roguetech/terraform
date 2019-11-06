@@ -149,6 +149,19 @@ resource "aws_alb_listener_rule" "graylog-web-rule" {
   }
 }
 
+resource "aws_alb_listener_rule" "graylog-filebeat-rule" {
+  listener_arn = "${aws_alb_listener.graylog-filebeat.arn}"
+  priority = 100
+
+  action {
+    type = "forward"
+    target_group_arn = "${aws_alb_target_group.graylog-filebeat-group.arn}"
+  }
+  condition {
+    field = "path-pattern"
+    values = ["/*"]
+  }
+}
 
 resource "aws_ecs_service" "graylog-service" {
   name            = "graylog"
