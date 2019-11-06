@@ -106,7 +106,7 @@ resource "aws_autoscaling_attachment" "graylog-web-attachment" {
   #port = 9000
 }
 
-resource "aws_autoscaling_attachment" "graylog-web-attachment" {
+resource "aws_autoscaling_attachment" "graylog-filebeat-attachment" {
   alb_target_group_arn = "${aws_alb_target_group.graylog-filebeat-group.arn}"
   autoscaling_group_name = "${aws_autoscaling_group.ecs-elk-autoscaling.id}"
 }
