@@ -10,10 +10,24 @@ resource "aws_security_group" "ecs-securitygroup" {
   }
 
   ingress {
+    from_port   = 9000
+    to_port     = 9000
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
     from_port       = 9200
     to_port         = 9200
     protocol        = "tcp"
     security_groups = [aws_security_group.elasticsearch-elb-securitygroup.id]
+  }
+
+  ingress {
+    from_port   = 5044
+    to_port     = 5044
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   ingress {
@@ -46,6 +60,13 @@ resource "aws_security_group" "elasticsearch-elb-securitygroup" {
   }
 
   ingress {
+    from_port   = 9000
+    to_port     = 9000
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
     from_port   = 9200
     to_port     = 9200
     protocol    = "tcp"
@@ -55,6 +76,13 @@ resource "aws_security_group" "elasticsearch-elb-securitygroup" {
   ingress {
     from_port   = 5601
     to_port     = 5601
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port   = 5044
+    to_port     = 5044
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -85,6 +113,13 @@ resource "aws_security_group" "elasticsearch-node-communication" {
   ingress {
     from_port   = 5601
     to_port     = 5601
+    protocol    = "tcp"
+    cidr_blocks = ["10.0.1.0/24"]
+  }
+  
+  ingress {
+    from_port   = 5044
+    to_port     = 5044
     protocol    = "tcp"
     cidr_blocks = ["10.0.1.0/24"]
   }

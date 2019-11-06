@@ -30,6 +30,10 @@
           "value": "0.0.0.0:9000"
         },
         {
+          "name": "GRAYLOG_HTTP_EXTERNAL_URI",
+          "value": "http://graylog-alb-578385167.eu-west-1.elb.amazonaws.com:9000/"
+        },
+        {
           "name": "elasticsearch_hosts",
           "value": "http://elasticsearch-elb-2008463367.eu-west-1.elb.amazonaws.com:9200"
         },
@@ -43,6 +47,10 @@
         }
     ],
     "portMappings": [
+        {
+            "containerPort": 5044,
+            "hostPort": 5044
+        },
         {
             "containerPort": 9000,
             "hostPort": 9000

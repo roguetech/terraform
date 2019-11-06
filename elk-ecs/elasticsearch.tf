@@ -14,20 +14,6 @@ data "template_file" "elasticsearch-task-definition-template2" {
   }
 }
 
-#resource "aws_efs_file_system" "es-data" {
-#  creation_token = "es-persistent-data"
-#  performance_mode = "generalPurpose"
-
-#  tags {
-#    Name = "elasticsearch-data"
-#  }
-#}
-
-#resource "aws_efs_mount_target" "elasticsearch" {
-#  file_system_id = "${aws_efs_file_system.es-data.id}"
-#  subnet_id      = "${aws_subnet.main-public-1.id}"
-#}
-
 resource "aws_ecs_task_definition" "elasticsearch1-task-definition" {
   family                = "elasticsearch1"
   container_definitions = data.template_file.elasticsearch-task-definition-template1.rendered
