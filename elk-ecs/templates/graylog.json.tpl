@@ -31,7 +31,7 @@
         },
         {
           "name": "GRAYLOG_HTTP_EXTERNAL_URI",
-          "value": "http://graylog-alb-578385167.eu-west-1.elb.amazonaws.com:9000/"
+          "value": "http://graylog-alb-1723519240.eu-west-1.elb.amazonaws.com:9000/"
         },
         {
           "name": "elasticsearch_hosts",
@@ -39,7 +39,7 @@
         },
         {
           "name": "ELASTICSEARCH_ENV_http.host",
-          "value": "elasticsearch-elb-2008463367.eu-west-1.elb.amazonaws.com"
+          "value": "elasticsearch-elb-1821828611.eu-west-1.elb.amazonaws.com"
         },
         {
           "name": "ELASTICSEARCH_PORT_9200_TCP_PORT",

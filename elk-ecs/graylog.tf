@@ -75,6 +75,15 @@ resource "aws_alb" "graylog-alb" {
   }
 }
 
+resource "aws_alb" "graylog-alb1" {
+  name            = "graylog-alb1"
+  subnets         = ["${aws_subnet.main-public-1.id}", "${aws_subnet.main-public-2.id}"]
+  security_groups = ["${aws_security_group.elasticsearch-elb-securitygroup.id}"]
+  tags = {
+     Name = "graylog-alb1"
+  }
+}
+
 # 2 - Create Target Group
 resource "aws_alb_target_group" "graylog-web-group" {
   name            = "graylog-web-group"
@@ -109,6 +118,7 @@ resource "aws_autoscaling_attachment" "graylog-web-attachment" {
 resource "aws_autoscaling_attachment" "graylog-filebeat-attachment" {
   alb_target_group_arn = "${aws_alb_target_group.graylog-filebeat-group.arn}"
   autoscaling_group_name = "${aws_autoscaling_group.ecs-elk-autoscaling.id}"
+  #port = 5044
 }
 
 # 4 - Specify the listeners
@@ -124,7 +134,7 @@ resource "aws_alb_listener" "graylog-web" {
 }
 
 resource "aws_alb_listener" "graylog-filebeat" {
-  load_balancer_arn = "${aws_alb.graylog-alb.arn}"
+  load_balancer_arn = "${aws_alb.graylog-alb1.arn}"
   port              = "5044"
   protocol          = "HTTP"
 
