@@ -57,6 +57,6 @@ resource "aws_ecs_service" "kibana-service" {
     container_port = 5601
   }
   lifecycle {
-    ignore_changes = [task_definition]
+    #ignore_changes = [task_definition]
   }
 }
