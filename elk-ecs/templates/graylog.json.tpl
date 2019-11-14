@@ -31,18 +31,18 @@
         },
         {
           "name": "GRAYLOG_HTTP_EXTERNAL_URI",
-          "value": "http://graylog-alb-2064908378.eu-west-1.elb.amazonaws.com:9000/"
+          "value": "http://${GRAYLOG_URL}:9000/"
         },
         {
-          "name": "elasticsearch_hosts",
-          "value": "http://elasticsearch-elb-1505466968.eu-west-1.elb.amazonaws.com:9200"
+          "name": "GRAYLOG_ELASTICSEARCH_HOSTS",
+          "value": "http://${ELASTIC_URL}:9200"
         },
         {
-          "name": "ELASTICSEARCH_ENV_http.host",
-          "value": "elasticsearch-elb-1505466968.eu-west-1.elb.amazonaws.com"
+          "name": "GRAYLOG_ELASTICSEARCH_ENV_HTTP.HOST",
+          "value": "${ELASTIC_URL}"
         },
         {
-          "name": "ELASTICSEARCH_PORT_9200_TCP_PORT",
+          "name": "GRAYLOG_ELASTICSEARCH_PORT_9200_TCP_PORT",
           "value": "9200"
         }
     ],

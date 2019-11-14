@@ -19,6 +19,8 @@ data "template_file" "graylog-task-definition-template" {
   vars = {
     REPOSITORY_URL = replace("483452016940.dkr.ecr.eu-west-1.amazonaws.com/graylog", "https://", "")
     REPOSITORY_URL1 = replace("483452016940.dkr.ecr.eu-west-1.amazonaws.com/mongo", "https://", "")
+    ELASTIC_URL = aws_elb.elasticsearch-elb.dns_name
+    GRAYLOG_URL = aws_alb.graylog-alb.dns_name
   }
 }
 

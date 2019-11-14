@@ -4,6 +4,7 @@ data "template_file" "kibana-task-definition-template" {
   template = file("templates/kibana.json.tpl")
   vars = {
     REPOSITORY_URL = replace("483452016940.dkr.ecr.eu-west-1.amazonaws.com/kibana", "https://", "")
+    elastic_url = aws_elb.elasticsearch-elb.dns_name
   }
 }
 
@@ -48,8 +49,8 @@ resource "aws_ecs_service" "kibana-service" {
   cluster         = aws_ecs_cluster.elk-cluster.id
   task_definition = aws_ecs_task_definition.kibana-task-definition.arn 
   desired_count   = 1
-  iam_role        = aws_iam_role.ecs-service-role.arn
-  depends_on      = [aws_iam_policy_attachment.ecs-service-attach1]
+  #iam_role        = aws_iam_role.ecs-service-role.arn
+  #depends_on      = [aws_iam_policy_attachment.ecs-service-attach1]
 
   load_balancer {
     elb_name       = aws_elb.kibana-elb.name
@@ -59,4 +60,5 @@ resource "aws_ecs_service" "kibana-service" {
   lifecycle {
     #ignore_changes = [task_definition]
   }
+  depends_on = [aws_elb.kibana-elb]
 }

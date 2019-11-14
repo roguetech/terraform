@@ -1,3 +1,7 @@
+locals {
+   kibana-elb = aws_elb.kibana-elb.dns_name
+}
+
 variable "AWS_REGION" {
 	default = "eu-west-1"
 }
