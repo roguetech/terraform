@@ -1,7 +1,5 @@
 # app
 
-# app
-
 data "template_file" "mongodb-task-definition-template" {
   template = file("templates/mongodb.json.tpl")
   vars = {
