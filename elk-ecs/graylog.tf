@@ -7,11 +7,6 @@ data "template_file" "mongodb-task-definition-template" {
   }
 }
 
-#resource "aws_ecs_task_definition" "mongodb-task-definition" {
-#  family                = "mongodb"
-#  container_definitions = data.template_file.mongodb-task-definition-template.rendered
-#}
-
 data "template_file" "graylog-task-definition-template" {
   template = file("templates/graylog.json.tpl")
   vars = {
@@ -25,44 +20,6 @@ data "template_file" "graylog-task-definition-template" {
 resource "aws_ecs_task_definition" "graylog-task-definition" {
   family                = "graylog"
   container_definitions = data.template_file.graylog-task-definition-template.rendered
-}
-
-resource "aws_elb" "graylog-elb-filebeat" {
-  name = "graylog-elb"
-
-  listener {
-    instance_port     = 5044
-    instance_protocol = "tcp"
-    lb_port           = 5044
-    lb_protocol       = "tcp"
-  }
-
-#  listener {
-#    instance_port     = 5600
-#    instance_protocol = "http"
-#    lb_port           = 5600
-#    lb_protocol       = "http"
-#  }
-
-  health_check {
-    healthy_threshold   = 3
-    unhealthy_threshold = 3
-    timeout             = 10
-    target              = "TCP:5044"
-    interval            = 60
-  }
-
-#  cross_zone_load_balancing   = true
-#  idle_timeout                = 400
-#  connection_draining         = true
-#  connection_draining_timeout = 400
-
-  subnets         = [aws_subnet.main-public-1.id]
-  security_groups = [aws_security_group.elasticsearch-elb-securitygroup.id]
-
-  tags = {
-    Name = "graylog-elb-filebeat"
-  }
 }
 
 # 1 - General Settings
@@ -86,15 +43,6 @@ resource "aws_lb" "graylog-filebeat" {
      Name = "graylog-alb"
   }
 }
-
-#resource "aws_alb" "graylog-alb1" {
-#  name            = "graylog-alb1"
-#  subnets         = ["${aws_subnet.main-public-1.id}", "${aws_subnet.main-public-2.id}"]
-#  security_groups = ["${aws_security_group.elasticsearch-elb-securitygroup.id}"]
-#  tags = {
-#     Name = "graylog-alb1"
-#  }
-#}
 
 # 2 - Create Target Group
 resource "aws_alb_target_group" "graylog-web-group" {
@@ -129,31 +77,11 @@ resource "aws_lb_target_group" "graylog-filebeat-group" {
 }
 
 
-#resource "aws_alb_target_group" "graylog-filebeat-group" {
-#  name            = "graylog-filebeat-group"
-#  port            = 5044
-#  protocol        = "HTTP"
-#  vpc_id          = "${aws_vpc.main.id}"
-#  health_check {
-#    path = "/api"
-#    port = 9000
-#  }
-#  depends_on = ["aws_alb.graylog-alb1"]
-#}
-
 # 3 - Attach instances to target groups
 resource "aws_autoscaling_attachment" "graylog-web-attachment" {
   alb_target_group_arn = "${aws_alb_target_group.graylog-web-group.arn}"
   autoscaling_group_name = "${aws_autoscaling_group.ecs-elk-autoscaling.id}"
-  #target_id = "$aws_instance.example-instance.id}"
-  #port = 9000
 }
-
-#resource "aws_autoscaling_attachment" "graylog-filebeat-attachment" {
-#  lb_target_group_arn = "${aws_lb_target_group.graylog-filebeat-group.arn}"
-#  autoscaling_group_name = "${aws_autoscaling_group.ecs-elk-autoscaling.id}"
-#  #port = 5044
-#}
 
 # 4 - Specify the listeners
 resource "aws_alb_listener" "graylog-web" {
@@ -177,17 +105,6 @@ resource "aws_lb_listener" "graylog-filebeat" {
   }
 }
 
-#resource "aws_alb_listener" "graylog-filebeat" {
-#  load_balancer_arn = "${aws_alb.graylog-alb1.arn}"
-#  port              = "5044"
-#  protocol          = "HTTP"
-#
-#  default_action {
-#    target_group_arn = "${aws_alb_target_group.graylog-filebeat-group.arn}"
-#    type             = "forward"
-#  }
-#}
-
 # 5 - ALB Rules
 resource "aws_alb_listener_rule" "graylog-web-rule" {
   listener_arn = "${aws_alb_listener.graylog-web.arn}"
@@ -202,20 +119,6 @@ resource "aws_alb_listener_rule" "graylog-web-rule" {
     values = ["/*"]
   }
 }
-
-#resource "aws_alb_listener_rule" "graylog-filebeat-rule" {
-#  listener_arn = "${aws_alb_listener.graylog-filebeat.arn}"
-#  priority = 100
-#
-#  action {
-#    type = "forward"
-#    target_group_arn = "${aws_alb_target_group.graylog-filebeat-group.arn}"
-#  }
-#  condition {
-#    field = "path-pattern"
-#    values = ["/*"]
-#  }
-#}
 
 resource "aws_ecs_service" "graylog-service" {
   name            = "graylog"

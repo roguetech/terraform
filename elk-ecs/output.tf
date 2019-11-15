@@ -4,6 +4,7 @@ output "elb" {
 output "kibana-elb" {
   value = aws_elb.kibana-elb.dns_name
 }
-#output "container" {
-#  value = aws_ecr_repository.elasticsearch.repository_url
-#}
+
+output "graylog_filebeat" {
+  value = aws_lb.graylog-filebeat.dns_name
+}
