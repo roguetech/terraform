@@ -37,7 +37,7 @@ resource "aws_elb" "kibana-elb" {
   connection_draining_timeout = 400
 
   subnets         = [aws_subnet.main-public-1.id]
-  security_groups = [aws_security_group.elasticsearch-elb-securitygroup.id]
+  security_groups = [aws_security_group.elasticsearch-alb-securitygroup.id]
 
   tags = {
     Name = "kibana-elb"

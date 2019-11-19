@@ -26,7 +26,7 @@ resource "aws_ecs_task_definition" "graylog-task-definition" {
 resource "aws_alb" "graylog-alb" {
   name            = "graylog-alb"
   subnets         = ["${aws_subnet.main-public-1.id}", "${aws_subnet.main-public-2.id}"]
-  security_groups = ["${aws_security_group.elasticsearch-elb-securitygroup.id}"]
+  security_groups = ["${aws_security_group.elasticsearch-alb-securitygroup.id}"]
   tags = {
      Name = "graylog-alb"
   }
@@ -38,7 +38,7 @@ resource "aws_lb" "graylog-filebeat" {
   name                              = "graylog-filebeat" #can also be obtained from the variable nlb_config
   load_balancer_type                = "network"
   subnets         = ["${aws_subnet.main-public-1.id}", "${aws_subnet.main-public-2.id}"]
-  #security_groups = ["${aws_security_group.elasticsearch-elb-securitygroup.id}"]
+  #security_groups = ["${aws_security_group.elasticsearch-alb-securitygroup.id}"]
   tags = {
      Name = "graylog-alb"
   }

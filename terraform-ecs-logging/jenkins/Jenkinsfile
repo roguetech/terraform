@@ -1,0 +1,105 @@
+pipeline {
+    agent none
+
+		options {
+			ansiColor('xterm')
+		}
+
+    parameters {
+        booleanParam (
+            defaultValue: true,
+            description: '',
+            name : 'WAIT_FOR_INPUT')
+    }
+
+    stages {
+        stage('Cleanup')
+        {
+            agent {
+                label 'master'
+            }
+            steps {
+            cleanWs()
+            }
+        }
+        stage('Checkout') {
+            agent {
+                label 'master'
+            }
+
+						steps {
+							dir('terraform-preprod') {
+	                checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'new_gitlab_RSA', url: 'git@gitlab.tools.vsware.ie:configuration/terraform-preprod-norway.git']]])
+						}
+						dir('terraform-shared') {
+	                checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'new_gitlab_RSA', url: 'git@gitlab.tools.vsware.ie:configuration/terraform-shared.git']]])
+	            }
+						}
+        }
+
+				stage('Terragrunt Plan') {
+            agent {
+                label 'master'
+            }
+            steps {
+                milestone 1
+                	dir('terraform-preprod') {
+                        echo "Analysing the changes"
+                      sh '''
+                        TERRAGRUNT_DEBUG="true"
+                        TG_LOG="debug"
+                        PATH=$PATH:/var/lib/jenkins/terraform
+                        terragrunt -version
+                        terraform -version
+                        rm -rf ${WORKSPACE}/terraform-preprod/shared_*
+                        #/bin/cp ${WORKSPACE}/terraform-preprod/norway_iamr.tf ${WORKSPACE}/terraform-preprod/norway_iamr.txt
+                        find ${WORKSPACE}/terraform-shared/ -iname '*.tf' -exec cp --target-directory ${WORKSPACE}/terraform-preprod/ {} \\;
+                        find ${WORKSPACE}/terraform-shared/ -iname '*.tfvars' -exec cp --target-directory ${WORKSPACE}/terraform-preprod/ {} \\;
+                        #/bin/cp -f ${WORKSPACE}/terraform-preprod/norway_iamr.txt ${WORKSPACE}/terraform-preprod/norway_iamr.tf
+                        rm -f ${WORKSPACE}/terraform-preprod/shared_r53r.tf
+                        rm -f ${WORKSPACE}/terraform-preprod/shared_tg.tf
+                        terragrunt plan -no-color -var-file=variables-common.tfvars
+                      '''
+                }
+            }
+        }
+
+				stage('Apply?') {
+            agent none
+
+            when {
+                expression {
+                    return params.WAIT_FOR_INPUT
+                }
+            }
+            steps {
+                script {
+                    timeout(time: 10, unit: 'MINUTES') {
+                        input 'Apply Terraform?'
+                    }
+                }
+            }
+        }
+
+        stage('Terragrunt Apply') {
+            agent {
+                label 'master'
+            }
+            steps {
+                milestone 2
+									dir('terraform-preprod') {
+											sh '''
+											PATH=$PATH:/var/lib/jenkins/terraform
+                      rm -rf ${WORKSPACE}/terraform-preprod/shared_*
+                      find ${WORKSPACE}/terraform-shared/ -iname '*.tf' -exec cp --target-directory ${WORKSPACE}/terraform-preprod/ {} \\;
+                      find ${WORKSPACE}/terraform-shared/ -iname '*.tfvars' -exec cp --target-directory ${WORKSPACE}/terraform-preprod/ {} \\;
+                      rm -f ${WORKSPACE}/terraform-preprod/shared_r53r.tf
+                      rm -f ${WORKSPACE}/terraform-preprod/shared_tg.tf
+											(echo yes)| terragrunt apply -no-color -var-file=variables-common.tfvars
+											'''
+                        }
+                    }
+                }
+            }
+        }
+

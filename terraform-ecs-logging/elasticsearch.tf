@@ -88,7 +88,7 @@ resource "aws_ecs_task_definition" "elasticsearch2-task-definition" {
 resource "aws_alb" "elasticsearch-alb" {
   name            = "elasticsearch-alb"
   subnets         = ["${aws_subnet.main-public-1.id}", "${aws_subnet.main-public-2.id}"]
-  security_groups = ["${aws_security_group.elasticsearch-elb-securitygroup.id}"]
+  security_groups = ["${aws_security_group.elasticsearch-alb-securitygroup.id}"]
   tags = {
      Name = "elasticsearch-alb"
   }
