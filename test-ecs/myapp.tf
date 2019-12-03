@@ -1,7 +1,7 @@
 data "template_file" "myapp-task-definition-template" {
-    template    = file("template/myapp.json.tpl")
+    template    = file("templates/myapp.json.tpl")
     vars = {
-        REPOSITORY_URL = replace("483452016940.dkr.ecr.eu-west-1.amazonaws.com/elk", "https://", "")
+        REPOSITORY_URL = replace("483452016940.dkr.ecr.eu-west-1.amazonaws.com/myapp", "https://", "")
     }
 }
 
@@ -120,23 +120,23 @@ resource "aws_alb_listener_rule" "graylog-filebeat-rule" {
 
 resource "aws_ecs_service" "myapp-service" {
     name = "myapp"
-    cluster = "${aws_ecs_cluster.test-cluster.id}"
-    task_definition = "${aws_ecs_task_definition.myapp-task-definition.arn}"
+    cluster = aws_ecs_cluster.test-cluster.id
+    task_definition = aws_ecs_task_definition.myapp-task-definition.arn
     desired_count = 1
-    iam_role = "${aws_iam_role.ecs-service-role.arn}"
-    depends_on = ["aws_iam_policy_attachment.ecs-service-attach1"]
+    iam_role = aws_iam_role.ecs-test-service-role.arn
+    depends_on = ["aws_iam_policy_attachment.ecs-test-service-attach1"]
 
     load_balancer {
-       target_group_arn = "${aws_alb_target_group.graylog-web-group.id}"
+       target_group_arn = "aws_alb_target_group.graylog-web-group.id"
        container_name = "myapp"
        container_port = 9200
     }
 
-    load_balancer {
-       target_group_arn = "${aws_alb_target_group.graylog-filebeat-group.id}"
-       container_name = "myapp"
-       container_port = 9300
-    }
+    #load_balancer {
+    #   target_group_arn = "aws_alb_target_group.graylog-filebeat-group.id"
+    #   container_name = "myapp"
+    #   container_port = 9300
+    #}
 
-    #lifecycle { ignore_changes = ["task_definition"] }
+    lifecycle { ignore_changes = ["task_definition"] }
 }

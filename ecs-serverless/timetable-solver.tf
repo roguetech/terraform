@@ -1,7 +1,7 @@
 data "template_file" "timetable-solver-definition-template" {
-  template = file("templates/timetable-solver.json.tpl")
+  template = file("template/timetable-solver.json.tpl")
   vars = {
-    REPOSITORY_URL = replace("483452016940.dkr.ecr.eu-west-1.amazonaws.com/timetable-solver", "https://", "")
+    REPOSITORY_URL = replace("713658747859.dkr.ecr.eu-west-1.amazonaws.com/timetable-solver", "https://", "")
   }
 }
 
