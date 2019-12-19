@@ -22,9 +22,9 @@ resource "aws_ecs_task_definition" "graylog-task-definition" {
   container_definitions = data.template_file.graylog-task-definition-template.rendered
 }
 
-resource "aws_ecs_task_definition" "graylog-task-definition" {
+resource "aws_ecs_task_definition" "mongodb-task-definition" {
   family                = "graylog"
-  container_definitions = data.template_file.graylog-task-definition-template.rendered
+  container_definitions = data.template_file.mongodb-task-definition-template.rendered
 
   volume {
     name = "mongodb"
