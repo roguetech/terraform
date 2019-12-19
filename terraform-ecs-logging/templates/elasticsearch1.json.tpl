@@ -1,10 +1,10 @@
 [
   {
     "essential": true,
-    "memory": 2048,
+    "memory": 4096,
     "name": "elasticsearch",
     "cpu": 512,
-    "image": "${REPOSITORY_URL}:5",
+    "image": "${REPOSITORY_URL}:1",
     "containerName": "elasticsearch",
     "mountPoints": [
         {
@@ -15,7 +15,7 @@
     "environment": [
         {
           "name": "ES_JAVA_OPTS",
-          "value": "-Xms512m -Xmx512m"
+          "value": "-Xms2048m -Xmx2048m"
         },
         {
           "name": "LimitMEMLOCK",
@@ -39,10 +39,10 @@
             "containerPort": 9200,
             "hostPort": 9200
         },
-	{
-	    "containerPort": 9300,
+	      {
+	          "containerPort": 9300,
             "hostPort": 9300
-	}
+	      }
     ]
   }
 ]

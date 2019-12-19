@@ -1,0 +1,93 @@
+pipeline {
+    agent none
+
+		options {
+			ansiColor('xterm')
+		}
+
+    parameters {
+        booleanParam (
+            defaultValue: true,
+            description: '',
+            name : 'WAIT_FOR_INPUT')
+    }
+
+    stages {
+        stage('Cleanup')
+        {
+            agent {
+                label 'master'
+            }
+            steps {
+            cleanWs()
+            }
+        }
+        stage('Checkout') {
+            agent {
+                label 'master'
+            }
+
+						steps {
+							dir('terraform-ecs-logging') {
+	                checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'new_gitlab_RSA', url: 'git@gitlab.tools.vsware.ie:configuration/terraform-ecs-logging.git']]])
+						  }
+					}
+        }
+
+				stage('Terragrunt Plan') {
+            agent {
+                label 'master'
+            }
+            steps {
+                milestone 1
+                	dir('terraform-ecs-logging') {
+                        echo "Analysing the changes"
+                      sh '''#!/bin/bash
+                        set -ex
+                        TERRAGRUNT_DEBUG="true"
+                        TG_LOG="debug"
+                        PATH=$PATH:/var/lib/jenkins/terraform
+                        terragrunt -version
+                        terraform -version
+                        terragrunt plan -no-color
+                      '''
+                }
+            }
+        }
+
+				stage('Apply?') {
+            agent none
+
+            when {
+                expression {
+                    return params.WAIT_FOR_INPUT
+                }
+            }
+            steps {
+                script {
+                    timeout(time: 10, unit: 'MINUTES') {
+                        input 'Apply Terraform?'
+                    }
+                }
+            }
+        }
+
+        stage('Terragrunt Apply') {
+            agent {
+                label 'master'
+            }
+            steps {
+                milestone 2
+									dir('terraform-ecs-logging') {
+											sh '''#!/bin/bash
+                        set -ex
+                        TERRAGRUNT_DEBUG="true"
+                        TG_LOG="debug"
+											  PATH=$PATH:/var/lib/jenkins/terraform
+											  (echo yes)| terragrunt apply -no-color
+											'''
+                  }
+            }
+        }
+    }
+}

@@ -8,7 +8,7 @@
     "containerName": "elasticsearch",
     "mountPoints": [
         {
-          "sourceVolume": "esdata2",
+          "sourceVolume": "esdata3",
           "containerPath": "/opt/elasticsearch/data"
         }
     ],

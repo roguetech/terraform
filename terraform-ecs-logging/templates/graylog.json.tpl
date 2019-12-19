@@ -10,9 +10,9 @@
   },
   {
     "essential": true,
-    "memory": 512,
+    "memory": 1024,
     "name": "graylog",
-    "cpu": 128,
+    "cpu": 256,
     "image": "${REPOSITORY_URL}:1",
     "containerName": "graylog",
     "links": ["mongo:mongo"],

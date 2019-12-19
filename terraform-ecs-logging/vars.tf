@@ -1,9 +1,14 @@
-locals {
-   kibana-elb = aws_elb.kibana-elb.dns_name
-}
-
 variable "AWS_REGION" {
 	default = "eu-west-1"
+}
+
+variable "aws_region" {
+  description = "AWS region to launch servers."
+  default     = "eu-west-1"
+}
+
+variable "aws_account_id" {
+  default = "713658747859"
 }
 
 variable "PATH_TO_PRIVATE_KEY" {
@@ -15,7 +20,7 @@ variable "PATH_TO_PUBLIC_KEY" {
 }
 
 variable "ECS_INSTANCE_TYPE" {
-	default = "t2.medium"
+	default = "m5.large"
 }
 
 variable "ECS_AMIS" {
@@ -25,17 +30,17 @@ variable "ECS_AMIS" {
 	}
 }
 
-#variable "private_subnet_ids" {}
-
-variable "ebs_block_device" {
-  default     = "/dev/xvdcz"
-  description = "EBS block devices to attach to the instance. (default: /dev/xvdcz)"
+variable "pri_1d_cidr" {
+  default = "10.13.11.0/24"
 }
 
-variable "docker_storage_size" {
-  default     = "22"
-  description = "EBS Volume size in Gib that the ECS Instance uses for Docker images and metadata "
+variable "pri_1e_cidr" {
+  default = "10.13.12.0/24"
 }
 
-variable "AWS_ACCESS_KEY" {}
-variable "AWS_SECRET_KEY" {}
+variable "pri_1f_cidr" {
+  default = "10.13.13.0/24"
+}
+
+#variable "AWS_ACCESS_KEY" {}
+#variable "AWS_SECRET_KEY" {}
