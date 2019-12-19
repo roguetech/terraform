@@ -22,6 +22,24 @@ resource "aws_ecs_task_definition" "graylog-task-definition" {
   container_definitions = data.template_file.graylog-task-definition-template.rendered
 }
 
+resource "aws_ecs_task_definition" "graylog-task-definition" {
+  family                = "graylog"
+  container_definitions = data.template_file.graylog-task-definition-template.rendered
+
+  volume {
+    name = "mongodb"
+    docker_volume_configuration {
+      autoprovision = true
+      scope = "shared"
+      driver = "rexray/ebs"
+      driver_opts = {
+        size = "5"
+        volumetype = "gp2"
+      }
+    }
+  }
+}
+
 # 1 - General Settings
 resource "aws_alb" "graylog-web-alb" {
   name            = "graylog-web-alb"
