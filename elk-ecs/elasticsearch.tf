@@ -37,11 +37,12 @@ resource "aws_ecs_task_definition" "elasticsearch1-task-definition" {
     docker_volume_configuration {
       autoprovision = true
       scope = "shared"
-      driver = "cloudstor:aws"
+      #driver = "cloudstor:aws"
+      driver = "rexray/ebs"
       driver_opts = {
         size = "11"
         volumetype = "gp2"
-        backing = "relocatable"
+        #backing = "relocatable"
       }
     }
   } 
@@ -56,11 +57,12 @@ resource "aws_ecs_task_definition" "elasticsearch2-task-definition" {
     docker_volume_configuration {
       autoprovision = true
       scope = "shared"
-      driver = "cloudstor:aws"
+      driver = "rexray/ebs"
+      #driver = "cloudstor:aws"
       driver_opts = {
         size = "11"
         volumetype = "gp2"
-        backing = "relocatable"
+        #backing = "relocatable"
       }
     }
   }
