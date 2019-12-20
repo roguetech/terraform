@@ -1,4 +1,3 @@
-#Cluster
 resource "aws_ecs_cluster" "elk-cluster" {
 	name = "elk-cluster"
 }
@@ -18,11 +17,11 @@ resource "aws_launch_configuration" "ecs-elk-launchconfig" {
 
 resource "aws_autoscaling_group" "ecs-elk-autoscaling" {
 	name		= "ecs-elk-autoscaling"
-	vpc_zone_identifier	= [aws_subnet.logging-private-1.id]
+	vpc_zone_identifier	= [aws_subnet.private-1.id]
 		#aws_subnet.logging-private-2.id, aws_subnet.logging-private-3.id]
 	launch_configuration	= aws_launch_configuration.ecs-elk-launchconfig.name
-	min_size		= 3
-	max_size		= 3
+	min_size		= 1
+	max_size		= 1
 	tag {
 		key		              = "Name"
 		value		            = "ecs-ec2-container"

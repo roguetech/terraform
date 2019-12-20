@@ -1,5 +1,5 @@
 resource "aws_security_group" "ecs-securitygroup" {
-  vpc_id      = data.terraform_remote_state.vpc.outputs.main-vpc
+  vpc_id      = aws_vpc.main.id
   name        = "ecs"
   description = "security group for ecs"
   egress {
@@ -29,7 +29,6 @@ resource "aws_security_group" "ecs-securitygroup" {
     protocol    = "tcp"
     security_groups = [aws_security_group.graylog-alb-securitygroup.id]
     cidr_blocks = ["10.13.0.0/16"]
-    #cidr_blocks = ["80.233.43.227/32", "213.233.132.148/32", "10.224.60.24/32", "10.209.107.227/32", "31.187.0.23/32", "89.100.110.85/32","89.100.110.81/32","52.212.198.51/32","195.150.192.250/32", "213.94.231.245/32", "83.71.159.224/32", "54.171.12.38/32","63.34.245.21/32"]
   }
 
   ingress {
@@ -44,7 +43,7 @@ resource "aws_security_group" "ecs-securitygroup" {
     to_port     = 22
     protocol    = "tcp"
     #security_groups = [data.terraform_remote_state.vpc.outputs.security-group-ireland-office]
-    cidr_blocks = ["80.233.43.227/32", "213.233.132.148/32", "10.224.60.24/32", "10.209.107.227/32", "31.187.0.23/32", "89.100.110.85/32","89.100.110.81/32","52.212.198.51/32","195.150.192.250/32", "213.94.231.245/32", "83.71.159.224/32", "54.171.12.38/32","63.34.245.21/32"]
+    cidr_blocks = ["0.0.0.0/0"]
   }
   tags = {
     Name = "ecs-securitygroup"
@@ -52,7 +51,7 @@ resource "aws_security_group" "ecs-securitygroup" {
 }
 
 resource "aws_security_group" "elasticsearch-alb-securitygroup" {
-  vpc_id      = data.terraform_remote_state.vpc.outputs.main-vpc
+  vpc_id      = aws_vpc.main.id
   name        = "elasticsearch-alb"
   description = "security group for ecs"
   egress {
@@ -76,7 +75,7 @@ resource "aws_security_group" "elasticsearch-alb-securitygroup" {
 }
 
 resource "aws_security_group" "kibana-alb-securitygroup" {
-  vpc_id      = data.terraform_remote_state.vpc.outputs.main-vpc
+  vpc_id      = aws_vpc.main.id
   name        = "kibana-alb"
   description = "security group for kibana ecs"
   egress {
@@ -108,7 +107,7 @@ ingress {
 }
 
 resource "aws_security_group" "graylog-alb-securitygroup" {
-  vpc_id      = data.terraform_remote_state.vpc.outputs.main-vpc
+  vpc_id      = aws_vpc.main.id
   name        = "graylog-ecs-alb"
   description = "security group for graylog ecs"
   egress {
@@ -148,7 +147,7 @@ resource "aws_security_group" "graylog-alb-securitygroup" {
 }
 
 resource "aws_security_group" "elasticsearch-node-communication" {
-  vpc_id     = data.terraform_remote_state.vpc.outputs.main-vpc
+  vpc_id     = aws_vpc.main.id
   name       = "elasticsearch-node-comms"
   description = "security group so nodes can form a cluster"
   egress {

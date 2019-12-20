@@ -1,17 +1,17 @@
 # app
 
-data "template_file" "mongodb-task-definition-template" {
-  template = file("templates/mongodb.json.tpl")
-  vars = {
-    REPOSITORY_URL = replace("713658747859.dkr.ecr.eu-west-1.amazonaws.com/mongo", "https://", "")
-  }
-}
+#data "template_file" "mongodb-task-definition-template" {
+#  template = file("templates/mongodb.json.tpl")
+#  vars = {
+#    REPOSITORY_URL = replace("713658747859.dkr.ecr.eu-west-1.amazonaws.com/mongo", "https://", "")
+#  }
+#}
 
 data "template_file" "graylog-task-definition-template" {
   template = file("templates/graylog.json.tpl")
   vars = {
-    REPOSITORY_URL = replace("713658747859.dkr.ecr.eu-west-1.amazonaws.com/graylog", "https://", "")
-    REPOSITORY_URL1 = replace("713658747859.dkr.ecr.eu-west-1.amazonaws.com/mongo", "https://", "")
+    REPOSITORY_URL = replace("483452016940.dkr.ecr.eu-west-1.amazonaws.com/graylog", "https://", "")
+    REPOSITORY_URL1 = replace("483452016940.dkr.ecr.eu-west-1.amazonaws.com/mongo", "https://", "")
     ELASTIC_URL = aws_lb.elasticsearch-alb-internal.dns_name
     GRAYLOG_URL = aws_alb.graylog-web-alb.dns_name
   }
@@ -20,11 +20,6 @@ data "template_file" "graylog-task-definition-template" {
 resource "aws_ecs_task_definition" "graylog-task-definition" {
   family                = "graylog"
   container_definitions = data.template_file.graylog-task-definition-template.rendered
-}
-
-resource "aws_ecs_task_definition" "mongodb-task-definition" {
-  family                = "graylog"
-  container_definitions = data.template_file.mongodb-task-definition-template.rendered
 
   volume {
     name = "mongodb"
@@ -33,12 +28,30 @@ resource "aws_ecs_task_definition" "mongodb-task-definition" {
       scope = "shared"
       driver = "rexray/ebs"
       driver_opts = {
-        size = "5"
+        size = "10"
         volumetype = "gp2"
       }
     }
   }
 }
+
+#resource "aws_ecs_task_definition" "mongodb-task-definition" {
+#  family                = "graylog"
+#  container_definitions = data.template_file.mongodb-task-definition-template.rendered
+#
+#  volume {
+#    name = "mongodb"
+#    docker_volume_configuration {
+#      autoprovision = true
+#      scope = "shared"
+#      driver = "rexray/ebs"
+#      driver_opts = {
+#        size = "5"
+#        volumetype = "gp2"
+#      }
+#    }
+#  }
+#}
 
 # 1 - General Settings
 resource "aws_alb" "graylog-web-alb" {
@@ -79,7 +92,7 @@ resource "aws_alb_target_group" "graylog-web-group" {
   name            = "graylog-web-group"
   port            = 9000
   protocol        = "HTTP"
-  vpc_id          = data.terraform_remote_state.vpc.outputs.main-vpc
+  vpc_id          = aws_vpc.main.id
   health_check {
     path = "/api"
     port = 9000
@@ -90,7 +103,7 @@ resource "aws_alb_target_group" "graylog-web-group-internal" {
   name            = "graylog-web-group-internal"
   port            = 9000
   protocol        = "HTTP"
-  vpc_id          = data.terraform_remote_state.vpc.outputs.main-vpc
+  vpc_id          = aws_vpc.main.id
   health_check {
     path = "/api"
     port = 9000
@@ -103,7 +116,7 @@ resource "aws_lb_target_group" "graylog-filebeat-group" {
   name                  = "graylog-filebeat-group"
   port                  = 5044
   protocol              = "TCP"
-  vpc_id                  = data.terraform_remote_state.vpc.outputs.main-vpc
+  vpc_id                = aws_vpc.main.id
   health_check {
     interval            = 30
     port                = 5044
@@ -215,7 +228,7 @@ resource "aws_ecs_service" "graylog-service" {
   task_definition = aws_ecs_task_definition.graylog-task-definition.arn
   desired_count   = 1
   #iam_role        = aws_iam_role.ecs-service-role.arn
-  depends_on      = [aws_iam_policy_attachment.vsware-ecs-service-attach1]
+  depends_on      = [aws_iam_policy_attachment.ecs-service-attach1]
 
   load_balancer {
     target_group_arn = aws_alb_target_group.graylog-web-group.id
