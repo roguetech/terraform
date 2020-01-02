@@ -8,7 +8,7 @@ variable "aws_region" {
 }
 
 variable "aws_account_id" {
-  default = "713658747859"
+  default = "483452016940"
 }
 
 variable "PATH_TO_PRIVATE_KEY" {

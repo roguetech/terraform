@@ -1,20 +1,44 @@
 {
-    "Statement": [
-     {
-        "Effect": "Allow",
-        "Action": [
-           "xray:PutTraceSegments",
-           "xray:PutTelemetryRecords"
-         ],
-         "Resource": "*"
-         },
-         {
-           "Effect": "Allow",
-           "Action": [
-             "s3:PutObject",
-             "s3:GetObject"
-           ],
-           "Resource": "*"
-         }
-     ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "xray:PutTraceSegments",
+        "xray:PutTelemetryRecords"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:*"
+      ],
+      "Resource": "*"
+    },
+    {
+       "Effect": "Allow",
+       "Action": [
+         "rds-data:*"
+       ],
+       "Resource": "*"
+    },
+    {
+       "Effect": "Allow",
+       "Action": [
+         "secretsmanager:GetSecretValue"
+       ],
+       "Resource": "arn:aws:secretsmanager:*:*:*:*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+          "logs:CreateLogGroup",
+          "logs:CreateLogStream",
+          "logs:PutLogEvents",
+          "logs:DescribeLogStreams"
+        ],
+        "Resource": "arn:aws:logs:*:*:*"
+      }
+  ]
 }

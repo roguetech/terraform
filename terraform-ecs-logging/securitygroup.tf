@@ -1,5 +1,5 @@
 resource "aws_security_group" "ecs-securitygroup" {
-  vpc_id      = data.terraform_remote_state.vpc.outputs.main-vpc
+  vpc_id      = aws_vpc.main.id
   name        = "ecs"
   description = "security group for ecs"
   egress {
@@ -52,7 +52,7 @@ resource "aws_security_group" "ecs-securitygroup" {
 }
 
 resource "aws_security_group" "elasticsearch-alb-securitygroup" {
-  vpc_id      = data.terraform_remote_state.vpc.outputs.main-vpc
+  vpc_id      = aws_vpc.main.id
   name        = "elasticsearch-alb"
   description = "security group for ecs"
   egress {
@@ -108,7 +108,7 @@ ingress {
 }
 
 resource "aws_security_group" "graylog-alb-securitygroup" {
-  vpc_id      = data.terraform_remote_state.vpc.outputs.main-vpc
+  vpc_id      = aws_vpc.main.id
   name        = "graylog-ecs-alb"
   description = "security group for graylog ecs"
   egress {
@@ -148,7 +148,7 @@ resource "aws_security_group" "graylog-alb-securitygroup" {
 }
 
 resource "aws_security_group" "elasticsearch-node-communication" {
-  vpc_id     = data.terraform_remote_state.vpc.outputs.main-vpc
+  vpc_id     = aws_vpc.main.id
   name       = "elasticsearch-node-comms"
   description = "security group so nodes can form a cluster"
   egress {

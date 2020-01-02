@@ -1,7 +1,9 @@
+iam_role = "arn:aws:iam::713658747859:role/vsware-terraform"
+
 remote_state {
   backend = "s3"
   config = {
-    bucket         = "my-terraform-state-timetable-solver-serverless"
+    bucket         = "terraform-state-timetable-solver-serverless"
     key            = "${path_relative_to_include()}/terraform.tfstate"
     region         = "eu-west-1"
     encrypt        = true

@@ -2,10 +2,10 @@
   {
     "essential": true,
     "memory": 4096,
-    "name": "TimetableSchedularTask",
+    "name": "timetable-solver-worker",
     "cpu": 1024,
-    "image": "${REPOSITORY_URL}:1",
-    "containerName": "timetable-solver-mock",
+    "image": "${REPOSITORY_URL}:latest",
+    "containerName": "timetable-solver-worker",
     "environment": [
         {
           "name": "AWS_BUCKET_NAME",
@@ -20,7 +20,23 @@
           "value": ""
         },
         {
-          "name": "SCHEDULER_STATUS_ITEM_IDE",
+          "name": "AWS_REGION",
+          "value": ""
+        },
+        {
+          "name": "SCHEDULER_JOB_NAME",
+          "value": ""
+        },
+        {
+          "name": "RDS_RESOURCE_ARN",
+          "value": ""
+        },
+        {
+          "name": "RDS_SECRET_ARN",
+          "value": ""
+        },
+        {
+          "name": "RDS_DATABASE_NAME",
           "value": ""
         }
       ],
