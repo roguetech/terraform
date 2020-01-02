@@ -6,7 +6,13 @@
     "cpu": 128,
     "image": "${REPOSITORY_URL1}:1",
     "containerName": "mongo",
-    "alias": "mongo"
+    "alias": "mongo",
+    "mountPoints": [
+        {
+          "sourceVolume": "mongodb",
+          "containerPath": "/data/db"
+        }
+    ]
   },
   {
     "essential": true,

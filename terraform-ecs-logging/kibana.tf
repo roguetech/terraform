@@ -3,7 +3,7 @@
 data "template_file" "kibana-task-definition-template" {
   template = file("templates/kibana.json.tpl")
   vars = {
-    REPOSITORY_URL = replace("713658747859.dkr.ecr.eu-west-1.amazonaws.com/kibana", "https://", "")
+    REPOSITORY_URL = replace("483452016940.dkr.ecr.eu-west-1.amazonaws.com/kibana", "https://", "")
     elastic_url = aws_lb.elasticsearch-alb-internal.dns_name
   }
 }
@@ -30,7 +30,7 @@ resource "aws_alb_target_group" "kibana-group" {
   name            = "kibana-group"
   port            = 5601
   protocol        = "HTTP"
-  vpc_id          = data.terraform_remote_state.vpc.outputs.main-vpc
+  vpc_id          = aws_vpc.main.id
   health_check {
     path = "/app/kibana"
     port = 5601
@@ -109,7 +109,7 @@ resource "aws_alb_target_group" "kibana-group-internal" {
   name            = "kibana-group-internal"
   port            = 5601
   protocol        = "HTTP"
-  vpc_id          = data.terraform_remote_state.vpc.outputs.main-vpc
+  vpc_id          = aws_vpc.main.id
   health_check {
     path = "/app/kibana"
     port = 5601

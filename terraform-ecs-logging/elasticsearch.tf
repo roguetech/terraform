@@ -3,21 +3,21 @@
 data "template_file" "elasticsearch-task-definition-template1" {
   template = file("templates/elasticsearch1.json.tpl")
   vars = {
-    REPOSITORY_URL = replace("713658747859.dkr.ecr.eu-west-1.amazonaws.com/elk", "https://", "")
+    REPOSITORY_URL = replace("483452016940.dkr.ecr.eu-west-1.amazonaws.com/elk", "https://", "")
   }
 }
 
 data "template_file" "elasticsearch-task-definition-template2" {
   template = file("templates/elasticsearch2.json.tpl")
   vars = {
-    REPOSITORY_URL = replace("713658747859.dkr.ecr.eu-west-1.amazonaws.com/elk", "https://", "")
+    REPOSITORY_URL = replace("483452016940.dkr.ecr.eu-west-1.amazonaws.com/elk", "https://", "")
   }
 }
 
 data "template_file" "elasticsearch-task-definition-template3" {
   template = file("templates/elasticsearch3.json.tpl")
   vars = {
-    REPOSITORY_URL = replace("713658747859.dkr.ecr.eu-west-1.amazonaws.com/elk", "https://", "")
+    REPOSITORY_URL = replace("483452016940.dkr.ecr.eu-west-1.amazonaws.com/elk", "https://", "")
   }
 }
 
@@ -35,7 +35,7 @@ resource "aws_ecs_task_definition" "elasticsearch1-task-definition" {
       scope = "shared"
       driver = "rexray/ebs"
       driver_opts = {
-        size = "500"
+        size = "20"
         volumetype = "gp2"
       }
     }
@@ -53,7 +53,7 @@ resource "aws_ecs_task_definition" "elasticsearch2-task-definition" {
       scope = "shared"
       driver = "rexray/ebs"
       driver_opts = {
-        size = "500"
+        size = "20"
         volumetype = "gp2"
       }
     }
@@ -71,7 +71,7 @@ resource "aws_ecs_task_definition" "elasticsearch3-task-definition" {
       scope = "shared"
       driver = "rexray/ebs"
       driver_opts = {
-        size = "500"
+        size = "20"
         volumetype = "gp2"
       }
     }
@@ -93,7 +93,8 @@ resource "aws_alb_target_group" "elasticsearch-group" {
   name            = "elasticsearch-group"
   port            = 9200
   protocol        = "HTTP"
-  vpc_id          = data.terraform_remote_state.vpc.outputs.main-vpc
+  vpc_id          = aws_vpc.main.id
+
   health_check {
     path = "/"
     port = 9200
@@ -152,7 +153,7 @@ resource "aws_alb_target_group" "elasticsearch-group-internal" {
   name            = "elasticsearch-group-internal"
   port            = 9200
   protocol        = "HTTP"
-  vpc_id          = data.terraform_remote_state.vpc.outputs.main-vpc
+  vpc_id          = aws_vpc.main.id
   health_check {
     path = "/"
     port = 9200
@@ -200,8 +201,8 @@ resource "aws_ecs_service" "elasticsearch-service1" {
   cluster         = aws_ecs_cluster.elk-cluster.id
   task_definition = aws_ecs_task_definition.elasticsearch1-task-definition.arn
   desired_count   = 1
-  iam_role        = aws_iam_role.vsware-ecs-service-role.arn
-  depends_on      = [aws_iam_policy_attachment.vsware-ecs-service-attach1]
+  iam_role        = aws_iam_role.ecs-service-role.arn
+  depends_on      = [aws_iam_policy_attachment.ecs-service-attach1]
 
   load_balancer {
     target_group_arn = aws_alb_target_group.elasticsearch-group.id
@@ -218,8 +219,8 @@ resource "aws_ecs_service" "elasticsearch-service2" {
   cluster         = aws_ecs_cluster.elk-cluster.id
   task_definition = aws_ecs_task_definition.elasticsearch2-task-definition.arn
   desired_count   = 1
-  iam_role        = aws_iam_role.vsware-ecs-service-role.arn
-  depends_on      = [aws_iam_policy_attachment.vsware-ecs-service-attach1]
+  iam_role        = aws_iam_role.ecs-service-role.arn
+  depends_on      = [aws_iam_policy_attachment.ecs-service-attach1]
 
   load_balancer {
     target_group_arn = aws_alb_target_group.elasticsearch-group.id
@@ -236,8 +237,8 @@ resource "aws_ecs_service" "elasticsearch-service3" {
   cluster         = aws_ecs_cluster.elk-cluster.id
   task_definition = aws_ecs_task_definition.elasticsearch3-task-definition.arn
   desired_count   = 1
-  iam_role        = aws_iam_role.vsware-ecs-service-role.arn
-  depends_on      = [aws_iam_policy_attachment.vsware-ecs-service-attach1]
+  iam_role        = aws_iam_role.ecs-service-role.arn
+  depends_on      = [aws_iam_policy_attachment.ecs-service-attach1]
 
   load_balancer {
     target_group_arn = aws_alb_target_group.elasticsearch-group.id

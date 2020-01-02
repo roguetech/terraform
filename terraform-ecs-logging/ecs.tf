@@ -8,7 +8,7 @@ resource "aws_launch_configuration" "ecs-elk-launchconfig" {
 	image_id	= var.ECS_AMIS[var.AWS_REGION]
 	instance_type	= var.ECS_INSTANCE_TYPE
 	key_name	= aws_key_pair.mykeypair.key_name
-	iam_instance_profile	= aws_iam_instance_profile.vsware-ecs-ec2-role.id
+	iam_instance_profile	= aws_iam_instance_profile.ecs-ec2-role.id
 	security_groups	= [aws_security_group.ecs-securitygroup.id, aws_security_group.elasticsearch-node-communication.id]
 	user_data	= "#!/bin/bash\necho 'ECS_CLUSTER=elk-cluster' > /etc/ecs/ecs.config\nstart ecs\nsysctl -w vm.max_map_count=262144\ndocker plugin install rexray/ebs REXRAY_PREEMPT=true EBS_REGION=eu-west-1 --grant-all-permissions\nchown -R elasticsearch:elasticsearch /opt/elasticsearch/data"
         lifecycle {

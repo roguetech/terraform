@@ -4,7 +4,7 @@
     "memory": 4096,
     "name": "elasticsearch",
     "cpu": 512,
-    "image": "${REPOSITORY_URL}:1",
+    "image": "${REPOSITORY_URL}:5",
     "containerName": "elasticsearch",
     "mountPoints": [
         {
