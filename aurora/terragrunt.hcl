@@ -1,6 +1,7 @@
-terraform {
-  backend "s3" {
-    bucket         = "my-terraform-state"
+remote_state {
+  backend = "s3"
+  config = {
+    bucket         = "my-terraform-state-testing"
     key            = "aurora/terraform.tfstate"
     region         = "eu-west-1"
     encrypt        = true
