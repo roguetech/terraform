@@ -10,5 +10,7 @@ variable "PATH_TO_PUBLIC_KEY" {
         default = "mykey.pub"
 }
 
+variable "aurora_password" {}
+
 #variable "AWS_ACCESS_KEY" {}
 #variable "AWS_SECRET_KEY" {}

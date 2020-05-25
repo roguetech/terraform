@@ -1,0 +1,68 @@
+{
+  "version": 4,
+  "terraform_version": "0.12.13",
+  "serial": 4,
+  "lineage": "a6ab51d6-92b7-8d01-4016-4464a5b091d7",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "aws_s3_bucket",
+      "name": "no-visma-inschool-production-archiving",
+      "provider": "provider.aws",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "acceleration_status": "",
+            "acl": "private",
+            "arn": "arn:aws:s3:::no-visma-inschool-production-archiving",
+            "bucket": "no-visma-inschool-production-archiving",
+            "bucket_domain_name": "no-visma-inschool-production-archiving.s3.amazonaws.com",
+            "bucket_prefix": null,
+            "bucket_regional_domain_name": "no-visma-inschool-production-archiving.s3.eu-west-1.amazonaws.com",
+            "cors_rule": [],
+            "force_destroy": false,
+            "grant": [],
+            "hosted_zone_id": "Z1BKCTXD74EZPE",
+            "id": "no-visma-inschool-production-archiving",
+            "lifecycle_rule": [],
+            "logging": [],
+            "object_lock_configuration": [],
+            "policy": null,
+            "region": "eu-west-1",
+            "replication_configuration": [],
+            "request_payer": "BucketOwner",
+            "server_side_encryption_configuration": [
+              {
+                "rule": [
+                  {
+                    "apply_server_side_encryption_by_default": [
+                      {
+                        "kms_master_key_id": "",
+                        "sse_algorithm": "AES256"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "tags": {
+              "archiving": "pdfa"
+            },
+            "versioning": [
+              {
+                "enabled": true,
+                "mfa_delete": false
+              }
+            ],
+            "website": [],
+            "website_domain": null,
+            "website_endpoint": null
+          },
+          "private": "bnVsbA=="
+        }
+      ]
+    }
+  ]
+}

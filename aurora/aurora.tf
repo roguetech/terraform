@@ -16,7 +16,7 @@ resource "aws_rds_cluster" "test-aurora-serverless" {
   availability_zones      = ["eu-west-1a", "eu-west-1b", "eu-west-1c"]
   database_name           = "testauroraserverless"
   master_username         = "admin"
-  master_password         = "${aws_secretsmanager_secret_version.test_password.secret_string}"
+  master_password         = "${aws_secretsmanager_secret_version.test_password2.secret_string}"
   backup_retention_period = 5
   preferred_backup_window = "22:54-23:24"
   skip_final_snapshot       = true
