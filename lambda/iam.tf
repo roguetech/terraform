@@ -18,25 +18,23 @@ resource "aws_iam_role" "iam_for_lambda" {
 EOF
 }
 
-resource "aws_iam_role" "iam_for_lambda1" {
-  name = "iam_for_lambda1"
+resource "aws_iam_policy" "lambda_dynamodb" {
+  name        = "lambda_dynamodb"
+  path        = "/"
+  description = "IAM policy for access to a dynamodb from a lambda"
 
-  assume_role_policy = <<EOF
+  policy = <<EOF
 {
   "Version": "2012-10-17",
   "Statement": [
-   {
-     "Sid": "PutUpdateDeleteOnBooks",
-     "Effect": "Allow",
-     "Principal": {
-        "Service": [
-          "dynamodb.amazonaws.com"
-        ]
-      },
-     "Action": "sts:AssumeRole"
+    {
+      "Action": [
+        "dynamodb:*"
+      ],
+      "Resource": "arn:aws:dynamodb:*:*:*",
+      "Effect": "Allow"
     }
   ]
 }
 EOF
 }
-
