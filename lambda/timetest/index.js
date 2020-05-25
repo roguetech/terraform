@@ -4,10 +4,15 @@ var channel = "#alerts"
 var url = "/services/TCHRTAZBJ/B013V88L6NS/01h8egzpkWuDQpT6XmikjxMM"
 var date = new Date();
 var hour = date.getHours();
+const AWS = require('aws-sdk');
+const dynamodb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
+const limit = 8;
 
-exports.handler = function(event, context) {
+exports.handler = function(event, context, cb) {
     console.log(JSON.stringify(event, null, 2));
     console.log('From SNS:', event.Records[0].Sns.Message);
+    const date = new Date().toISOString().slice(0, 10);
+    const id = `iteration2:${event.Records[0].Sns.Type}:${date}`;
 
     var icon_emoji = ":thumbsup:"
     var postData = {
@@ -46,6 +51,30 @@ exports.handler = function(event, context) {
         }
     }
 
+    dynamodb.updateItem({
+      TableName: `ratelimit`,
+      Key: {
+        id: {S: id},
+      },
+      UpdateExpression: 'ADD MessageIds :MessageIds', // add request to the requests set
+      ConditionExpression: 'attribute_not_exists (MessageIds) OR contains(MessageIds, :MessageId) OR size(MessageIds) < :limit', // only if requests set does not exists or request is already in set or less than $limit requests in set
+      ExpressionAttributeValues: {
+        ':MessageId': {S: event.Records[0].Sns.MessageId},
+        ':MessageIds': {SS: [event.Records[0].Sns.MessageId]},
+        ':limit': {N: limit.toString()}
+      }
+    }, function(err) {
+    if (err) {
+      if (err.code === 'ConditionalCheckFailedException') { // $limit requests in set and current request is not in set
+        cb(null, {limited: true});
+      } else {
+        cb(err);
+      }
+    } else {
+      cb(null, {limited: false});
+    }
+  });
+
     postData.attachments = [
         {
             "color": severity,
@@ -59,7 +88,7 @@ exports.handler = function(event, context) {
         port: 443,
         path: url
     };
-    
+
     var CronJob = require('cron').CronJob;
     new CronJob('* * 15 * * 1-5', function() {
         console.log('You will see this message every second');
