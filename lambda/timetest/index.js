@@ -2,19 +2,31 @@ var https = require('https');
 var util = require('util');
 var channel = "#alerts"
 var url = "/services/TCHRTAZBJ/B013V88L6NS/01h8egzpkWuDQpT6XmikjxMM"
-var date = new Date();
-var hour = date.getHours();
 const AWS = require('aws-sdk');
 const dynamodb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
-const limit = 8;
+var time = new Date();
 
 exports.handler = function(event, context, cb) {
     console.log(JSON.stringify(event, null, 2));
     console.log('From SNS:', event.Records[0].Sns.Message);
-    const date = new Date().toISOString().slice(0, 10);
-    const id = `iteration2:${event.Records[0].Sns.Type}:${date}`;
+    const date = new Date(event.Records[0].Sns.Timestamp).toISOString().slice(0, 10);
+    const id = `iteration2:${date}`;
+    var hour =   time.getHours();
+    var day = time.getDay();
 
-    var icon_emoji = ":thumbsup:"
+    var params = {
+        'TableName': "ratelimit",
+        'Key': { "id": {S: id} },
+        'UpdateExpression': "ADD MessageIds :MessageIds",
+        'ConditionExpression': 'not contains (MessageIds, :MessageId)',
+        'ExpressionAttributeValues': {
+            ':MessageId': {S: event.Records[0].Sns.MessageId},
+            ':MessageIds': {'SS': [event.Records[0].Sns.MessageId]}
+    },
+    //ReturnValues: 'UPDATED_NEW'
+  };
+
+    var icon_emoji = ":thumbsup:";
     var postData = {
         "channel": channel,
         "username": "CloudwatchAlarm-Sns-Lambda-Slack",
@@ -36,7 +48,7 @@ exports.handler = function(event, context, cb) {
     for(var dangerMessagesItem in dangerMessages) {
         if (message.indexOf(dangerMessages[dangerMessagesItem]) != -1) {
             severity = "danger";
-            icon_emoji = ":thumbsdown:"
+            icon_emoji = ":thumbsdown:";
             break;
         }
     }
@@ -50,30 +62,6 @@ exports.handler = function(event, context, cb) {
             }
         }
     }
-
-    dynamodb.updateItem({
-      TableName: `ratelimit`,
-      Key: {
-        id: {S: id},
-      },
-      UpdateExpression: 'ADD MessageIds :MessageIds', // add request to the requests set
-      ConditionExpression: 'attribute_not_exists (MessageIds) OR contains(MessageIds, :MessageId) OR size(MessageIds) < :limit', // only if requests set does not exists or request is already in set or less than $limit requests in set
-      ExpressionAttributeValues: {
-        ':MessageId': {S: event.Records[0].Sns.MessageId},
-        ':MessageIds': {SS: [event.Records[0].Sns.MessageId]},
-        ':limit': {N: limit.toString()}
-      }
-    }, function(err) {
-    if (err) {
-      if (err.code === 'ConditionalCheckFailedException') { // $limit requests in set and current request is not in set
-        cb(null, {limited: true});
-      } else {
-        cb(err);
-      }
-    } else {
-      cb(null, {limited: false});
-    }
-  });
 
     postData.attachments = [
         {
@@ -89,45 +77,45 @@ exports.handler = function(event, context, cb) {
         path: url
     };
 
-    var CronJob = require('cron').CronJob;
-    new CronJob('* * 15 * * 1-5', function() {
-        console.log('You will see this message every second');
-        if ("good" != severity) {
-            var req = https.request(options, function(res) {
-            res.setEncoding('utf8');
-            res.on('data', function (chunk) {
-                context.done(null);
-            });
-            });
-            console.log('Before req.on error');
-            req.on('error', function(e) {
-                console.log('problem with request: ' + e.message);
-            });
-            req.write(util.format("%j", postData));
-            req.end();
-            console.log('end of loop');
-      }
-    },null, true,'Europe/Dublin');
+    if(day >= 1 && day <= 5){
+        if(hour >= 8 && hour <= 20){
+                console.log("inside");
+                console.log('You will see this message every second');
+                if ("good" != severity) {
+                  var req = https.request(options, function(res) {
+                    res.setEncoding('utf8');
+                    res.on('data', function (chunk) {
+                      context.done(null);
+                    });
+                  });
+                  console.log('Before req.on error');
+                  req.on('error', function(e) {
+                    console.log('problem with request: ' + e.message);
+                  });
+
+                  dynamodb.updateItem(params, function(err) {
+    		              if (err) {
+      			               console.log("error " + err);
+      			               if (err.code === 'ConditionalCheckFailedException') { // $limit requests in set and current request is not in set
+        			                  cb(null, {limited: true});
+        			                  console.log("conditional error the messageid already exists");
+      			               } else {
+        			                  console.log("ok");
+      			               }
+    		              } else {
+      			               console.log("error " + err);
+      			               req.write(util.format("%j", postData));
+            	               cb(null, {limited: false});
+    		              }
+    		              req.end();
+  	              });
+
+                }
+        } else {
+            console.log("outside time")
+        }
+    } else {
+        console.log("outside day")
+    }
     console.log('outside loop');
-    //job.start();
-    //job.cancel();
-
-    // if (hour > 12 && hour < 21) {
-    //    if ("good" != severity) {
-    //      var req = https.request(options, function(res) {
-    //        res.setEncoding('utf8');
-    //        res.on('data', function (chunk) {
-    //        context.done(null);
-    //      });
-    //    });
-
-    //    console.log('Before req.on error');
-    //    req.on('error', function(e) {
-    //      console.log('problem with request: ' + e.message);
-    //    });
-
-    //    req.write(util.format("%j", postData));
-    //    req.end();
-   // }
- // }
 };
