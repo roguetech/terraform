@@ -1,0 +1,25 @@
+variable "AWS_REGION" {
+	default = "eu-west-1"
+}
+
+variable "PATH_TO_PRIVATE_KEY" {
+	default = "spin-key"
+}
+
+variable "PATH_TO_PUBLIC_KEY" {
+	default = "spin-key.pub"
+}
+
+variable "ECS_INSTANCE_TYPE" {
+	default = "t2.medium"
+}
+
+variable "ECS_AMIS" {
+	type = map(string)
+	default = {
+		eu-west-1 = "ami-0963349a5568210b8"
+	}
+}
+
+variable "AWS_ACCESS_KEY" {}
+variable "AWS_SECRET_KEY" {}
