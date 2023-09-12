@@ -1,0 +1,2282 @@
+module.eks.time_sleep.this[0] (deposed object 6273ee78): Refreshing state... [id=2023-09-07T17:28:21Z]
+module.eks.time_sleep.this[0] (deposed object ab0f7c06): Refreshing state... [id=2023-09-07T14:15:33Z]
+module.eks.time_sleep.this[0] (deposed object a6697c66): Refreshing state... [id=2023-09-08T11:31:21Z]
+module.eks.time_sleep.this[0] (deposed object 095e4093): Refreshing state... [id=2023-09-07T17:07:41Z]
+module.vpc.aws_vpc.this[0]: Refreshing state... [id=vpc-0f6bf9aa33fce0c9a]
+module.eks.module.fargate_profile["kube-system"].data.aws_iam_policy_document.assume_role_policy[0]: Reading...
+module.eks.module.fargate_profile["kube-system"].data.aws_partition.current: Reading...
+module.eks.data.aws_caller_identity.current: Reading...
+module.eks.data.aws_partition.current: Reading...
+aws_s3_bucket.tf_state_bucket: Refreshing state... [id=terraform-bucket-calypsoai-scaling-test]
+module.eks.module.fargate_profile["karpenter"].data.aws_iam_policy_document.assume_role_policy[0]: Reading...
+module.eks.module.kms.data.aws_caller_identity.current: Reading...
+module.karpenter.data.aws_caller_identity.current: Reading...
+module.eks.module.fargate_profile["karpenter"].data.aws_partition.current: Reading...
+module.eks.module.fargate_profile["kube-system"].data.aws_iam_policy_document.assume_role_policy[0]: Read complete after 0s [id=3016102342]
+module.eks.module.fargate_profile["karpenter"].data.aws_iam_policy_document.assume_role_policy[0]: Read complete after 0s [id=3016102342]
+module.eks.module.fargate_profile["karpenter"].data.aws_partition.current: Read complete after 0s [id=aws]
+module.eks.module.fargate_profile["kube-system"].data.aws_partition.current: Read complete after 0s [id=aws]
+module.eks.data.aws_partition.current: Read complete after 0s [id=aws]
+module.eks.module.fargate_profile["kube-system"].data.aws_caller_identity.current: Reading...
+module.karpenter.data.aws_partition.current: Reading...
+module.eks.module.fargate_profile["karpenter"].data.aws_caller_identity.current: Reading...
+module.eks.module.kms.data.aws_partition.current: Reading...
+module.eks.aws_cloudwatch_log_group.this[0]: Refreshing state... [id=/aws/eks/scaling-test-cluster/cluster]
+module.karpenter.data.aws_partition.current: Read complete after 0s [id=aws]
+module.eks.module.kms.data.aws_partition.current: Read complete after 0s [id=aws]
+module.eks.module.fargate_profile["kube-system"].aws_iam_role.this[0]: Refreshing state... [id=kube-system-20230907165511474400000002]
+module.eks.module.fargate_profile["karpenter"].aws_iam_role.this[0]: Refreshing state... [id=karpenter-20230907165511473700000001]
+module.eks.data.aws_iam_policy_document.assume_role_policy[0]: Reading...
+module.eks.data.aws_iam_policy_document.assume_role_policy[0]: Read complete after 0s [id=2764486067]
+module.karpenter.data.aws_iam_policy_document.assume_role[0]: Reading...
+module.karpenter.data.aws_iam_policy_document.assume_role[0]: Read complete after 0s [id=2560088296]
+module.eks.aws_iam_role.this[0]: Refreshing state... [id=scaling-test-cluster-cluster-20230907115851578400000003]
+module.eks.module.kms.data.aws_caller_identity.current: Read complete after 0s [id=559347283443]
+module.eks.module.fargate_profile["kube-system"].data.aws_caller_identity.current: Read complete after 0s [id=559347283443]
+module.eks.data.aws_caller_identity.current: Read complete after 0s [id=559347283443]
+module.eks.data.aws_iam_session_context.current: Reading...
+module.eks.data.aws_iam_session_context.current: Read complete after 0s [id=arn:aws:iam::559347283443:user/engineers/patrick-admin]
+module.vpc.aws_default_route_table.default[0]: Refreshing state... [id=rtb-026f0281a511b9bd2]
+module.karpenter.data.aws_caller_identity.current: Read complete after 0s [id=559347283443]
+module.eks.module.fargate_profile["karpenter"].data.aws_caller_identity.current: Read complete after 0s [id=559347283443]
+module.eks.aws_security_group.cluster[0]: Refreshing state... [id=sg-0534bfc64a31faa7f]
+module.vpc.aws_default_network_acl.this[0]: Refreshing state... [id=acl-0388c992f542f32e1]
+module.vpc.aws_default_security_group.this[0]: Refreshing state... [id=sg-0d451ad2a834ed7c2]
+module.eks.aws_security_group.node[0]: Refreshing state... [id=sg-03485ea22e1731c18]
+module.vpc.aws_route_table.private[2]: Refreshing state... [id=rtb-04d8e750ae5421f78]
+module.vpc.aws_route_table.private[0]: Refreshing state... [id=rtb-06b9dc9726d66a483]
+module.vpc.aws_route_table.private[1]: Refreshing state... [id=rtb-006d9c1567c4c4624]
+module.vpc.aws_subnet.private[2]: Refreshing state... [id=subnet-05d4388cc5f9f8a45]
+module.vpc.aws_internet_gateway.this[0]: Refreshing state... [id=igw-0ade8db863d09ece2]
+module.vpc.aws_subnet.private[0]: Refreshing state... [id=subnet-0ff9eddc2a0073d42]
+module.vpc.aws_route_table.public[0]: Refreshing state... [id=rtb-0c79401c371a4a53e]
+module.vpc.aws_subnet.private[1]: Refreshing state... [id=subnet-0275e70875cdae108]
+module.vpc.aws_subnet.public[2]: Refreshing state... [id=subnet-0b1b614dd5cc9c409]
+module.vpc.aws_subnet.public[0]: Refreshing state... [id=subnet-087186eaedbd7a6fb]
+module.vpc.aws_subnet.public[1]: Refreshing state... [id=subnet-0d713d68950b62777]
+module.eks.aws_security_group_rule.node["ingress_cluster_443"]: Refreshing state... [id=sgrule-628813848]
+module.eks.aws_security_group_rule.node["ingress_nodes_ephemeral"]: Refreshing state... [id=sgrule-2976726306]
+module.eks.aws_security_group_rule.node["ingress_cluster_6443_webhook"]: Refreshing state... [id=sgrule-1635212220]
+module.eks.aws_security_group_rule.node["egress_all"]: Refreshing state... [id=sgrule-145259702]
+module.eks.aws_security_group_rule.node["ingress_self_coredns_tcp"]: Refreshing state... [id=sgrule-24106789]
+module.eks.aws_security_group_rule.node["ingress_self_coredns_udp"]: Refreshing state... [id=sgrule-2771416266]
+module.eks.aws_security_group_rule.node["ingress_cluster_4443_webhook"]: Refreshing state... [id=sgrule-2822061098]
+module.eks.aws_security_group_rule.node["ingress_cluster_9443_webhook"]: Refreshing state... [id=sgrule-378164310]
+module.eks.aws_security_group_rule.node["ingress_cluster_kubelet"]: Refreshing state... [id=sgrule-1827781633]
+module.eks.aws_security_group_rule.node["ingress_cluster_8443_webhook"]: Refreshing state... [id=sgrule-1915447197]
+module.vpc.aws_eip.nat[1]: Refreshing state... [id=eipalloc-02014e80d685adaf9]
+module.eks.aws_security_group_rule.cluster["ingress_nodes_443"]: Refreshing state... [id=sgrule-2063763030]
+module.vpc.aws_eip.nat[2]: Refreshing state... [id=eipalloc-0d63032b2b5b6fd53]
+module.vpc.aws_route.public_internet_gateway[0]: Refreshing state... [id=r-rtb-0c79401c371a4a53e1080289494]
+module.vpc.aws_eip.nat[0]: Refreshing state... [id=eipalloc-01fa14d6ad27f065f]
+module.vpc.aws_route_table_association.private[0]: Refreshing state... [id=rtbassoc-07da99ad13d6b87a6]
+module.vpc.aws_route_table_association.private[1]: Refreshing state... [id=rtbassoc-089d30c2543eb4521]
+module.vpc.aws_route_table_association.private[2]: Refreshing state... [id=rtbassoc-020c57b4bf94ffc11]
+module.eks.module.fargate_profile["kube-system"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy"]: Refreshing state... [id=kube-system-20230907165511474400000002-20230907165512448600000006]
+module.eks.module.fargate_profile["karpenter"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"]: Refreshing state... [id=karpenter-20230907165511473700000001-20230907165512260900000004]
+module.eks.module.fargate_profile["karpenter"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy"]: Refreshing state... [id=karpenter-20230907165511473700000001-20230907165512256100000003]
+module.eks.module.fargate_profile["kube-system"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"]: Refreshing state... [id=kube-system-20230907165511474400000002-20230907165512399400000005]
+module.vpc.aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-03e7f6555286c577a]
+module.vpc.aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-03ad97daf040d425f]
+module.vpc.aws_route_table_association.public[2]: Refreshing state... [id=rtbassoc-070f11e62b3174e5e]
+module.eks.aws_iam_role_policy_attachment.this["AmazonEKSClusterPolicy"]: Refreshing state... [id=scaling-test-cluster-cluster-20230907115851578400000003-20230907115853225900000005]
+module.eks.aws_iam_role_policy_attachment.this["AmazonEKSVPCResourceController"]: Refreshing state... [id=scaling-test-cluster-cluster-20230907115851578400000003-20230907115853005000000004]
+module.vpc.aws_nat_gateway.this[0]: Refreshing state... [id=nat-081ccd7d2fc2db16a]
+module.vpc.aws_nat_gateway.this[1]: Refreshing state... [id=nat-0701ec297ce91c659]
+module.vpc.aws_nat_gateway.this[2]: Refreshing state... [id=nat-02609fed9370e73c3]
+module.eks.module.kms.data.aws_iam_policy_document.this[0]: Reading...
+module.eks.module.kms.data.aws_iam_policy_document.this[0]: Read complete after 0s [id=3603170483]
+module.eks.module.kms.aws_kms_key.this[0]: Refreshing state... [id=3ced928c-93ad-4e2c-bb9f-d6233814c279]
+module.vpc.aws_route.private_nat_gateway[0]: Refreshing state... [id=r-rtb-06b9dc9726d66a4831080289494]
+module.vpc.aws_route.private_nat_gateway[1]: Refreshing state... [id=r-rtb-006d9c1567c4c46241080289494]
+module.vpc.aws_route.private_nat_gateway[2]: Refreshing state... [id=r-rtb-04d8e750ae5421f781080289494]
+module.eks.module.kms.aws_kms_alias.this["cluster"]: Refreshing state... [id=alias/eks/scaling-test-cluster]
+module.eks.aws_iam_policy.cluster_encryption[0]: Refreshing state... [id=arn:aws:iam::559347283443:policy/scaling-test-cluster-cluster-ClusterEncryption20230907115908788900000006]
+module.eks.aws_eks_cluster.this[0]: Refreshing state... [id=scaling-test-cluster]
+module.eks.data.tls_certificate.this[0]: Reading...
+module.eks.time_sleep.this[0]: Refreshing state... [id=2023-09-08T12:31:32Z]
+module.eks.data.aws_eks_addon_version.this["coredns"]: Reading...
+module.eks.data.aws_eks_addon_version.this["vpc-cni"]: Reading...
+module.eks.data.tls_certificate.this[0]: Read complete after 0s [id=eae3d1a78da36d265617d0e58ee6c9f6db23c834]
+module.eks.data.aws_eks_addon_version.this["vpc-cni"]: Read complete after 0s [id=vpc-cni]
+module.eks.data.aws_eks_addon_version.this["coredns"]: Read complete after 0s [id=coredns]
+module.karpenter.aws_cloudwatch_event_rule.this["instance_state_change"]: Refreshing state... [id=KarpenterInstanceStateChange-20230907145506484700000007]
+module.karpenter.aws_sqs_queue.this[0]: Refreshing state... [id=https://sqs.eu-west-1.amazonaws.com/559347283443/Karpenter-scaling-test-cluster]
+module.karpenter.aws_cloudwatch_event_rule.this["health_event"]: Refreshing state... [id=KarpenterHealthEvent-20230907145506484200000006]
+module.karpenter.aws_cloudwatch_event_rule.this["instance_rebalance"]: Refreshing state... [id=KarpenterInstanceRebalance-20230907145506481500000002]
+module.karpenter.aws_cloudwatch_event_rule.this["spot_interupt"]: Refreshing state... [id=KarpenterSpotInterrupt-20230907145506483800000005]
+module.karpenter.aws_iam_role.this[0]: Refreshing state... [id=Karpenter-scaling-test-cluster-20230907145506482700000003]
+module.eks.aws_iam_openid_connect_provider.oidc_provider[0]: Refreshing state... [id=arn:aws:iam::559347283443:oidc-provider/oidc.eks.eu-west-1.amazonaws.com/id/8227A4101BC784050411D9E507E2F1A6]
+module.eks.module.fargate_profile["kube-system"].aws_eks_fargate_profile.this[0]: Refreshing state... [id=scaling-test-cluster:kube-system]
+module.eks.module.fargate_profile["karpenter"].aws_eks_fargate_profile.this[0]: Refreshing state... [id=scaling-test-cluster:karpenter]
+module.eks.aws_iam_role_policy_attachment.cluster_encryption[0]: Refreshing state... [id=scaling-test-cluster-cluster-20230907115851578400000003-20230907115909436900000007]
+module.karpenter.data.aws_iam_policy_document.queue[0]: Reading...
+module.karpenter.data.aws_iam_policy_document.queue[0]: Read complete after 0s [id=695313761]
+module.karpenter.data.aws_iam_policy_document.irsa_assume_role[0]: Reading...
+module.karpenter.aws_sqs_queue_policy.this[0]: Refreshing state... [id=https://sqs.eu-west-1.amazonaws.com/559347283443/Karpenter-scaling-test-cluster]
+module.karpenter.data.aws_iam_policy_document.irsa_assume_role[0]: Read complete after 0s [id=3339534847]
+module.karpenter.aws_iam_role.irsa[0]: Refreshing state... [id=KarpenterIRSA-scaling-test-cluster-20230907145506483300000004]
+module.eks.aws_eks_addon.this["coredns"]: Refreshing state... [id=scaling-test-cluster:coredns]
+module.eks.aws_eks_addon.this["vpc-cni"]: Refreshing state... [id=scaling-test-cluster:vpc-cni]
+module.karpenter.aws_cloudwatch_event_target.this["health_event"]: Refreshing state... [id=KarpenterHealthEvent-20230907145506484200000006-KarpenterInterruptionQueueTarget]
+module.karpenter.aws_cloudwatch_event_target.this["instance_rebalance"]: Refreshing state... [id=KarpenterInstanceRebalance-20230907145506481500000002-KarpenterInterruptionQueueTarget]
+module.karpenter.aws_cloudwatch_event_target.this["instance_state_change"]: Refreshing state... [id=KarpenterInstanceStateChange-20230907145506484700000007-KarpenterInterruptionQueueTarget]
+module.karpenter.aws_cloudwatch_event_target.this["spot_interupt"]: Refreshing state... [id=KarpenterSpotInterrupt-20230907145506483800000005-KarpenterInterruptionQueueTarget]
+module.karpenter.aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"]: Refreshing state... [id=Karpenter-scaling-test-cluster-20230907145506482700000003-2023090714550778090000000b]
+module.karpenter.data.aws_iam_policy_document.irsa[0]: Reading...
+module.karpenter.aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"]: Refreshing state... [id=Karpenter-scaling-test-cluster-20230907145506482700000003-2023090714550771610000000a]
+module.karpenter.aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"]: Refreshing state... [id=Karpenter-scaling-test-cluster-20230907145506482700000003-20230907145507556600000009]
+module.karpenter.aws_iam_instance_profile.this[0]: Refreshing state... [id=Karpenter-scaling-test-cluster-20230907145507380900000008]
+module.karpenter.data.aws_iam_policy_document.irsa[0]: Read complete after 0s [id=1799130675]
+module.karpenter.aws_iam_policy.irsa[0]: Refreshing state... [id=arn:aws:iam::559347283443:policy/KarpenterIRSA-scaling-test-cluster-2023090714553210330000000d]
+module.karpenter.aws_iam_role_policy_attachment.irsa[0]: Refreshing state... [id=KarpenterIRSA-scaling-test-cluster-20230907145506483300000004-2023090714553272210000000e]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # aws_s3_bucket.tf_state_bucket will be destroyed
+  - resource "aws_s3_bucket" "tf_state_bucket" {
+      - arn                         = "arn:aws:s3:::terraform-bucket-calypsoai-scaling-test" -> null
+      - bucket                      = "terraform-bucket-calypsoai-scaling-test" -> null
+      - bucket_domain_name          = "terraform-bucket-calypsoai-scaling-test.s3.amazonaws.com" -> null
+      - bucket_regional_domain_name = "terraform-bucket-calypsoai-scaling-test.s3.eu-west-1.amazonaws.com" -> null
+      - force_destroy               = false -> null
+      - hosted_zone_id              = "Z1BKCTXD74EZPE" -> null
+      - id                          = "terraform-bucket-calypsoai-scaling-test" -> null
+      - object_lock_enabled         = false -> null
+      - region                      = "eu-west-1" -> null
+      - request_payer               = "BucketOwner" -> null
+      - tags                        = {} -> null
+      - tags_all                    = {} -> null
+
+      - grant {
+          - id          = "e6f8bd2bd72f6cbe59b2f752bd2ec7a40d8cc341b014b9b25f017127cc7cd079" -> null
+          - permissions = [
+              - "FULL_CONTROL",
+            ] -> null
+          - type        = "CanonicalUser" -> null
+        }
+
+      - server_side_encryption_configuration {
+          - rule {
+              - bucket_key_enabled = false -> null
+
+              - apply_server_side_encryption_by_default {
+                  - sse_algorithm = "AES256" -> null
+                }
+            }
+        }
+
+      - versioning {
+          - enabled    = true -> null
+          - mfa_delete = false -> null
+        }
+    }
+
+  # module.eks.aws_cloudwatch_log_group.this[0] will be destroyed
+  - resource "aws_cloudwatch_log_group" "this" {
+      - arn               = "arn:aws:logs:eu-west-1:559347283443:log-group:/aws/eks/scaling-test-cluster/cluster" -> null
+      - id                = "/aws/eks/scaling-test-cluster/cluster" -> null
+      - name              = "/aws/eks/scaling-test-cluster/cluster" -> null
+      - retention_in_days = 90 -> null
+      - skip_destroy      = false -> null
+      - tags              = {
+          - "Name" = "/aws/eks/scaling-test-cluster/cluster"
+        } -> null
+      - tags_all          = {
+          - "Name" = "/aws/eks/scaling-test-cluster/cluster"
+        } -> null
+    }
+
+  # module.eks.aws_eks_addon.this["coredns"] will be destroyed
+  - resource "aws_eks_addon" "this" {
+      - addon_name           = "coredns" -> null
+      - addon_version        = "v1.10.1-eksbuild.1" -> null
+      - arn                  = "arn:aws:eks:eu-west-1:559347283443:addon/scaling-test-cluster/coredns/98c53a64-838d-81d2-9a89-f5900c01ae08" -> null
+      - cluster_name         = "scaling-test-cluster" -> null
+      - configuration_values = jsonencode(
+            {
+              - computeType = "Fargate"
+              - resources   = {
+                  - limits   = {
+                      - cpu    = "0.25"
+                      - memory = "256M"
+                    }
+                  - requests = {
+                      - cpu    = "0.25"
+                      - memory = "256M"
+                    }
+                }
+            }
+        ) -> null
+      - created_at           = "2023-09-08T12:34:06Z" -> null
+      - id                   = "scaling-test-cluster:coredns" -> null
+      - modified_at          = "2023-09-08T12:35:19Z" -> null
+      - resolve_conflicts    = "OVERWRITE" -> null
+      - tags                 = {} -> null
+      - tags_all             = {} -> null
+
+      - timeouts {}
+    }
+
+  # module.eks.aws_eks_addon.this["vpc-cni"] will be destroyed
+  - resource "aws_eks_addon" "this" {
+      - addon_name        = "vpc-cni" -> null
+      - addon_version     = "v1.14.0-eksbuild.3" -> null
+      - arn               = "arn:aws:eks:eu-west-1:559347283443:addon/scaling-test-cluster/vpc-cni/7cc53a64-838d-b53f-7c86-9c3933f7d40a" -> null
+      - cluster_name      = "scaling-test-cluster" -> null
+      - created_at        = "2023-09-08T12:34:06Z" -> null
+      - id                = "scaling-test-cluster:vpc-cni" -> null
+      - modified_at       = "2023-09-08T12:34:16Z" -> null
+      - resolve_conflicts = "OVERWRITE" -> null
+      - tags              = {} -> null
+      - tags_all          = {} -> null
+
+      - timeouts {}
+    }
+
+  # module.eks.aws_eks_cluster.this[0] will be destroyed
+  - resource "aws_eks_cluster" "this" {
+      - arn                       = "arn:aws:eks:eu-west-1:559347283443:cluster/scaling-test-cluster" -> null
+      - certificate_authority     = [
+          - {
+              - data = "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJRXc5dDZDbCtmR013RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TXpBNU1EZ3hNakkyTkRGYUZ3MHpNekE1TURVeE1qSTJOREZhTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUUM1ZXdPS2duSTlEQXJBRkdJRFNaeHV5WHI2U29NckJYUEFxbHduY3dOdFowTkxtYm5BamEwNUtHd3kKczN3RW1WQlhSdUtKc3d0OHZGZThieVdoWTEyOXJKU0VVREd5M0dXVTRBZmVScm5IYnA4amFaMy8xWlpaSFZETgp5U2VzL3VoZUFGVDRPaFZHMkhkZGxEZnFZTmxCTWcrYUZ3T1ExRm1xLzlwVjBXeC94Y1ZmNG9ON2RTT2c5TlFpCkFGRTJydkc3V3dESkd2MDQ2dzB4N3luS0NoRHFsZzBjUjZDTURqcnpPbFA3VE1JdWllcVE1NlVCRjByemR5R08KaFZ1TS92Tlh5V0dHelNIaHVpenVaeHRlTWxuSVplenE3cGpSc3AvZjZTc0JVUEw5TFlUMitrcE51anhnM2dsZApZRmE2bjcyejhWY3pXOThYeFN0QzJjdUplODJ2QWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJSVWZBY0IrWXUvSUpFOE5CQ09EOS9SWEs2RUx6QVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQ0tuL1Z3YlVBTgpqUVk1T296ZER4alRhVEFyQ1ZhRldIUlVHL1kzeEVJdThTM3phYUpWRTd4eGhKYXJ3bTRVcFdUYVp4cHY4eWZtCnliMVNFdHRMdWRwZ003ZXVJa0xBSEx0QnlPTkwyQm93YjI2WmQxclVOUjJrOHc1b0t2Nkt4SXUvUmcrckdGQUEKd0Z5bUZaUkhnSmowNVd6L3RaT0xvUGhvZzFWMWl4VXFzcDFWamdHNXYzTjRlUnpPMERjdjl2aTQ4eVlVSCs1UwpIU015bzdycnY1QlRPcHhyYWlNSWI2R201NkFaUWUwZXhDQ2d5Wk1VYTd4RUNhMTBIT0lxdjNGZHVyK2NHL0tUCjhhVFBlYm1kSGRBcUpvNEIvZUcrNzczRys1S2JIZERNcWJlc2poVC9WOUdmdWRYa3FLcjZ2TERmalV1RGpWd2gKM1ZkTlB4bXczMTA2Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K"
+            },
+        ] -> null
+      - created_at                = "2023-09-08 12:22:11.279 +0000 UTC" -> null
+      - enabled_cluster_log_types = [
+          - "api",
+          - "audit",
+          - "authenticator",
+        ] -> null
+      - endpoint                  = "https://8227A4101BC784050411D9E507E2F1A6.yl4.eu-west-1.eks.amazonaws.com" -> null
+      - id                        = "scaling-test-cluster" -> null
+      - identity                  = [
+          - {
+              - oidc = [
+                  - {
+                      - issuer = "https://oidc.eks.eu-west-1.amazonaws.com/id/8227A4101BC784050411D9E507E2F1A6"
+                    },
+                ]
+            },
+        ] -> null
+      - name                      = "scaling-test-cluster" -> null
+      - platform_version          = "eks.5" -> null
+      - role_arn                  = "arn:aws:iam::559347283443:role/scaling-test-cluster-cluster-20230907115851578400000003" -> null
+      - status                    = "ACTIVE" -> null
+      - tags                      = {} -> null
+      - tags_all                  = {} -> null
+      - version                   = "1.27" -> null
+
+      - encryption_config {
+          - resources = [
+              - "secrets",
+            ] -> null
+
+          - provider {
+              - key_arn = "arn:aws:kms:eu-west-1:559347283443:key/3ced928c-93ad-4e2c-bb9f-d6233814c279" -> null
+            }
+        }
+
+      - kubernetes_network_config {
+          - ip_family         = "ipv4" -> null
+          - service_ipv4_cidr = "172.20.0.0/16" -> null
+        }
+
+      - timeouts {}
+
+      - vpc_config {
+          - cluster_security_group_id = "sg-03aba56eb283100d7" -> null
+          - endpoint_private_access   = true -> null
+          - endpoint_public_access    = true -> null
+          - public_access_cidrs       = [
+              - "0.0.0.0/0",
+            ] -> null
+          - security_group_ids        = [] -> null
+          - subnet_ids                = [
+              - "subnet-087186eaedbd7a6fb",
+              - "subnet-0b1b614dd5cc9c409",
+              - "subnet-0d713d68950b62777",
+            ] -> null
+          - vpc_id                    = "vpc-0f6bf9aa33fce0c9a" -> null
+        }
+    }
+
+  # module.eks.aws_iam_openid_connect_provider.oidc_provider[0] will be destroyed
+  - resource "aws_iam_openid_connect_provider" "oidc_provider" {
+      - arn             = "arn:aws:iam::559347283443:oidc-provider/oidc.eks.eu-west-1.amazonaws.com/id/8227A4101BC784050411D9E507E2F1A6" -> null
+      - client_id_list  = [
+          - "sts.amazonaws.com",
+        ] -> null
+      - id              = "arn:aws:iam::559347283443:oidc-provider/oidc.eks.eu-west-1.amazonaws.com/id/8227A4101BC784050411D9E507E2F1A6" -> null
+      - tags            = {
+          - "Name" = "scaling-test-cluster-eks-irsa"
+        } -> null
+      - tags_all        = {
+          - "Name" = "scaling-test-cluster-eks-irsa"
+        } -> null
+      - thumbprint_list = [
+          - "9e99a48a9960b14926bb7f3b02e22da2b0ab7280",
+          - "06b25927c42a721631c1efd9431e648fa62e1e39",
+          - "2ad974a775f73cbdbbd8f5ac3a49255fa8fb1f8c",
+          - "055fe77d0e22309f2488e349e871240040876d28",
+        ] -> null
+      - url             = "oidc.eks.eu-west-1.amazonaws.com/id/8227A4101BC784050411D9E507E2F1A6" -> null
+    }
+
+  # module.eks.aws_iam_policy.cluster_encryption[0] will be destroyed
+  - resource "aws_iam_policy" "cluster_encryption" {
+      - arn         = "arn:aws:iam::559347283443:policy/scaling-test-cluster-cluster-ClusterEncryption20230907115908788900000006" -> null
+      - description = "Cluster encryption policy to allow cluster role to utilize CMK provided" -> null
+      - id          = "arn:aws:iam::559347283443:policy/scaling-test-cluster-cluster-ClusterEncryption20230907115908788900000006" -> null
+      - name        = "scaling-test-cluster-cluster-ClusterEncryption20230907115908788900000006" -> null
+      - name_prefix = "scaling-test-cluster-cluster-ClusterEncryption" -> null
+      - path        = "/" -> null
+      - policy      = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action   = [
+                          - "kms:Encrypt",
+                          - "kms:Decrypt",
+                          - "kms:ListGrants",
+                          - "kms:DescribeKey",
+                        ]
+                      - Effect   = "Allow"
+                      - Resource = "arn:aws:kms:eu-west-1:559347283443:key/3ced928c-93ad-4e2c-bb9f-d6233814c279"
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - policy_id   = "ANPAYEO5SGXZ6T4S25PL4" -> null
+      - tags        = {} -> null
+      - tags_all    = {} -> null
+    }
+
+  # module.eks.aws_iam_role.this[0] will be destroyed
+  - resource "aws_iam_role" "this" {
+      - arn                   = "arn:aws:iam::559347283443:role/scaling-test-cluster-cluster-20230907115851578400000003" -> null
+      - assume_role_policy    = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "sts:AssumeRole"
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Service = "eks.amazonaws.com"
+                        }
+                      - Sid       = "EKSClusterAssumeRole"
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - create_date           = "2023-09-07T11:58:51Z" -> null
+      - force_detach_policies = true -> null
+      - id                    = "scaling-test-cluster-cluster-20230907115851578400000003" -> null
+      - managed_policy_arns   = [
+          - "arn:aws:iam::559347283443:policy/scaling-test-cluster-cluster-ClusterEncryption20230907115908788900000006",
+          - "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy",
+          - "arn:aws:iam::aws:policy/AmazonEKSVPCResourceController",
+        ] -> null
+      - max_session_duration  = 3600 -> null
+      - name                  = "scaling-test-cluster-cluster-20230907115851578400000003" -> null
+      - name_prefix           = "scaling-test-cluster-cluster-" -> null
+      - path                  = "/" -> null
+      - tags                  = {} -> null
+      - tags_all              = {} -> null
+      - unique_id             = "AROAYEO5SGXZ4OFZNNDHS" -> null
+
+      - inline_policy {
+          - name   = "scaling-test-cluster-cluster" -> null
+          - policy = jsonencode(
+                {
+                  - Statement = [
+                      - {
+                          - Action   = [
+                              - "logs:CreateLogGroup",
+                            ]
+                          - Effect   = "Deny"
+                          - Resource = "*"
+                        },
+                    ]
+                  - Version   = "2012-10-17"
+                }
+            ) -> null
+        }
+    }
+
+  # module.eks.aws_iam_role_policy_attachment.cluster_encryption[0] will be destroyed
+  - resource "aws_iam_role_policy_attachment" "cluster_encryption" {
+      - id         = "scaling-test-cluster-cluster-20230907115851578400000003-20230907115909436900000007" -> null
+      - policy_arn = "arn:aws:iam::559347283443:policy/scaling-test-cluster-cluster-ClusterEncryption20230907115908788900000006" -> null
+      - role       = "scaling-test-cluster-cluster-20230907115851578400000003" -> null
+    }
+
+  # module.eks.aws_iam_role_policy_attachment.this["AmazonEKSClusterPolicy"] will be destroyed
+  - resource "aws_iam_role_policy_attachment" "this" {
+      - id         = "scaling-test-cluster-cluster-20230907115851578400000003-20230907115853225900000005" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy" -> null
+      - role       = "scaling-test-cluster-cluster-20230907115851578400000003" -> null
+    }
+
+  # module.eks.aws_iam_role_policy_attachment.this["AmazonEKSVPCResourceController"] will be destroyed
+  - resource "aws_iam_role_policy_attachment" "this" {
+      - id         = "scaling-test-cluster-cluster-20230907115851578400000003-20230907115853005000000004" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonEKSVPCResourceController" -> null
+      - role       = "scaling-test-cluster-cluster-20230907115851578400000003" -> null
+    }
+
+  # module.eks.aws_security_group.cluster[0] will be destroyed
+  - resource "aws_security_group" "cluster" {
+      - arn                    = "arn:aws:ec2:eu-west-1:559347283443:security-group/sg-0534bfc64a31faa7f" -> null
+      - description            = "EKS cluster security group" -> null
+      - egress                 = [] -> null
+      - id                     = "sg-0534bfc64a31faa7f" -> null
+      - ingress                = [
+          - {
+              - cidr_blocks      = []
+              - description      = "Node groups to cluster API"
+              - from_port        = 443
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = [
+                  - "sg-03485ea22e1731c18",
+                ]
+              - self             = false
+              - to_port          = 443
+            },
+        ] -> null
+      - name                   = "scaling-test-cluster-cluster-20230907140656878200000001" -> null
+      - name_prefix            = "scaling-test-cluster-cluster-" -> null
+      - owner_id               = "559347283443" -> null
+      - revoke_rules_on_delete = false -> null
+      - tags                   = {
+          - "Name" = "scaling-test-cluster-cluster"
+        } -> null
+      - tags_all               = {
+          - "Name" = "scaling-test-cluster-cluster"
+        } -> null
+      - vpc_id                 = "vpc-0f6bf9aa33fce0c9a" -> null
+    }
+
+  # module.eks.aws_security_group.node[0] will be destroyed
+  - resource "aws_security_group" "node" {
+      - arn                    = "arn:aws:ec2:eu-west-1:559347283443:security-group/sg-03485ea22e1731c18" -> null
+      - description            = "EKS node shared security group" -> null
+      - egress                 = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = "Allow all egress"
+              - from_port        = 0
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "-1"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 0
+            },
+        ] -> null
+      - id                     = "sg-03485ea22e1731c18" -> null
+      - ingress                = [
+          - {
+              - cidr_blocks      = []
+              - description      = "Cluster API to node 4443/tcp webhook"
+              - from_port        = 4443
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = [
+                  - "sg-0534bfc64a31faa7f",
+                ]
+              - self             = false
+              - to_port          = 4443
+            },
+          - {
+              - cidr_blocks      = []
+              - description      = "Cluster API to node 6443/tcp webhook"
+              - from_port        = 6443
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = [
+                  - "sg-0534bfc64a31faa7f",
+                ]
+              - self             = false
+              - to_port          = 6443
+            },
+          - {
+              - cidr_blocks      = []
+              - description      = "Cluster API to node 8443/tcp webhook"
+              - from_port        = 8443
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = [
+                  - "sg-0534bfc64a31faa7f",
+                ]
+              - self             = false
+              - to_port          = 8443
+            },
+          - {
+              - cidr_blocks      = []
+              - description      = "Cluster API to node 9443/tcp webhook"
+              - from_port        = 9443
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = [
+                  - "sg-0534bfc64a31faa7f",
+                ]
+              - self             = false
+              - to_port          = 9443
+            },
+          - {
+              - cidr_blocks      = []
+              - description      = "Cluster API to node groups"
+              - from_port        = 443
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = [
+                  - "sg-0534bfc64a31faa7f",
+                ]
+              - self             = false
+              - to_port          = 443
+            },
+          - {
+              - cidr_blocks      = []
+              - description      = "Cluster API to node kubelets"
+              - from_port        = 10250
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = [
+                  - "sg-0534bfc64a31faa7f",
+                ]
+              - self             = false
+              - to_port          = 10250
+            },
+          - {
+              - cidr_blocks      = []
+              - description      = "Node to node CoreDNS UDP"
+              - from_port        = 53
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "udp"
+              - security_groups  = []
+              - self             = true
+              - to_port          = 53
+            },
+          - {
+              - cidr_blocks      = []
+              - description      = "Node to node CoreDNS"
+              - from_port        = 53
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = true
+              - to_port          = 53
+            },
+          - {
+              - cidr_blocks      = []
+              - description      = "Node to node ingress on ephemeral ports"
+              - from_port        = 1025
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = true
+              - to_port          = 65535
+            },
+        ] -> null
+      - name                   = "scaling-test-cluster-node-20230907140656879000000002" -> null
+      - name_prefix            = "scaling-test-cluster-node-" -> null
+      - owner_id               = "559347283443" -> null
+      - revoke_rules_on_delete = false -> null
+      - tags                   = {
+          - "Name"                                       = "scaling-test-cluster-node"
+          - "kubernetes.io/cluster/scaling-test-cluster" = "owned"
+        } -> null
+      - tags_all               = {
+          - "Name"                                       = "scaling-test-cluster-node"
+          - "kubernetes.io/cluster/scaling-test-cluster" = "owned"
+        } -> null
+      - vpc_id                 = "vpc-0f6bf9aa33fce0c9a" -> null
+    }
+
+  # module.eks.aws_security_group_rule.cluster["ingress_nodes_443"] will be destroyed
+  - resource "aws_security_group_rule" "cluster" {
+      - description              = "Node groups to cluster API" -> null
+      - from_port                = 443 -> null
+      - id                       = "sgrule-2063763030" -> null
+      - protocol                 = "tcp" -> null
+      - security_group_id        = "sg-0534bfc64a31faa7f" -> null
+      - security_group_rule_id   = "sgr-097ba52c375f592bf" -> null
+      - self                     = false -> null
+      - source_security_group_id = "sg-03485ea22e1731c18" -> null
+      - to_port                  = 443 -> null
+      - type                     = "ingress" -> null
+    }
+
+  # module.eks.aws_security_group_rule.node["egress_all"] will be destroyed
+  - resource "aws_security_group_rule" "node" {
+      - cidr_blocks            = [
+          - "0.0.0.0/0",
+        ] -> null
+      - description            = "Allow all egress" -> null
+      - from_port              = 0 -> null
+      - id                     = "sgrule-145259702" -> null
+      - prefix_list_ids        = [] -> null
+      - protocol               = "-1" -> null
+      - security_group_id      = "sg-03485ea22e1731c18" -> null
+      - security_group_rule_id = "sgr-04e71951a68a5b52b" -> null
+      - self                   = false -> null
+      - to_port                = 0 -> null
+      - type                   = "egress" -> null
+    }
+
+  # module.eks.aws_security_group_rule.node["ingress_cluster_443"] will be destroyed
+  - resource "aws_security_group_rule" "node" {
+      - description              = "Cluster API to node groups" -> null
+      - from_port                = 443 -> null
+      - id                       = "sgrule-628813848" -> null
+      - prefix_list_ids          = [] -> null
+      - protocol                 = "tcp" -> null
+      - security_group_id        = "sg-03485ea22e1731c18" -> null
+      - security_group_rule_id   = "sgr-001902faf797fb5a3" -> null
+      - self                     = false -> null
+      - source_security_group_id = "sg-0534bfc64a31faa7f" -> null
+      - to_port                  = 443 -> null
+      - type                     = "ingress" -> null
+    }
+
+  # module.eks.aws_security_group_rule.node["ingress_cluster_4443_webhook"] will be destroyed
+  - resource "aws_security_group_rule" "node" {
+      - description              = "Cluster API to node 4443/tcp webhook" -> null
+      - from_port                = 4443 -> null
+      - id                       = "sgrule-2822061098" -> null
+      - prefix_list_ids          = [] -> null
+      - protocol                 = "tcp" -> null
+      - security_group_id        = "sg-03485ea22e1731c18" -> null
+      - security_group_rule_id   = "sgr-088132186516c5695" -> null
+      - self                     = false -> null
+      - source_security_group_id = "sg-0534bfc64a31faa7f" -> null
+      - to_port                  = 4443 -> null
+      - type                     = "ingress" -> null
+    }
+
+  # module.eks.aws_security_group_rule.node["ingress_cluster_6443_webhook"] will be destroyed
+  - resource "aws_security_group_rule" "node" {
+      - description              = "Cluster API to node 6443/tcp webhook" -> null
+      - from_port                = 6443 -> null
+      - id                       = "sgrule-1635212220" -> null
+      - prefix_list_ids          = [] -> null
+      - protocol                 = "tcp" -> null
+      - security_group_id        = "sg-03485ea22e1731c18" -> null
+      - security_group_rule_id   = "sgr-0547d9e613443e10d" -> null
+      - self                     = false -> null
+      - source_security_group_id = "sg-0534bfc64a31faa7f" -> null
+      - to_port                  = 6443 -> null
+      - type                     = "ingress" -> null
+    }
+
+  # module.eks.aws_security_group_rule.node["ingress_cluster_8443_webhook"] will be destroyed
+  - resource "aws_security_group_rule" "node" {
+      - description              = "Cluster API to node 8443/tcp webhook" -> null
+      - from_port                = 8443 -> null
+      - id                       = "sgrule-1915447197" -> null
+      - prefix_list_ids          = [] -> null
+      - protocol                 = "tcp" -> null
+      - security_group_id        = "sg-03485ea22e1731c18" -> null
+      - security_group_rule_id   = "sgr-0270f3129a7acd4be" -> null
+      - self                     = false -> null
+      - source_security_group_id = "sg-0534bfc64a31faa7f" -> null
+      - to_port                  = 8443 -> null
+      - type                     = "ingress" -> null
+    }
+
+  # module.eks.aws_security_group_rule.node["ingress_cluster_9443_webhook"] will be destroyed
+  - resource "aws_security_group_rule" "node" {
+      - description              = "Cluster API to node 9443/tcp webhook" -> null
+      - from_port                = 9443 -> null
+      - id                       = "sgrule-378164310" -> null
+      - prefix_list_ids          = [] -> null
+      - protocol                 = "tcp" -> null
+      - security_group_id        = "sg-03485ea22e1731c18" -> null
+      - security_group_rule_id   = "sgr-0f838e889544c3f77" -> null
+      - self                     = false -> null
+      - source_security_group_id = "sg-0534bfc64a31faa7f" -> null
+      - to_port                  = 9443 -> null
+      - type                     = "ingress" -> null
+    }
+
+  # module.eks.aws_security_group_rule.node["ingress_cluster_kubelet"] will be destroyed
+  - resource "aws_security_group_rule" "node" {
+      - description              = "Cluster API to node kubelets" -> null
+      - from_port                = 10250 -> null
+      - id                       = "sgrule-1827781633" -> null
+      - prefix_list_ids          = [] -> null
+      - protocol                 = "tcp" -> null
+      - security_group_id        = "sg-03485ea22e1731c18" -> null
+      - security_group_rule_id   = "sgr-0e90286d7332c8262" -> null
+      - self                     = false -> null
+      - source_security_group_id = "sg-0534bfc64a31faa7f" -> null
+      - to_port                  = 10250 -> null
+      - type                     = "ingress" -> null
+    }
+
+  # module.eks.aws_security_group_rule.node["ingress_nodes_ephemeral"] will be destroyed
+  - resource "aws_security_group_rule" "node" {
+      - description            = "Node to node ingress on ephemeral ports" -> null
+      - from_port              = 1025 -> null
+      - id                     = "sgrule-2976726306" -> null
+      - prefix_list_ids        = [] -> null
+      - protocol               = "tcp" -> null
+      - security_group_id      = "sg-03485ea22e1731c18" -> null
+      - security_group_rule_id = "sgr-0109d8407ab8334b3" -> null
+      - self                   = true -> null
+      - to_port                = 65535 -> null
+      - type                   = "ingress" -> null
+    }
+
+  # module.eks.aws_security_group_rule.node["ingress_self_coredns_tcp"] will be destroyed
+  - resource "aws_security_group_rule" "node" {
+      - description            = "Node to node CoreDNS" -> null
+      - from_port              = 53 -> null
+      - id                     = "sgrule-24106789" -> null
+      - prefix_list_ids        = [] -> null
+      - protocol               = "tcp" -> null
+      - security_group_id      = "sg-03485ea22e1731c18" -> null
+      - security_group_rule_id = "sgr-0ea8c150314237ed3" -> null
+      - self                   = true -> null
+      - to_port                = 53 -> null
+      - type                   = "ingress" -> null
+    }
+
+  # module.eks.aws_security_group_rule.node["ingress_self_coredns_udp"] will be destroyed
+  - resource "aws_security_group_rule" "node" {
+      - description            = "Node to node CoreDNS UDP" -> null
+      - from_port              = 53 -> null
+      - id                     = "sgrule-2771416266" -> null
+      - prefix_list_ids        = [] -> null
+      - protocol               = "udp" -> null
+      - security_group_id      = "sg-03485ea22e1731c18" -> null
+      - security_group_rule_id = "sgr-035c952d9ff81a23b" -> null
+      - self                   = true -> null
+      - to_port                = 53 -> null
+      - type                   = "ingress" -> null
+    }
+
+  # module.eks.time_sleep.this[0] will be destroyed
+  - resource "time_sleep" "this" {
+      - create_duration = "30s" -> null
+      - id              = "2023-09-08T12:31:32Z" -> null
+      - triggers        = {
+          - "cluster_certificate_authority_data" = "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJRXc5dDZDbCtmR013RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TXpBNU1EZ3hNakkyTkRGYUZ3MHpNekE1TURVeE1qSTJOREZhTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUUM1ZXdPS2duSTlEQXJBRkdJRFNaeHV5WHI2U29NckJYUEFxbHduY3dOdFowTkxtYm5BamEwNUtHd3kKczN3RW1WQlhSdUtKc3d0OHZGZThieVdoWTEyOXJKU0VVREd5M0dXVTRBZmVScm5IYnA4amFaMy8xWlpaSFZETgp5U2VzL3VoZUFGVDRPaFZHMkhkZGxEZnFZTmxCTWcrYUZ3T1ExRm1xLzlwVjBXeC94Y1ZmNG9ON2RTT2c5TlFpCkFGRTJydkc3V3dESkd2MDQ2dzB4N3luS0NoRHFsZzBjUjZDTURqcnpPbFA3VE1JdWllcVE1NlVCRjByemR5R08KaFZ1TS92Tlh5V0dHelNIaHVpenVaeHRlTWxuSVplenE3cGpSc3AvZjZTc0JVUEw5TFlUMitrcE51anhnM2dsZApZRmE2bjcyejhWY3pXOThYeFN0QzJjdUplODJ2QWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJSVWZBY0IrWXUvSUpFOE5CQ09EOS9SWEs2RUx6QVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQ0tuL1Z3YlVBTgpqUVk1T296ZER4alRhVEFyQ1ZhRldIUlVHL1kzeEVJdThTM3phYUpWRTd4eGhKYXJ3bTRVcFdUYVp4cHY4eWZtCnliMVNFdHRMdWRwZ003ZXVJa0xBSEx0QnlPTkwyQm93YjI2WmQxclVOUjJrOHc1b0t2Nkt4SXUvUmcrckdGQUEKd0Z5bUZaUkhnSmowNVd6L3RaT0xvUGhvZzFWMWl4VXFzcDFWamdHNXYzTjRlUnpPMERjdjl2aTQ4eVlVSCs1UwpIU015bzdycnY1QlRPcHhyYWlNSWI2R201NkFaUWUwZXhDQ2d5Wk1VYTd4RUNhMTBIT0lxdjNGZHVyK2NHL0tUCjhhVFBlYm1kSGRBcUpvNEIvZUcrNzczRys1S2JIZERNcWJlc2poVC9WOUdmdWRYa3FLcjZ2TERmalV1RGpWd2gKM1ZkTlB4bXczMTA2Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K"
+          - "cluster_endpoint"                   = "https://8227A4101BC784050411D9E507E2F1A6.yl4.eu-west-1.eks.amazonaws.com"
+          - "cluster_name"                       = "scaling-test-cluster"
+          - "cluster_version"                    = "1.27"
+        } -> null
+    }
+
+  # module.eks.time_sleep.this[0] (deposed object 095e4093) will be destroyed
+  # (left over from a partially-failed replacement of this instance)
+  - resource "time_sleep" "this" {
+      - create_duration = "30s" -> null
+      - id              = "2023-09-07T17:07:41Z" -> null
+      - triggers        = {
+          - "cluster_certificate_authority_data" = "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJYzd5V1B1c3hSUGN3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TXpBNU1EY3hOekF5TkRCYUZ3MHpNekE1TURReE56QXlOREJhTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUURGWGpEN0NxUWREWElQTzFYa3gvbEFESXBvd2RpS2s3anVRamdEdnczSVQydVJZT3dvdmd4VDJXYk0KTjE3dlZyZ052Nk9nYUtnTzlYeFJUb2FXWDYzSm1XdkxzcXlRRnh2VDZRS2I1cXIxUVhPZmdRWE9NeXpZN1BOcQpSMjU5UU1vdm9SRUFUMXVzUFBJcDJBR2xWTUJOeHo4QkdBQkFNQjZJMERHMjJqNnhGdHdMQjNnMWpGY0hTTkRrCkhJbkw4bnlmWHpKMFBWQ0t6S2RVRjh5bWdnendidkhwVWhzN085S1NmYzE1S2NGZjJ3ZEkxQW5vSlI2UUtvWmkKRysybkp2d1MzTXd3QlUvd0RQTnNBTGQ0VCtYREZkdVJjZ1c2RXV3RG9ONlpML1daenJPRlpEK0ZFaldVU21UWQpaUndpU3hTT280NGg2NDVuOEhQSnBLaVhpR0tGQWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJSeUJ6TU9tVXVOaytnbTlzbG9yQm1KZkIyU3hEQVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQ3RaWEg0eEozUApFYnBreWN4SnprdlJwU0RCUXliWWo3MmRMbkF6a25GR3Z3QUtUUVI5bDFxMDVHRkErVFd4RmlBTjlDN0RleUcrCmlOUVIxcFVPWlBSKy83NFNXVDVNU3EwUmtmTUlnZGV6Q2Z3QksrVmZpTld4UGZ1YTdHeFZwV0dkOUtEZ3dtRVUKYUNETWE5bm44UWIxdStwbE5Ob3VhelJUUzRaNi9NNEJRbWRDTExuK3JNdXdNb1B1aFpaUVg3ZTlYMTc3OXpVZwo2a0FCaWRacnRscHZ6YnNIUkU0S2R1QmcxMHp2a1VHQndGNDdzQ214aG5ucU1IdlIyVUFQemlKN1pMbzZYYU9ICkM1Ykkva2NyRStPTVl3R2dadkVCcDd5Y042aXRINlNyZVpNMmd2dmdDeXJ2UURaSHlwTVUxQXZ2dFdqS1h3RW0KYUVvTXpWMlo0K1pZCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K"
+          - "cluster_endpoint"                   = "https://C7ACFBCF384F8C0301A233792C4A8654.gr7.eu-west-1.eks.amazonaws.com"
+          - "cluster_name"                       = "scaling-test-cluster"
+          - "cluster_version"                    = "1.27"
+        } -> null
+    }
+
+  # module.eks.time_sleep.this[0] (deposed object 6273ee78) will be destroyed
+  # (left over from a partially-failed replacement of this instance)
+  - resource "time_sleep" "this" {
+      - create_duration = "30s" -> null
+      - id              = "2023-09-07T17:28:21Z" -> null
+      - triggers        = {
+          - "cluster_certificate_authority_data" = "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJZndQMktBVythUmd3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TXpBNU1EY3hOekl6TVRKYUZ3MHpNekE1TURReE56SXpNVEphTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUURLd1N3eXBxenRSbi9iN2p2dGJvMHN3aTU4bWlvYUtwWXZ4U3drZ2cyK0hkWFdNbjB0RTFpakc2YVcKRENLdU12blpObjNBdHZQRXlCR2lSR3ozYXJDZFUrbUhxMHpYSHNCczRoS3RQUlFXbHZ3Y0NBWU9lSlhFV0Z2UQp3WUJuUWs3SkxFWmdsaTloUWhrWi9QSjFQb3JjcTJtc1hGeXJWckVhNWVzbEplaUQrdm12QkdsSi8zS2toUjZKCjRIdEZmRTJZM3ljQWhjK2oyT1BtQ3RTamNuN2JTb1NPS21JQ0VpckFKeHpSc1Y5LzBseS9GR3E5bVNrU3BHZzMKRTR6c09vUVBpNjlKSmoyZHVndzdNbXljSDVVV09Fd0V4bmVRTmk1RlBpVkZ4azA5M2ZiV29BeDJHZnFwQXQ0eApiVTVTd1I4UWRHWmJNVUx3cXZ3R0RRVlYwNmZYQWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJRRHJMQ05vWWNkM2RDdjVwZnFSck1qU3VpanR6QVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQVN5Vy9kREdBTApDV3l2UE8xK2VVczVCOVRmZHVmcXgwWVFJWG9LQk9YMzBVTlZXZjlVc3h2QzNzamJadXhPeURhMHFvQXJOVk5xCkNqQktmZUptZzFkSGswTlZSOGZ3dmlUSHhtU3RVRVZtd1ZmSUoyd3BXLzE4MktjTUJpWkxnTGNWOUc0bXhlK1UKUmNjc2lGL2VHV2kycElOS3hiSElpc1NBZmRYd3cxZTZWTFNBemQwRHgvYUU1R05xSTdXa20wSC9IdGFlc3E5WQpCMklaNk9keHM1YmdtNmpjVDc1eE1Tb2NaRENNWDFFY0x4elNUcWl5T3ZYanZTZk00eGtMQ1J6REZPUWdqbzdWCjQwdmRCOTRCOVI3cXVtZzJKMURyK2Q1VVZuU1R1K01rOUhrNW5YQk5rcTBXNzE4c0pmK2JoVXUyeGRqOFprRGcKNTJIOVNZdW85aGlCCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K"
+          - "cluster_endpoint"                   = "https://7D9C0C79FCEAC4C4E8974E553223F68E.gr7.eu-west-1.eks.amazonaws.com"
+          - "cluster_name"                       = "scaling-test-cluster"
+          - "cluster_version"                    = "1.27"
+        } -> null
+    }
+
+  # module.eks.time_sleep.this[0] (deposed object a6697c66) will be destroyed
+  # (left over from a partially-failed replacement of this instance)
+  - resource "time_sleep" "this" {
+      - create_duration = "30s" -> null
+      - id              = "2023-09-08T11:31:21Z" -> null
+      - triggers        = {
+          - "cluster_certificate_authority_data" = "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJYmV3ZEUxenNGamN3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TXpBNU1EZ3hNVEkxTXpWYUZ3MHpNekE1TURVeE1USTFNelZhTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUUN3ZCtOTTYwT0Uybm1xR1VnRUoyV05xdzBKd0Vkc1pmYThOV2NHZHk0ckNOUjYxaFE4TEErQnhlOW0KS00rK3ZoNVRHODFlVlErZkE3U1ZESGU2c2hOTEtpbFpkSmRMVE1qamZXQ0huYWMzWGdrR2NkbTQza0xKMmxoYQoxOEEzYzROS0s5TnJxc2dIQUprN2Nrc1I0K2RQYlUxd0ErQUZLVGpmc3k3TzJrSWRZMm9sWWtJK2pvdG8zNHYrCmtjMGJuWDFaQkd4YkVRUTc3NE9zMlFaeDNWZFcyTm1LQVIwZzRWYzBCZXRoSzRVQmQ2eU15czlTZG9EZ2Q0RjcKZnZvalpPWHVuM1Qwa1ppT3ZaMHU0WEV6SjBrSGYwdXZaMVNLNktCdjN4SitkMGtSdjZEMDQ3QjlrWHFSMzVOVgpOb1Fxb0Z2cTJEZVhFNkdsS2hsVC9XZERNeUxqQWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJTc2FwMjd5NDZiSElQcVg5ZVk0NjQ5TEh3NEJqQVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQUs0NWMrcm9OdgpSVG9pT3VYK21BdFI0UmRUZEtESFFFSTU1dFJpSE93ZlRvbWZLZ3hIZnR5bXc1UjF2OGpjdVQxanNReFY1aUlyCmZHZk1mUHRnclgwVCtPWWwyNUVEMzYvbFZTMzROcldFMSt0ZzdreUhhMDkrN01WUnEwd2NEL25OcStoNzhnN2IKZFNVZzNmQVdkNnlGemNRQUxsek5iUmF5OG1BdlUrZnd4WjJaR04yemxnbmE0bnN2SDR5cit5MktVcTN4SE1zRwpCLzdqRHlER1NBd3JVUXl0dGpqdUNjMjFubS9mRWpDbXV6RTRKZ21sR0o4SkVlMksrUkhaYXhwTmR0dnFqTkFzClJScVdaVDVqZGkwTm5GZlg2SXd2VU5TZ0lhZk1FVXJxc2loWG4xSm80VGk4bnFUMWc2UjhpeG5lRnE3VCsyNUMKWVUxK1RYazQ5SnR4Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K"
+          - "cluster_endpoint"                   = "https://B109DACF59155D23DE095B87AD2D96D1.gr7.eu-west-1.eks.amazonaws.com"
+          - "cluster_name"                       = "scaling-test-cluster"
+          - "cluster_version"                    = "1.27"
+        } -> null
+    }
+
+  # module.eks.time_sleep.this[0] (deposed object ab0f7c06) will be destroyed
+  # (left over from a partially-failed replacement of this instance)
+  - resource "time_sleep" "this" {
+      - create_duration = "30s" -> null
+      - id              = "2023-09-07T14:15:33Z" -> null
+      - triggers        = {
+          - "cluster_certificate_authority_data" = "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJZStxWHFSNndXeG93RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TXpBNU1EY3hOREV4TURsYUZ3MHpNekE1TURReE5ERXhNRGxhTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUUQxRkY2MXJiWE16UUlQMms4WGZ3YmRodHM5VHpxQ0N1TSsyd1NteEJtM0RUOG42NkNMWlRTTFhITEoKcGIxR0FKem1JU3pXbzdzOU5xUStiWTYxUTRESlNjbEdlaS9XbWx3aHVFLzNhL3llZVdTYUNhZzZnTW93djZ2bgp6MUcweDAyWGxlZS95RUlRR0JlS2E2WHpIaGN5VDVWMlpmZGw1dXVYRWIrcDFsUVp6V3pGaUxEKzlJRkpzUmI1CjgycU9DbmFUSkdWMEdQS041bk1WVGZqeHhVR0dqd0lnT1krenhseUY3VjBzRFpVak9TRlBHZkdNS1p6Yko1STYKVFN6R25LY204TjBIcGd5NUx4enV6UzhkMjltY2Vsb0o4MzdJTjAzWFViVmp5WVZUUllydjFGMVFCWjNMWnAwdgo3WS9EVHo2c2traWxSbEJ6MktkTnFLV0tzQm43QWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJST2l1LzYwbGM2R3VBNUxha0wyb1QvQmRrdWZqQVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQW9PcHRqanRiSQpqNjNFSlFJRFRyUEh6Mld6Qm5qQWVaaWhaNGtxSDVrblpmMlhrL0V0THhyOU9xZG1vZGJwUlRJS1ZDVnNEamR3Cnc5LzJSUXo3RU8zaDJKZkdoU3BmNncrd3JFN3NvekVnZlBTYStiNUhoR3ErRi8wTmZ1OGhTMGpKU1g1dkd2RzUKRmM5S09kdkxiNWxqNTBGWnl4S0wrNHFyb2RCMCtPZ0V0cG1sKzI4RkNXbEg2ZWhVeHN4cjVLWFljNU5hVWt2eQpLTFB1cFU4VVpYU1kvcCt6RmpMUTBCZitsMmxuMU1BMGJ4QTRjVzI1TFloWEJ5d01PeERQVUlBcjRSbXlhNU1ZCjN3TjhpUVBYb2pWdW5hVjRNeHRiMlRmakU4Y3NHcjRGSlZ3Umx1YlREV05vQngwYzNISjRJd1kzWUxXSjlXelgKVmdZcGtpUHoycFkzCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K"
+          - "cluster_endpoint"                   = "https://2240F9915BD9FAF2FAC79E0800991A81.gr7.eu-west-1.eks.amazonaws.com"
+          - "cluster_name"                       = "scaling-test-cluster"
+          - "cluster_version"                    = "1.27"
+        } -> null
+    }
+
+  # module.karpenter.aws_cloudwatch_event_rule.this["health_event"] will be destroyed
+  - resource "aws_cloudwatch_event_rule" "this" {
+      - arn            = "arn:aws:events:eu-west-1:559347283443:rule/KarpenterHealthEvent-20230907145506484200000006" -> null
+      - description    = "Karpenter interrupt - AWS health event" -> null
+      - event_bus_name = "default" -> null
+      - event_pattern  = jsonencode(
+            {
+              - detail-type = [
+                  - "AWS Health Event",
+                ]
+              - source      = [
+                  - "aws.health",
+                ]
+            }
+        ) -> null
+      - id             = "KarpenterHealthEvent-20230907145506484200000006" -> null
+      - is_enabled     = true -> null
+      - name           = "KarpenterHealthEvent-20230907145506484200000006" -> null
+      - name_prefix    = "KarpenterHealthEvent-" -> null
+      - tags           = {
+          - "ClusterName" = "scaling-test-cluster"
+          - "Environment" = "dev"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all       = {
+          - "ClusterName" = "scaling-test-cluster"
+          - "Environment" = "dev"
+          - "Terraform"   = "true"
+        } -> null
+    }
+
+  # module.karpenter.aws_cloudwatch_event_rule.this["instance_rebalance"] will be destroyed
+  - resource "aws_cloudwatch_event_rule" "this" {
+      - arn            = "arn:aws:events:eu-west-1:559347283443:rule/KarpenterInstanceRebalance-20230907145506481500000002" -> null
+      - description    = "Karpenter interrupt - EC2 instance rebalance recommendation" -> null
+      - event_bus_name = "default" -> null
+      - event_pattern  = jsonencode(
+            {
+              - detail-type = [
+                  - "EC2 Instance Rebalance Recommendation",
+                ]
+              - source      = [
+                  - "aws.ec2",
+                ]
+            }
+        ) -> null
+      - id             = "KarpenterInstanceRebalance-20230907145506481500000002" -> null
+      - is_enabled     = true -> null
+      - name           = "KarpenterInstanceRebalance-20230907145506481500000002" -> null
+      - name_prefix    = "KarpenterInstanceRebalance-" -> null
+      - tags           = {
+          - "ClusterName" = "scaling-test-cluster"
+          - "Environment" = "dev"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all       = {
+          - "ClusterName" = "scaling-test-cluster"
+          - "Environment" = "dev"
+          - "Terraform"   = "true"
+        } -> null
+    }
+
+  # module.karpenter.aws_cloudwatch_event_rule.this["instance_state_change"] will be destroyed
+  - resource "aws_cloudwatch_event_rule" "this" {
+      - arn            = "arn:aws:events:eu-west-1:559347283443:rule/KarpenterInstanceStateChange-20230907145506484700000007" -> null
+      - description    = "Karpenter interrupt - EC2 instance state-change notification" -> null
+      - event_bus_name = "default" -> null
+      - event_pattern  = jsonencode(
+            {
+              - detail-type = [
+                  - "EC2 Instance State-change Notification",
+                ]
+              - source      = [
+                  - "aws.ec2",
+                ]
+            }
+        ) -> null
+      - id             = "KarpenterInstanceStateChange-20230907145506484700000007" -> null
+      - is_enabled     = true -> null
+      - name           = "KarpenterInstanceStateChange-20230907145506484700000007" -> null
+      - name_prefix    = "KarpenterInstanceStateChange-" -> null
+      - tags           = {
+          - "ClusterName" = "scaling-test-cluster"
+          - "Environment" = "dev"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all       = {
+          - "ClusterName" = "scaling-test-cluster"
+          - "Environment" = "dev"
+          - "Terraform"   = "true"
+        } -> null
+    }
+
+  # module.karpenter.aws_cloudwatch_event_rule.this["spot_interupt"] will be destroyed
+  - resource "aws_cloudwatch_event_rule" "this" {
+      - arn            = "arn:aws:events:eu-west-1:559347283443:rule/KarpenterSpotInterrupt-20230907145506483800000005" -> null
+      - description    = "Karpenter interrupt - EC2 spot instance interruption warning" -> null
+      - event_bus_name = "default" -> null
+      - event_pattern  = jsonencode(
+            {
+              - detail-type = [
+                  - "EC2 Spot Instance Interruption Warning",
+                ]
+              - source      = [
+                  - "aws.ec2",
+                ]
+            }
+        ) -> null
+      - id             = "KarpenterSpotInterrupt-20230907145506483800000005" -> null
+      - is_enabled     = true -> null
+      - name           = "KarpenterSpotInterrupt-20230907145506483800000005" -> null
+      - name_prefix    = "KarpenterSpotInterrupt-" -> null
+      - tags           = {
+          - "ClusterName" = "scaling-test-cluster"
+          - "Environment" = "dev"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all       = {
+          - "ClusterName" = "scaling-test-cluster"
+          - "Environment" = "dev"
+          - "Terraform"   = "true"
+        } -> null
+    }
+
+  # module.karpenter.aws_cloudwatch_event_target.this["health_event"] will be destroyed
+  - resource "aws_cloudwatch_event_target" "this" {
+      - arn            = "arn:aws:sqs:eu-west-1:559347283443:Karpenter-scaling-test-cluster" -> null
+      - event_bus_name = "default" -> null
+      - id             = "KarpenterHealthEvent-20230907145506484200000006-KarpenterInterruptionQueueTarget" -> null
+      - rule           = "KarpenterHealthEvent-20230907145506484200000006" -> null
+      - target_id      = "KarpenterInterruptionQueueTarget" -> null
+    }
+
+  # module.karpenter.aws_cloudwatch_event_target.this["instance_rebalance"] will be destroyed
+  - resource "aws_cloudwatch_event_target" "this" {
+      - arn            = "arn:aws:sqs:eu-west-1:559347283443:Karpenter-scaling-test-cluster" -> null
+      - event_bus_name = "default" -> null
+      - id             = "KarpenterInstanceRebalance-20230907145506481500000002-KarpenterInterruptionQueueTarget" -> null
+      - rule           = "KarpenterInstanceRebalance-20230907145506481500000002" -> null
+      - target_id      = "KarpenterInterruptionQueueTarget" -> null
+    }
+
+  # module.karpenter.aws_cloudwatch_event_target.this["instance_state_change"] will be destroyed
+  - resource "aws_cloudwatch_event_target" "this" {
+      - arn            = "arn:aws:sqs:eu-west-1:559347283443:Karpenter-scaling-test-cluster" -> null
+      - event_bus_name = "default" -> null
+      - id             = "KarpenterInstanceStateChange-20230907145506484700000007-KarpenterInterruptionQueueTarget" -> null
+      - rule           = "KarpenterInstanceStateChange-20230907145506484700000007" -> null
+      - target_id      = "KarpenterInterruptionQueueTarget" -> null
+    }
+
+  # module.karpenter.aws_cloudwatch_event_target.this["spot_interupt"] will be destroyed
+  - resource "aws_cloudwatch_event_target" "this" {
+      - arn            = "arn:aws:sqs:eu-west-1:559347283443:Karpenter-scaling-test-cluster" -> null
+      - event_bus_name = "default" -> null
+      - id             = "KarpenterSpotInterrupt-20230907145506483800000005-KarpenterInterruptionQueueTarget" -> null
+      - rule           = "KarpenterSpotInterrupt-20230907145506483800000005" -> null
+      - target_id      = "KarpenterInterruptionQueueTarget" -> null
+    }
+
+  # module.karpenter.aws_iam_instance_profile.this[0] will be destroyed
+  - resource "aws_iam_instance_profile" "this" {
+      - arn         = "arn:aws:iam::559347283443:instance-profile/Karpenter-scaling-test-cluster-20230907145507380900000008" -> null
+      - create_date = "2023-09-07T14:55:07Z" -> null
+      - id          = "Karpenter-scaling-test-cluster-20230907145507380900000008" -> null
+      - name        = "Karpenter-scaling-test-cluster-20230907145507380900000008" -> null
+      - name_prefix = "Karpenter-scaling-test-cluster-" -> null
+      - path        = "/" -> null
+      - role        = "Karpenter-scaling-test-cluster-20230907145506482700000003" -> null
+      - tags        = {
+          - "Environment" = "dev"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all    = {
+          - "Environment" = "dev"
+          - "Terraform"   = "true"
+        } -> null
+      - unique_id   = "AIPAYEO5SGXZXSNRF334A" -> null
+    }
+
+  # module.karpenter.aws_iam_policy.irsa[0] will be destroyed
+  - resource "aws_iam_policy" "irsa" {
+      - arn         = "arn:aws:iam::559347283443:policy/KarpenterIRSA-scaling-test-cluster-2023090714553210330000000d" -> null
+      - description = "Karpenter IAM role for service account" -> null
+      - id          = "arn:aws:iam::559347283443:policy/KarpenterIRSA-scaling-test-cluster-2023090714553210330000000d" -> null
+      - name        = "KarpenterIRSA-scaling-test-cluster-2023090714553210330000000d" -> null
+      - name_prefix = "KarpenterIRSA-scaling-test-cluster-" -> null
+      - path        = "/" -> null
+      - policy      = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action   = [
+                          - "pricing:GetProducts",
+                          - "ec2:DescribeSubnets",
+                          - "ec2:DescribeSpotPriceHistory",
+                          - "ec2:DescribeSecurityGroups",
+                          - "ec2:DescribeLaunchTemplates",
+                          - "ec2:DescribeInstances",
+                          - "ec2:DescribeInstanceTypes",
+                          - "ec2:DescribeInstanceTypeOfferings",
+                          - "ec2:DescribeImages",
+                          - "ec2:DescribeAvailabilityZones",
+                          - "ec2:CreateTags",
+                          - "ec2:CreateLaunchTemplate",
+                          - "ec2:CreateFleet",
+                        ]
+                      - Effect   = "Allow"
+                      - Resource = "*"
+                    },
+                  - {
+                      - Action    = [
+                          - "ec2:TerminateInstances",
+                          - "ec2:DeleteLaunchTemplate",
+                        ]
+                      - Condition = {
+                          - StringEquals = {
+                              - "ec2:ResourceTag/karpenter.sh/discovery" = "scaling-test-cluster"
+                            }
+                        }
+                      - Effect    = "Allow"
+                      - Resource  = "*"
+                    },
+                  - {
+                      - Action    = "ec2:RunInstances"
+                      - Condition = {
+                          - StringEquals = {
+                              - "ec2:ResourceTag/karpenter.sh/discovery" = "scaling-test-cluster"
+                            }
+                        }
+                      - Effect    = "Allow"
+                      - Resource  = "arn:aws:ec2:*:559347283443:launch-template/*"
+                    },
+                  - {
+                      - Action   = "ec2:RunInstances"
+                      - Effect   = "Allow"
+                      - Resource = [
+                          - "arn:aws:ec2:*::snapshot/*",
+                          - "arn:aws:ec2:*::image/*",
+                          - "arn:aws:ec2:*:559347283443:volume/*",
+                          - "arn:aws:ec2:*:559347283443:subnet/*",
+                          - "arn:aws:ec2:*:559347283443:spot-instances-request/*",
+                          - "arn:aws:ec2:*:559347283443:security-group/*",
+                          - "arn:aws:ec2:*:559347283443:network-interface/*",
+                          - "arn:aws:ec2:*:559347283443:instance/*",
+                        ]
+                    },
+                  - {
+                      - Action   = "ssm:GetParameter"
+                      - Effect   = "Allow"
+                      - Resource = "arn:aws:ssm:*:*:parameter/aws/service/*"
+                    },
+                  - {
+                      - Action   = "eks:DescribeCluster"
+                      - Effect   = "Allow"
+                      - Resource = "arn:aws:eks:*:559347283443:cluster/scaling-test-cluster"
+                    },
+                  - {
+                      - Action   = "iam:PassRole"
+                      - Effect   = "Allow"
+                      - Resource = "arn:aws:iam::559347283443:role/Karpenter-scaling-test-cluster-20230907145506482700000003"
+                    },
+                  - {
+                      - Action   = [
+                          - "sqs:ReceiveMessage",
+                          - "sqs:GetQueueUrl",
+                          - "sqs:GetQueueAttributes",
+                          - "sqs:DeleteMessage",
+                        ]
+                      - Effect   = "Allow"
+                      - Resource = "arn:aws:sqs:eu-west-1:559347283443:Karpenter-scaling-test-cluster"
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - policy_id   = "ANPAYEO5SGXZSKHNHZFON" -> null
+      - tags        = {
+          - "Environment" = "dev"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all    = {
+          - "Environment" = "dev"
+          - "Terraform"   = "true"
+        } -> null
+    }
+
+  # module.karpenter.aws_iam_role.irsa[0] will be destroyed
+  - resource "aws_iam_role" "irsa" {
+      - arn                   = "arn:aws:iam::559347283443:role/KarpenterIRSA-scaling-test-cluster-20230907145506483300000004" -> null
+      - assume_role_policy    = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "sts:AssumeRoleWithWebIdentity"
+                      - Condition = {
+                          - StringEquals = {
+                              - "oidc.eks.eu-west-1.amazonaws.com/id/8227A4101BC784050411D9E507E2F1A6:aud" = "sts.amazonaws.com"
+                              - "oidc.eks.eu-west-1.amazonaws.com/id/8227A4101BC784050411D9E507E2F1A6:sub" = "system:serviceaccount:karpenter:karpenter"
+                            }
+                        }
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Federated = "arn:aws:iam::559347283443:oidc-provider/oidc.eks.eu-west-1.amazonaws.com/id/8227A4101BC784050411D9E507E2F1A6"
+                        }
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - create_date           = "2023-09-07T14:55:06Z" -> null
+      - description           = "Karpenter IAM role for service account" -> null
+      - force_detach_policies = true -> null
+      - id                    = "KarpenterIRSA-scaling-test-cluster-20230907145506483300000004" -> null
+      - managed_policy_arns   = [
+          - "arn:aws:iam::559347283443:policy/KarpenterIRSA-scaling-test-cluster-2023090714553210330000000d",
+        ] -> null
+      - max_session_duration  = 3600 -> null
+      - name                  = "KarpenterIRSA-scaling-test-cluster-20230907145506483300000004" -> null
+      - name_prefix           = "KarpenterIRSA-scaling-test-cluster-" -> null
+      - path                  = "/" -> null
+      - tags                  = {
+          - "Environment" = "dev"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all              = {
+          - "Environment" = "dev"
+          - "Terraform"   = "true"
+        } -> null
+      - unique_id             = "AROAYEO5SGXZ4SWVJRY2F" -> null
+    }
+
+  # module.karpenter.aws_iam_role.this[0] will be destroyed
+  - resource "aws_iam_role" "this" {
+      - arn                   = "arn:aws:iam::559347283443:role/Karpenter-scaling-test-cluster-20230907145506482700000003" -> null
+      - assume_role_policy    = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "sts:AssumeRole"
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Service = "ec2.amazonaws.com"
+                        }
+                      - Sid       = "EKSNodeAssumeRole"
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - create_date           = "2023-09-07T14:55:06Z" -> null
+      - force_detach_policies = true -> null
+      - id                    = "Karpenter-scaling-test-cluster-20230907145506482700000003" -> null
+      - managed_policy_arns   = [
+          - "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly",
+          - "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
+          - "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
+        ] -> null
+      - max_session_duration  = 3600 -> null
+      - name                  = "Karpenter-scaling-test-cluster-20230907145506482700000003" -> null
+      - name_prefix           = "Karpenter-scaling-test-cluster-" -> null
+      - path                  = "/" -> null
+      - tags                  = {
+          - "Environment" = "dev"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all              = {
+          - "Environment" = "dev"
+          - "Terraform"   = "true"
+        } -> null
+      - unique_id             = "AROAYEO5SGXZT67KRDWKA" -> null
+    }
+
+  # module.karpenter.aws_iam_role_policy_attachment.irsa[0] will be destroyed
+  - resource "aws_iam_role_policy_attachment" "irsa" {
+      - id         = "KarpenterIRSA-scaling-test-cluster-20230907145506483300000004-2023090714553272210000000e" -> null
+      - policy_arn = "arn:aws:iam::559347283443:policy/KarpenterIRSA-scaling-test-cluster-2023090714553210330000000d" -> null
+      - role       = "KarpenterIRSA-scaling-test-cluster-20230907145506483300000004" -> null
+    }
+
+  # module.karpenter.aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"] will be destroyed
+  - resource "aws_iam_role_policy_attachment" "this" {
+      - id         = "Karpenter-scaling-test-cluster-20230907145506482700000003-2023090714550778090000000b" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly" -> null
+      - role       = "Karpenter-scaling-test-cluster-20230907145506482700000003" -> null
+    }
+
+  # module.karpenter.aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"] will be destroyed
+  - resource "aws_iam_role_policy_attachment" "this" {
+      - id         = "Karpenter-scaling-test-cluster-20230907145506482700000003-20230907145507556600000009" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy" -> null
+      - role       = "Karpenter-scaling-test-cluster-20230907145506482700000003" -> null
+    }
+
+  # module.karpenter.aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"] will be destroyed
+  - resource "aws_iam_role_policy_attachment" "this" {
+      - id         = "Karpenter-scaling-test-cluster-20230907145506482700000003-2023090714550771610000000a" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy" -> null
+      - role       = "Karpenter-scaling-test-cluster-20230907145506482700000003" -> null
+    }
+
+  # module.karpenter.aws_sqs_queue.this[0] will be destroyed
+  - resource "aws_sqs_queue" "this" {
+      - arn                               = "arn:aws:sqs:eu-west-1:559347283443:Karpenter-scaling-test-cluster" -> null
+      - content_based_deduplication       = false -> null
+      - delay_seconds                     = 0 -> null
+      - fifo_queue                        = false -> null
+      - id                                = "https://sqs.eu-west-1.amazonaws.com/559347283443/Karpenter-scaling-test-cluster" -> null
+      - kms_data_key_reuse_period_seconds = 300 -> null
+      - max_message_size                  = 262144 -> null
+      - message_retention_seconds         = 300 -> null
+      - name                              = "Karpenter-scaling-test-cluster" -> null
+      - policy                            = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "sqs:SendMessage"
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Service = [
+                              - "events.amazonaws.com",
+                              - "sqs.amazonaws.com",
+                            ]
+                        }
+                      - Resource  = "arn:aws:sqs:eu-west-1:559347283443:Karpenter-scaling-test-cluster"
+                      - Sid       = "SqsWrite"
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - receive_wait_time_seconds         = 0 -> null
+      - sqs_managed_sse_enabled           = true -> null
+      - tags                              = {
+          - "Environment" = "dev"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all                          = {
+          - "Environment" = "dev"
+          - "Terraform"   = "true"
+        } -> null
+      - url                               = "https://sqs.eu-west-1.amazonaws.com/559347283443/Karpenter-scaling-test-cluster" -> null
+      - visibility_timeout_seconds        = 30 -> null
+    }
+
+  # module.karpenter.aws_sqs_queue_policy.this[0] will be destroyed
+  - resource "aws_sqs_queue_policy" "this" {
+      - id        = "https://sqs.eu-west-1.amazonaws.com/559347283443/Karpenter-scaling-test-cluster" -> null
+      - policy    = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "sqs:SendMessage"
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Service = [
+                              - "sqs.amazonaws.com",
+                              - "events.amazonaws.com",
+                            ]
+                        }
+                      - Resource  = "arn:aws:sqs:eu-west-1:559347283443:Karpenter-scaling-test-cluster"
+                      - Sid       = "SqsWrite"
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - queue_url = "https://sqs.eu-west-1.amazonaws.com/559347283443/Karpenter-scaling-test-cluster" -> null
+    }
+
+  # module.vpc.aws_default_network_acl.this[0] will be destroyed
+  - resource "aws_default_network_acl" "this" {
+      - arn                    = "arn:aws:ec2:eu-west-1:559347283443:network-acl/acl-0388c992f542f32e1" -> null
+      - default_network_acl_id = "acl-0388c992f542f32e1" -> null
+      - id                     = "acl-0388c992f542f32e1" -> null
+      - owner_id               = "559347283443" -> null
+      - subnet_ids             = [
+          - "subnet-0275e70875cdae108",
+          - "subnet-05d4388cc5f9f8a45",
+          - "subnet-087186eaedbd7a6fb",
+          - "subnet-0b1b614dd5cc9c409",
+          - "subnet-0d713d68950b62777",
+          - "subnet-0ff9eddc2a0073d42",
+        ] -> null
+      - tags                   = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-default"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all               = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-default"
+          - "Terraform"   = "true"
+        } -> null
+      - vpc_id                 = "vpc-0f6bf9aa33fce0c9a" -> null
+
+      - egress {
+          - action          = "allow" -> null
+          - from_port       = 0 -> null
+          - icmp_code       = 0 -> null
+          - icmp_type       = 0 -> null
+          - ipv6_cidr_block = "::/0" -> null
+          - protocol        = "-1" -> null
+          - rule_no         = 101 -> null
+          - to_port         = 0 -> null
+        }
+      - egress {
+          - action     = "allow" -> null
+          - cidr_block = "0.0.0.0/0" -> null
+          - from_port  = 0 -> null
+          - icmp_code  = 0 -> null
+          - icmp_type  = 0 -> null
+          - protocol   = "-1" -> null
+          - rule_no    = 100 -> null
+          - to_port    = 0 -> null
+        }
+
+      - ingress {
+          - action          = "allow" -> null
+          - from_port       = 0 -> null
+          - icmp_code       = 0 -> null
+          - icmp_type       = 0 -> null
+          - ipv6_cidr_block = "::/0" -> null
+          - protocol        = "-1" -> null
+          - rule_no         = 101 -> null
+          - to_port         = 0 -> null
+        }
+      - ingress {
+          - action     = "allow" -> null
+          - cidr_block = "0.0.0.0/0" -> null
+          - from_port  = 0 -> null
+          - icmp_code  = 0 -> null
+          - icmp_type  = 0 -> null
+          - protocol   = "-1" -> null
+          - rule_no    = 100 -> null
+          - to_port    = 0 -> null
+        }
+    }
+
+  # module.vpc.aws_default_route_table.default[0] will be destroyed
+  - resource "aws_default_route_table" "default" {
+      - arn                    = "arn:aws:ec2:eu-west-1:559347283443:route-table/rtb-026f0281a511b9bd2" -> null
+      - default_route_table_id = "rtb-026f0281a511b9bd2" -> null
+      - id                     = "rtb-026f0281a511b9bd2" -> null
+      - owner_id               = "559347283443" -> null
+      - propagating_vgws       = [] -> null
+      - route                  = [] -> null
+      - tags                   = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-default"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all               = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-default"
+          - "Terraform"   = "true"
+        } -> null
+      - vpc_id                 = "vpc-0f6bf9aa33fce0c9a" -> null
+
+      - timeouts {
+          - create = "5m" -> null
+          - update = "5m" -> null
+        }
+    }
+
+  # module.vpc.aws_default_security_group.this[0] will be destroyed
+  - resource "aws_default_security_group" "this" {
+      - arn                    = "arn:aws:ec2:eu-west-1:559347283443:security-group/sg-0d451ad2a834ed7c2" -> null
+      - description            = "default VPC security group" -> null
+      - egress                 = [] -> null
+      - id                     = "sg-0d451ad2a834ed7c2" -> null
+      - ingress                = [] -> null
+      - name                   = "default" -> null
+      - owner_id               = "559347283443" -> null
+      - revoke_rules_on_delete = false -> null
+      - tags                   = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-default"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all               = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-default"
+          - "Terraform"   = "true"
+        } -> null
+      - vpc_id                 = "vpc-0f6bf9aa33fce0c9a" -> null
+    }
+
+  # module.vpc.aws_eip.nat[0] will be destroyed
+  - resource "aws_eip" "nat" {
+      - allocation_id        = "eipalloc-01fa14d6ad27f065f" -> null
+      - association_id       = "eipassoc-01a6f52f62d7cc927" -> null
+      - domain               = "vpc" -> null
+      - id                   = "eipalloc-01fa14d6ad27f065f" -> null
+      - network_border_group = "eu-west-1" -> null
+      - network_interface    = "eni-08562c8ea706b8087" -> null
+      - private_dns          = "ip-10-0-101-55.eu-west-1.compute.internal" -> null
+      - private_ip           = "10.0.101.55" -> null
+      - public_dns           = "ec2-63-33-220-68.eu-west-1.compute.amazonaws.com" -> null
+      - public_ip            = "63.33.220.68" -> null
+      - public_ipv4_pool     = "amazon" -> null
+      - tags                 = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-eu-west-1a"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all             = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-eu-west-1a"
+          - "Terraform"   = "true"
+        } -> null
+      - vpc                  = true -> null
+    }
+
+  # module.vpc.aws_eip.nat[1] will be destroyed
+  - resource "aws_eip" "nat" {
+      - allocation_id        = "eipalloc-02014e80d685adaf9" -> null
+      - association_id       = "eipassoc-01082d39e0f4b1d08" -> null
+      - domain               = "vpc" -> null
+      - id                   = "eipalloc-02014e80d685adaf9" -> null
+      - network_border_group = "eu-west-1" -> null
+      - network_interface    = "eni-0ec24c2fe7d6980ac" -> null
+      - private_dns          = "ip-10-0-102-40.eu-west-1.compute.internal" -> null
+      - private_ip           = "10.0.102.40" -> null
+      - public_dns           = "ec2-63-35-101-184.eu-west-1.compute.amazonaws.com" -> null
+      - public_ip            = "63.35.101.184" -> null
+      - public_ipv4_pool     = "amazon" -> null
+      - tags                 = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-eu-west-1b"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all             = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-eu-west-1b"
+          - "Terraform"   = "true"
+        } -> null
+      - vpc                  = true -> null
+    }
+
+  # module.vpc.aws_eip.nat[2] will be destroyed
+  - resource "aws_eip" "nat" {
+      - allocation_id        = "eipalloc-0d63032b2b5b6fd53" -> null
+      - association_id       = "eipassoc-065cf27bfc82e943d" -> null
+      - domain               = "vpc" -> null
+      - id                   = "eipalloc-0d63032b2b5b6fd53" -> null
+      - network_border_group = "eu-west-1" -> null
+      - network_interface    = "eni-03fc64894e023b734" -> null
+      - private_dns          = "ip-10-0-103-188.eu-west-1.compute.internal" -> null
+      - private_ip           = "10.0.103.188" -> null
+      - public_dns           = "ec2-99-80-221-113.eu-west-1.compute.amazonaws.com" -> null
+      - public_ip            = "99.80.221.113" -> null
+      - public_ipv4_pool     = "amazon" -> null
+      - tags                 = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-eu-west-1c"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all             = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-eu-west-1c"
+          - "Terraform"   = "true"
+        } -> null
+      - vpc                  = true -> null
+    }
+
+  # module.vpc.aws_internet_gateway.this[0] will be destroyed
+  - resource "aws_internet_gateway" "this" {
+      - arn      = "arn:aws:ec2:eu-west-1:559347283443:internet-gateway/igw-0ade8db863d09ece2" -> null
+      - id       = "igw-0ade8db863d09ece2" -> null
+      - owner_id = "559347283443" -> null
+      - tags     = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc"
+          - "Terraform"   = "true"
+        } -> null
+      - vpc_id   = "vpc-0f6bf9aa33fce0c9a" -> null
+    }
+
+  # module.vpc.aws_nat_gateway.this[0] will be destroyed
+  - resource "aws_nat_gateway" "this" {
+      - allocation_id                      = "eipalloc-01fa14d6ad27f065f" -> null
+      - association_id                     = "eipassoc-01a6f52f62d7cc927" -> null
+      - connectivity_type                  = "public" -> null
+      - id                                 = "nat-081ccd7d2fc2db16a" -> null
+      - network_interface_id               = "eni-08562c8ea706b8087" -> null
+      - private_ip                         = "10.0.101.55" -> null
+      - public_ip                          = "63.33.220.68" -> null
+      - secondary_allocation_ids           = [] -> null
+      - secondary_private_ip_address_count = 0 -> null
+      - secondary_private_ip_addresses     = [] -> null
+      - subnet_id                          = "subnet-087186eaedbd7a6fb" -> null
+      - tags                               = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-eu-west-1a"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all                           = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-eu-west-1a"
+          - "Terraform"   = "true"
+        } -> null
+    }
+
+  # module.vpc.aws_nat_gateway.this[1] will be destroyed
+  - resource "aws_nat_gateway" "this" {
+      - allocation_id                      = "eipalloc-02014e80d685adaf9" -> null
+      - association_id                     = "eipassoc-01082d39e0f4b1d08" -> null
+      - connectivity_type                  = "public" -> null
+      - id                                 = "nat-0701ec297ce91c659" -> null
+      - network_interface_id               = "eni-0ec24c2fe7d6980ac" -> null
+      - private_ip                         = "10.0.102.40" -> null
+      - public_ip                          = "63.35.101.184" -> null
+      - secondary_allocation_ids           = [] -> null
+      - secondary_private_ip_address_count = 0 -> null
+      - secondary_private_ip_addresses     = [] -> null
+      - subnet_id                          = "subnet-0d713d68950b62777" -> null
+      - tags                               = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-eu-west-1b"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all                           = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-eu-west-1b"
+          - "Terraform"   = "true"
+        } -> null
+    }
+
+  # module.vpc.aws_nat_gateway.this[2] will be destroyed
+  - resource "aws_nat_gateway" "this" {
+      - allocation_id                      = "eipalloc-0d63032b2b5b6fd53" -> null
+      - association_id                     = "eipassoc-065cf27bfc82e943d" -> null
+      - connectivity_type                  = "public" -> null
+      - id                                 = "nat-02609fed9370e73c3" -> null
+      - network_interface_id               = "eni-03fc64894e023b734" -> null
+      - private_ip                         = "10.0.103.188" -> null
+      - public_ip                          = "99.80.221.113" -> null
+      - secondary_allocation_ids           = [] -> null
+      - secondary_private_ip_address_count = 0 -> null
+      - secondary_private_ip_addresses     = [] -> null
+      - subnet_id                          = "subnet-0b1b614dd5cc9c409" -> null
+      - tags                               = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-eu-west-1c"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all                           = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-eu-west-1c"
+          - "Terraform"   = "true"
+        } -> null
+    }
+
+  # module.vpc.aws_route.private_nat_gateway[0] will be destroyed
+  - resource "aws_route" "private_nat_gateway" {
+      - destination_cidr_block = "0.0.0.0/0" -> null
+      - id                     = "r-rtb-06b9dc9726d66a4831080289494" -> null
+      - nat_gateway_id         = "nat-081ccd7d2fc2db16a" -> null
+      - origin                 = "CreateRoute" -> null
+      - route_table_id         = "rtb-06b9dc9726d66a483" -> null
+      - state                  = "active" -> null
+
+      - timeouts {
+          - create = "5m" -> null
+        }
+    }
+
+  # module.vpc.aws_route.private_nat_gateway[1] will be destroyed
+  - resource "aws_route" "private_nat_gateway" {
+      - destination_cidr_block = "0.0.0.0/0" -> null
+      - id                     = "r-rtb-006d9c1567c4c46241080289494" -> null
+      - nat_gateway_id         = "nat-0701ec297ce91c659" -> null
+      - origin                 = "CreateRoute" -> null
+      - route_table_id         = "rtb-006d9c1567c4c4624" -> null
+      - state                  = "active" -> null
+
+      - timeouts {
+          - create = "5m" -> null
+        }
+    }
+
+  # module.vpc.aws_route.private_nat_gateway[2] will be destroyed
+  - resource "aws_route" "private_nat_gateway" {
+      - destination_cidr_block = "0.0.0.0/0" -> null
+      - id                     = "r-rtb-04d8e750ae5421f781080289494" -> null
+      - nat_gateway_id         = "nat-02609fed9370e73c3" -> null
+      - origin                 = "CreateRoute" -> null
+      - route_table_id         = "rtb-04d8e750ae5421f78" -> null
+      - state                  = "active" -> null
+
+      - timeouts {
+          - create = "5m" -> null
+        }
+    }
+
+  # module.vpc.aws_route.public_internet_gateway[0] will be destroyed
+  - resource "aws_route" "public_internet_gateway" {
+      - destination_cidr_block = "0.0.0.0/0" -> null
+      - gateway_id             = "igw-0ade8db863d09ece2" -> null
+      - id                     = "r-rtb-0c79401c371a4a53e1080289494" -> null
+      - origin                 = "CreateRoute" -> null
+      - route_table_id         = "rtb-0c79401c371a4a53e" -> null
+      - state                  = "active" -> null
+
+      - timeouts {
+          - create = "5m" -> null
+        }
+    }
+
+  # module.vpc.aws_route_table.private[0] will be destroyed
+  - resource "aws_route_table" "private" {
+      - arn              = "arn:aws:ec2:eu-west-1:559347283443:route-table/rtb-06b9dc9726d66a483" -> null
+      - id               = "rtb-06b9dc9726d66a483" -> null
+      - owner_id         = "559347283443" -> null
+      - propagating_vgws = [] -> null
+      - route            = [
+          - {
+              - carrier_gateway_id         = ""
+              - cidr_block                 = "0.0.0.0/0"
+              - core_network_arn           = ""
+              - destination_prefix_list_id = ""
+              - egress_only_gateway_id     = ""
+              - gateway_id                 = ""
+              - ipv6_cidr_block            = ""
+              - local_gateway_id           = ""
+              - nat_gateway_id             = "nat-081ccd7d2fc2db16a"
+              - network_interface_id       = ""
+              - transit_gateway_id         = ""
+              - vpc_endpoint_id            = ""
+              - vpc_peering_connection_id  = ""
+            },
+        ] -> null
+      - tags             = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-private-eu-west-1a"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all         = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-private-eu-west-1a"
+          - "Terraform"   = "true"
+        } -> null
+      - vpc_id           = "vpc-0f6bf9aa33fce0c9a" -> null
+    }
+
+  # module.vpc.aws_route_table.private[1] will be destroyed
+  - resource "aws_route_table" "private" {
+      - arn              = "arn:aws:ec2:eu-west-1:559347283443:route-table/rtb-006d9c1567c4c4624" -> null
+      - id               = "rtb-006d9c1567c4c4624" -> null
+      - owner_id         = "559347283443" -> null
+      - propagating_vgws = [] -> null
+      - route            = [
+          - {
+              - carrier_gateway_id         = ""
+              - cidr_block                 = "0.0.0.0/0"
+              - core_network_arn           = ""
+              - destination_prefix_list_id = ""
+              - egress_only_gateway_id     = ""
+              - gateway_id                 = ""
+              - ipv6_cidr_block            = ""
+              - local_gateway_id           = ""
+              - nat_gateway_id             = "nat-0701ec297ce91c659"
+              - network_interface_id       = ""
+              - transit_gateway_id         = ""
+              - vpc_endpoint_id            = ""
+              - vpc_peering_connection_id  = ""
+            },
+        ] -> null
+      - tags             = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-private-eu-west-1b"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all         = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-private-eu-west-1b"
+          - "Terraform"   = "true"
+        } -> null
+      - vpc_id           = "vpc-0f6bf9aa33fce0c9a" -> null
+    }
+
+  # module.vpc.aws_route_table.private[2] will be destroyed
+  - resource "aws_route_table" "private" {
+      - arn              = "arn:aws:ec2:eu-west-1:559347283443:route-table/rtb-04d8e750ae5421f78" -> null
+      - id               = "rtb-04d8e750ae5421f78" -> null
+      - owner_id         = "559347283443" -> null
+      - propagating_vgws = [] -> null
+      - route            = [
+          - {
+              - carrier_gateway_id         = ""
+              - cidr_block                 = "0.0.0.0/0"
+              - core_network_arn           = ""
+              - destination_prefix_list_id = ""
+              - egress_only_gateway_id     = ""
+              - gateway_id                 = ""
+              - ipv6_cidr_block            = ""
+              - local_gateway_id           = ""
+              - nat_gateway_id             = "nat-02609fed9370e73c3"
+              - network_interface_id       = ""
+              - transit_gateway_id         = ""
+              - vpc_endpoint_id            = ""
+              - vpc_peering_connection_id  = ""
+            },
+        ] -> null
+      - tags             = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-private-eu-west-1c"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all         = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-private-eu-west-1c"
+          - "Terraform"   = "true"
+        } -> null
+      - vpc_id           = "vpc-0f6bf9aa33fce0c9a" -> null
+    }
+
+  # module.vpc.aws_route_table.public[0] will be destroyed
+  - resource "aws_route_table" "public" {
+      - arn              = "arn:aws:ec2:eu-west-1:559347283443:route-table/rtb-0c79401c371a4a53e" -> null
+      - id               = "rtb-0c79401c371a4a53e" -> null
+      - owner_id         = "559347283443" -> null
+      - propagating_vgws = [] -> null
+      - route            = [
+          - {
+              - carrier_gateway_id         = ""
+              - cidr_block                 = "0.0.0.0/0"
+              - core_network_arn           = ""
+              - destination_prefix_list_id = ""
+              - egress_only_gateway_id     = ""
+              - gateway_id                 = "igw-0ade8db863d09ece2"
+              - ipv6_cidr_block            = ""
+              - local_gateway_id           = ""
+              - nat_gateway_id             = ""
+              - network_interface_id       = ""
+              - transit_gateway_id         = ""
+              - vpc_endpoint_id            = ""
+              - vpc_peering_connection_id  = ""
+            },
+        ] -> null
+      - tags             = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-public"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all         = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-public"
+          - "Terraform"   = "true"
+        } -> null
+      - vpc_id           = "vpc-0f6bf9aa33fce0c9a" -> null
+    }
+
+  # module.vpc.aws_route_table_association.private[0] will be destroyed
+  - resource "aws_route_table_association" "private" {
+      - id             = "rtbassoc-07da99ad13d6b87a6" -> null
+      - route_table_id = "rtb-06b9dc9726d66a483" -> null
+      - subnet_id      = "subnet-0ff9eddc2a0073d42" -> null
+    }
+
+  # module.vpc.aws_route_table_association.private[1] will be destroyed
+  - resource "aws_route_table_association" "private" {
+      - id             = "rtbassoc-089d30c2543eb4521" -> null
+      - route_table_id = "rtb-006d9c1567c4c4624" -> null
+      - subnet_id      = "subnet-0275e70875cdae108" -> null
+    }
+
+  # module.vpc.aws_route_table_association.private[2] will be destroyed
+  - resource "aws_route_table_association" "private" {
+      - id             = "rtbassoc-020c57b4bf94ffc11" -> null
+      - route_table_id = "rtb-04d8e750ae5421f78" -> null
+      - subnet_id      = "subnet-05d4388cc5f9f8a45" -> null
+    }
+
+  # module.vpc.aws_route_table_association.public[0] will be destroyed
+  - resource "aws_route_table_association" "public" {
+      - id             = "rtbassoc-03e7f6555286c577a" -> null
+      - route_table_id = "rtb-0c79401c371a4a53e" -> null
+      - subnet_id      = "subnet-087186eaedbd7a6fb" -> null
+    }
+
+  # module.vpc.aws_route_table_association.public[1] will be destroyed
+  - resource "aws_route_table_association" "public" {
+      - id             = "rtbassoc-03ad97daf040d425f" -> null
+      - route_table_id = "rtb-0c79401c371a4a53e" -> null
+      - subnet_id      = "subnet-0d713d68950b62777" -> null
+    }
+
+  # module.vpc.aws_route_table_association.public[2] will be destroyed
+  - resource "aws_route_table_association" "public" {
+      - id             = "rtbassoc-070f11e62b3174e5e" -> null
+      - route_table_id = "rtb-0c79401c371a4a53e" -> null
+      - subnet_id      = "subnet-0b1b614dd5cc9c409" -> null
+    }
+
+  # module.vpc.aws_subnet.private[0] will be destroyed
+  - resource "aws_subnet" "private" {
+      - arn                                            = "arn:aws:ec2:eu-west-1:559347283443:subnet/subnet-0ff9eddc2a0073d42" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "eu-west-1a" -> null
+      - availability_zone_id                           = "euw1-az2" -> null
+      - cidr_block                                     = "10.0.1.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-0ff9eddc2a0073d42" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "559347283443" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-private-eu-west-1a"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all                                       = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-private-eu-west-1a"
+          - "Terraform"   = "true"
+        } -> null
+      - vpc_id                                         = "vpc-0f6bf9aa33fce0c9a" -> null
+    }
+
+  # module.vpc.aws_subnet.private[1] will be destroyed
+  - resource "aws_subnet" "private" {
+      - arn                                            = "arn:aws:ec2:eu-west-1:559347283443:subnet/subnet-0275e70875cdae108" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "eu-west-1b" -> null
+      - availability_zone_id                           = "euw1-az3" -> null
+      - cidr_block                                     = "10.0.2.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-0275e70875cdae108" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "559347283443" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-private-eu-west-1b"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all                                       = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-private-eu-west-1b"
+          - "Terraform"   = "true"
+        } -> null
+      - vpc_id                                         = "vpc-0f6bf9aa33fce0c9a" -> null
+    }
+
+  # module.vpc.aws_subnet.private[2] will be destroyed
+  - resource "aws_subnet" "private" {
+      - arn                                            = "arn:aws:ec2:eu-west-1:559347283443:subnet/subnet-05d4388cc5f9f8a45" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "eu-west-1c" -> null
+      - availability_zone_id                           = "euw1-az1" -> null
+      - cidr_block                                     = "10.0.3.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-05d4388cc5f9f8a45" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "559347283443" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-private-eu-west-1c"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all                                       = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-private-eu-west-1c"
+          - "Terraform"   = "true"
+        } -> null
+      - vpc_id                                         = "vpc-0f6bf9aa33fce0c9a" -> null
+    }
+
+  # module.vpc.aws_subnet.public[0] will be destroyed
+  - resource "aws_subnet" "public" {
+      - arn                                            = "arn:aws:ec2:eu-west-1:559347283443:subnet/subnet-087186eaedbd7a6fb" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "eu-west-1a" -> null
+      - availability_zone_id                           = "euw1-az2" -> null
+      - cidr_block                                     = "10.0.101.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-087186eaedbd7a6fb" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "559347283443" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-public-eu-west-1a"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all                                       = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-public-eu-west-1a"
+          - "Terraform"   = "true"
+        } -> null
+      - vpc_id                                         = "vpc-0f6bf9aa33fce0c9a" -> null
+    }
+
+  # module.vpc.aws_subnet.public[1] will be destroyed
+  - resource "aws_subnet" "public" {
+      - arn                                            = "arn:aws:ec2:eu-west-1:559347283443:subnet/subnet-0d713d68950b62777" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "eu-west-1b" -> null
+      - availability_zone_id                           = "euw1-az3" -> null
+      - cidr_block                                     = "10.0.102.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-0d713d68950b62777" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "559347283443" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-public-eu-west-1b"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all                                       = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-public-eu-west-1b"
+          - "Terraform"   = "true"
+        } -> null
+      - vpc_id                                         = "vpc-0f6bf9aa33fce0c9a" -> null
+    }
+
+  # module.vpc.aws_subnet.public[2] will be destroyed
+  - resource "aws_subnet" "public" {
+      - arn                                            = "arn:aws:ec2:eu-west-1:559347283443:subnet/subnet-0b1b614dd5cc9c409" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "eu-west-1c" -> null
+      - availability_zone_id                           = "euw1-az1" -> null
+      - cidr_block                                     = "10.0.103.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-0b1b614dd5cc9c409" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "559347283443" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-public-eu-west-1c"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all                                       = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc-public-eu-west-1c"
+          - "Terraform"   = "true"
+        } -> null
+      - vpc_id                                         = "vpc-0f6bf9aa33fce0c9a" -> null
+    }
+
+  # module.vpc.aws_vpc.this[0] will be destroyed
+  - resource "aws_vpc" "this" {
+      - arn                                  = "arn:aws:ec2:eu-west-1:559347283443:vpc/vpc-0f6bf9aa33fce0c9a" -> null
+      - assign_generated_ipv6_cidr_block     = false -> null
+      - cidr_block                           = "10.0.0.0/16" -> null
+      - default_network_acl_id               = "acl-0388c992f542f32e1" -> null
+      - default_route_table_id               = "rtb-026f0281a511b9bd2" -> null
+      - default_security_group_id            = "sg-0d451ad2a834ed7c2" -> null
+      - dhcp_options_id                      = "dopt-e2cbc484" -> null
+      - enable_dns_hostnames                 = true -> null
+      - enable_dns_support                   = true -> null
+      - enable_network_address_usage_metrics = false -> null
+      - id                                   = "vpc-0f6bf9aa33fce0c9a" -> null
+      - instance_tenancy                     = "default" -> null
+      - ipv6_netmask_length                  = 0 -> null
+      - main_route_table_id                  = "rtb-026f0281a511b9bd2" -> null
+      - owner_id                             = "559347283443" -> null
+      - tags                                 = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc"
+          - "Terraform"   = "true"
+        } -> null
+      - tags_all                             = {
+          - "Environment" = "scaling-test"
+          - "Name"        = "scaling-test-vpc"
+          - "Terraform"   = "true"
+        } -> null
+    }
+
+  # module.eks.module.fargate_profile["karpenter"].aws_eks_fargate_profile.this[0] will be destroyed
+  - resource "aws_eks_fargate_profile" "this" {
+      - arn                    = "arn:aws:eks:eu-west-1:559347283443:fargateprofile/scaling-test-cluster/karpenter/d2c53a63-56ce-b7c9-aecf-cbcb6144a5ed" -> null
+      - cluster_name           = "scaling-test-cluster" -> null
+      - fargate_profile_name   = "karpenter" -> null
+      - id                     = "scaling-test-cluster:karpenter" -> null
+      - pod_execution_role_arn = "arn:aws:iam::559347283443:role/karpenter-20230907165511473700000001" -> null
+      - status                 = "ACTIVE" -> null
+      - subnet_ids             = [
+          - "subnet-0275e70875cdae108",
+          - "subnet-05d4388cc5f9f8a45",
+          - "subnet-0ff9eddc2a0073d42",
+        ] -> null
+      - tags                   = {} -> null
+      - tags_all               = {} -> null
+
+      - selector {
+          - labels    = {} -> null
+          - namespace = "karpenter" -> null
+        }
+
+      - timeouts {}
+    }
+
+  # module.eks.module.fargate_profile["karpenter"].aws_iam_role.this[0] will be destroyed
+  - resource "aws_iam_role" "this" {
+      - arn                   = "arn:aws:iam::559347283443:role/karpenter-20230907165511473700000001" -> null
+      - assume_role_policy    = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "sts:AssumeRole"
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Service = "eks-fargate-pods.amazonaws.com"
+                        }
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - create_date           = "2023-09-07T16:55:11Z" -> null
+      - description           = "Fargate profile IAM role" -> null
+      - force_detach_policies = true -> null
+      - id                    = "karpenter-20230907165511473700000001" -> null
+      - managed_policy_arns   = [
+          - "arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy",
+          - "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
+        ] -> null
+      - max_session_duration  = 3600 -> null
+      - name                  = "karpenter-20230907165511473700000001" -> null
+      - name_prefix           = "karpenter-" -> null
+      - path                  = "/" -> null
+      - tags                  = {} -> null
+      - tags_all              = {} -> null
+      - unique_id             = "AROAYEO5SGXZZUI3JKIHZ" -> null
+    }
+
+  # module.eks.module.fargate_profile["karpenter"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy"] will be destroyed
+  - resource "aws_iam_role_policy_attachment" "this" {
+      - id         = "karpenter-20230907165511473700000001-20230907165512256100000003" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy" -> null
+      - role       = "karpenter-20230907165511473700000001" -> null
+    }
+
+  # module.eks.module.fargate_profile["karpenter"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"] will be destroyed
+  - resource "aws_iam_role_policy_attachment" "this" {
+      - id         = "karpenter-20230907165511473700000001-20230907165512260900000004" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy" -> null
+      - role       = "karpenter-20230907165511473700000001" -> null
+    }
+
+  # module.eks.module.fargate_profile["kube-system"].aws_eks_fargate_profile.this[0] will be destroyed
+  - resource "aws_eks_fargate_profile" "this" {
+      - arn                    = "arn:aws:eks:eu-west-1:559347283443:fargateprofile/scaling-test-cluster/kube-system/96c53a64-65f6-5cba-1087-065ba8da6e53" -> null
+      - cluster_name           = "scaling-test-cluster" -> null
+      - fargate_profile_name   = "kube-system" -> null
+      - id                     = "scaling-test-cluster:kube-system" -> null
+      - pod_execution_role_arn = "arn:aws:iam::559347283443:role/kube-system-20230907165511474400000002" -> null
+      - status                 = "ACTIVE" -> null
+      - subnet_ids             = [
+          - "subnet-0275e70875cdae108",
+          - "subnet-05d4388cc5f9f8a45",
+          - "subnet-0ff9eddc2a0073d42",
+        ] -> null
+      - tags                   = {} -> null
+      - tags_all               = {} -> null
+
+      - selector {
+          - labels    = {} -> null
+          - namespace = "kube-system" -> null
+        }
+
+      - timeouts {}
+    }
+
+  # module.eks.module.fargate_profile["kube-system"].aws_iam_role.this[0] will be destroyed
+  - resource "aws_iam_role" "this" {
+      - arn                   = "arn:aws:iam::559347283443:role/kube-system-20230907165511474400000002" -> null
+      - assume_role_policy    = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = "sts:AssumeRole"
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - Service = "eks-fargate-pods.amazonaws.com"
+                        }
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - create_date           = "2023-09-07T16:55:11Z" -> null
+      - description           = "Fargate profile IAM role" -> null
+      - force_detach_policies = true -> null
+      - id                    = "kube-system-20230907165511474400000002" -> null
+      - managed_policy_arns   = [
+          - "arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy",
+          - "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
+        ] -> null
+      - max_session_duration  = 3600 -> null
+      - name                  = "kube-system-20230907165511474400000002" -> null
+      - name_prefix           = "kube-system-" -> null
+      - path                  = "/" -> null
+      - tags                  = {} -> null
+      - tags_all              = {} -> null
+      - unique_id             = "AROAYEO5SGXZ7XFZPE4R5" -> null
+    }
+
+  # module.eks.module.fargate_profile["kube-system"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy"] will be destroyed
+  - resource "aws_iam_role_policy_attachment" "this" {
+      - id         = "kube-system-20230907165511474400000002-20230907165512448600000006" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy" -> null
+      - role       = "kube-system-20230907165511474400000002" -> null
+    }
+
+  # module.eks.module.fargate_profile["kube-system"].aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"] will be destroyed
+  - resource "aws_iam_role_policy_attachment" "this" {
+      - id         = "kube-system-20230907165511474400000002-20230907165512399400000005" -> null
+      - policy_arn = "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy" -> null
+      - role       = "kube-system-20230907165511474400000002" -> null
+    }
+
+  # module.eks.module.kms.aws_kms_alias.this["cluster"] will be destroyed
+  - resource "aws_kms_alias" "this" {
+      - arn            = "arn:aws:kms:eu-west-1:559347283443:alias/eks/scaling-test-cluster" -> null
+      - id             = "alias/eks/scaling-test-cluster" -> null
+      - name           = "alias/eks/scaling-test-cluster" -> null
+      - target_key_arn = "arn:aws:kms:eu-west-1:559347283443:key/3ced928c-93ad-4e2c-bb9f-d6233814c279" -> null
+      - target_key_id  = "3ced928c-93ad-4e2c-bb9f-d6233814c279" -> null
+    }
+
+  # module.eks.module.kms.aws_kms_key.this[0] will be destroyed
+  - resource "aws_kms_key" "this" {
+      - arn                                = "arn:aws:kms:eu-west-1:559347283443:key/3ced928c-93ad-4e2c-bb9f-d6233814c279" -> null
+      - bypass_policy_lockout_safety_check = false -> null
+      - customer_master_key_spec           = "SYMMETRIC_DEFAULT" -> null
+      - description                        = "scaling-test-cluster cluster encryption key" -> null
+      - enable_key_rotation                = true -> null
+      - id                                 = "3ced928c-93ad-4e2c-bb9f-d6233814c279" -> null
+      - is_enabled                         = true -> null
+      - key_id                             = "3ced928c-93ad-4e2c-bb9f-d6233814c279" -> null
+      - key_usage                          = "ENCRYPT_DECRYPT" -> null
+      - multi_region                       = false -> null
+      - policy                             = jsonencode(
+            {
+              - Statement = [
+                  - {
+                      - Action    = [
+                          - "kms:Update*",
+                          - "kms:UntagResource",
+                          - "kms:TagResource",
+                          - "kms:ScheduleKeyDeletion",
+                          - "kms:Revoke*",
+                          - "kms:Put*",
+                          - "kms:List*",
+                          - "kms:Get*",
+                          - "kms:Enable*",
+                          - "kms:Disable*",
+                          - "kms:Describe*",
+                          - "kms:Delete*",
+                          - "kms:Create*",
+                          - "kms:CancelKeyDeletion",
+                        ]
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - AWS = "arn:aws:iam::559347283443:user/engineers/patrick-admin"
+                        }
+                      - Resource  = "*"
+                      - Sid       = "KeyAdministration"
+                    },
+                  - {
+                      - Action    = [
+                          - "kms:ReEncrypt*",
+                          - "kms:GenerateDataKey*",
+                          - "kms:Encrypt",
+                          - "kms:DescribeKey",
+                          - "kms:Decrypt",
+                        ]
+                      - Effect    = "Allow"
+                      - Principal = {
+                          - AWS = "arn:aws:iam::559347283443:role/scaling-test-cluster-cluster-20230907115851578400000003"
+                        }
+                      - Resource  = "*"
+                      - Sid       = "KeyUsage"
+                    },
+                ]
+              - Version   = "2012-10-17"
+            }
+        ) -> null
+      - tags                               = {} -> null
+      - tags_all                           = {} -> null
+    }
+
+Plan: 0 to add, 0 to change, 88 to destroy.
+
+Do you really want to destroy all resources?
+  Terraform will destroy all your managed infrastructure, as shown above.
+  There is no undo. Only 'yes' will be accepted to confirm.
+
+  Enter a value: 
+Interrupt received.
+Please wait for Terraform to exit or data loss may occur.
+Gracefully shutting down...
+
+
+
+Error: error asking for approval: interrupted
+

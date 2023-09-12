@@ -1,0 +1,637 @@
+aws_s3_bucket.tf_state_bucket: Refreshing state... [id=terraform-bucket-calypsoai-scaling-test]
+module.eks.data.aws_caller_identity.current: Reading...
+module.eks.module.kms.data.aws_caller_identity.current: Reading...
+module.eks.aws_cloudwatch_log_group.this[0]: Refreshing state... [id=/aws/eks/scaling-test-cluster/cluster]
+module.vpc.aws_vpc.this[0]: Refreshing state... [id=vpc-0f6bf9aa33fce0c9a]
+module.karpenter.data.aws_caller_identity.current: Reading...
+module.karpenter.data.aws_partition.current: Reading...
+module.eks.module.kms.data.aws_partition.current: Reading...
+module.eks.data.aws_partition.current: Reading...
+module.eks.data.aws_partition.current: Read complete after 0s [id=aws]
+module.eks.module.kms.data.aws_partition.current: Read complete after 0s [id=aws]
+module.karpenter.data.aws_partition.current: Read complete after 0s [id=aws]
+module.eks.data.aws_iam_policy_document.assume_role_policy[0]: Reading...
+module.karpenter.data.aws_iam_policy_document.assume_role[0]: Reading...
+module.karpenter.data.aws_iam_policy_document.assume_role[0]: Read complete after 0s [id=2560088296]
+module.eks.data.aws_iam_policy_document.assume_role_policy[0]: Read complete after 0s [id=2764486067]
+module.eks.aws_iam_role.this[0]: Refreshing state... [id=scaling-test-cluster-cluster-20230907115851578400000003]
+module.eks.module.kms.data.aws_caller_identity.current: Read complete after 0s [id=559347283443]
+module.karpenter.data.aws_caller_identity.current: Read complete after 0s [id=559347283443]
+module.eks.data.aws_caller_identity.current: Read complete after 0s [id=559347283443]
+module.eks.data.aws_iam_session_context.current: Reading...
+module.eks.data.aws_iam_session_context.current: Read complete after 0s [id=arn:aws:iam::559347283443:user/engineers/patrick-admin]
+module.vpc.aws_subnet.public[2]: Refreshing state... [id=subnet-0b1b614dd5cc9c409]
+module.vpc.aws_default_route_table.default[0]: Refreshing state... [id=rtb-026f0281a511b9bd2]
+module.vpc.aws_default_security_group.this[0]: Refreshing state... [id=sg-0d451ad2a834ed7c2]
+module.vpc.aws_default_network_acl.this[0]: Refreshing state... [id=acl-0388c992f542f32e1]
+module.vpc.aws_route_table.private[1]: Refreshing state... [id=rtb-006d9c1567c4c4624]
+module.vpc.aws_subnet.public[1]: Refreshing state... [id=subnet-0d713d68950b62777]
+module.vpc.aws_subnet.public[0]: Refreshing state... [id=subnet-087186eaedbd7a6fb]
+module.vpc.aws_internet_gateway.this[0]: Refreshing state... [id=igw-0ade8db863d09ece2]
+module.eks.aws_security_group.node[0]: Refreshing state... [id=sg-03485ea22e1731c18]
+module.vpc.aws_subnet.private[2]: Refreshing state... [id=subnet-05d4388cc5f9f8a45]
+module.vpc.aws_route_table.public[0]: Refreshing state... [id=rtb-0c79401c371a4a53e]
+module.vpc.aws_subnet.private[1]: Refreshing state... [id=subnet-0275e70875cdae108]
+module.vpc.aws_subnet.private[0]: Refreshing state... [id=subnet-0ff9eddc2a0073d42]
+module.vpc.aws_route_table.private[0]: Refreshing state... [id=rtb-06b9dc9726d66a483]
+module.vpc.aws_route_table.private[2]: Refreshing state... [id=rtb-04d8e750ae5421f78]
+module.eks.aws_security_group.cluster[0]: Refreshing state... [id=sg-0534bfc64a31faa7f]
+module.vpc.aws_eip.nat[0]: Refreshing state... [id=eipalloc-01fa14d6ad27f065f]
+module.vpc.aws_eip.nat[1]: Refreshing state... [id=eipalloc-02014e80d685adaf9]
+module.vpc.aws_eip.nat[2]: Refreshing state... [id=eipalloc-0d63032b2b5b6fd53]
+module.eks.aws_iam_role_policy_attachment.this["AmazonEKSVPCResourceController"]: Refreshing state... [id=scaling-test-cluster-cluster-20230907115851578400000003-20230907115853005000000004]
+module.eks.aws_iam_role_policy_attachment.this["AmazonEKSClusterPolicy"]: Refreshing state... [id=scaling-test-cluster-cluster-20230907115851578400000003-20230907115853225900000005]
+module.vpc.aws_route_table_association.public[2]: Refreshing state... [id=rtbassoc-070f11e62b3174e5e]
+module.vpc.aws_route.public_internet_gateway[0]: Refreshing state... [id=r-rtb-0c79401c371a4a53e1080289494]
+module.vpc.aws_route_table_association.private[2]: Refreshing state... [id=rtbassoc-020c57b4bf94ffc11]
+module.vpc.aws_route_table_association.private[1]: Refreshing state... [id=rtbassoc-089d30c2543eb4521]
+module.vpc.aws_route_table_association.private[0]: Refreshing state... [id=rtbassoc-07da99ad13d6b87a6]
+module.eks.aws_security_group_rule.cluster["ingress_nodes_443"]: Refreshing state... [id=sgrule-2063763030]
+module.vpc.aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-03ad97daf040d425f]
+module.vpc.aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-03e7f6555286c577a]
+module.eks.module.kms.data.aws_iam_policy_document.this[0]: Reading...
+module.eks.module.kms.data.aws_iam_policy_document.this[0]: Read complete after 0s [id=3603170483]
+module.eks.aws_security_group_rule.node["egress_all"]: Refreshing state... [id=sgrule-145259702]
+module.eks.aws_security_group_rule.node["ingress_self_coredns_tcp"]: Refreshing state... [id=sgrule-24106789]
+module.eks.aws_security_group_rule.node["ingress_cluster_4443_webhook"]: Refreshing state... [id=sgrule-2822061098]
+module.eks.aws_security_group_rule.node["ingress_cluster_8443_webhook"]: Refreshing state... [id=sgrule-1915447197]
+module.eks.aws_security_group_rule.node["ingress_cluster_443"]: Refreshing state... [id=sgrule-628813848]
+module.eks.aws_security_group_rule.node["ingress_self_coredns_udp"]: Refreshing state... [id=sgrule-2771416266]
+module.eks.aws_security_group_rule.node["ingress_cluster_6443_webhook"]: Refreshing state... [id=sgrule-1635212220]
+module.eks.aws_security_group_rule.node["ingress_cluster_kubelet"]: Refreshing state... [id=sgrule-1827781633]
+module.eks.aws_security_group_rule.node["ingress_cluster_9443_webhook"]: Refreshing state... [id=sgrule-378164310]
+module.eks.aws_security_group_rule.node["ingress_nodes_ephemeral"]: Refreshing state... [id=sgrule-2976726306]
+module.eks.module.kms.aws_kms_key.this[0]: Refreshing state... [id=3ced928c-93ad-4e2c-bb9f-d6233814c279]
+module.vpc.aws_nat_gateway.this[1]: Refreshing state... [id=nat-0701ec297ce91c659]
+module.vpc.aws_nat_gateway.this[2]: Refreshing state... [id=nat-02609fed9370e73c3]
+module.vpc.aws_nat_gateway.this[0]: Refreshing state... [id=nat-081ccd7d2fc2db16a]
+module.vpc.aws_route.private_nat_gateway[1]: Refreshing state... [id=r-rtb-006d9c1567c4c46241080289494]
+module.vpc.aws_route.private_nat_gateway[0]: Refreshing state... [id=r-rtb-06b9dc9726d66a4831080289494]
+module.vpc.aws_route.private_nat_gateway[2]: Refreshing state... [id=r-rtb-04d8e750ae5421f781080289494]
+module.eks.module.kms.aws_kms_alias.this["cluster"]: Refreshing state... [id=alias/eks/scaling-test-cluster]
+module.eks.aws_iam_policy.cluster_encryption[0]: Refreshing state... [id=arn:aws:iam::559347283443:policy/scaling-test-cluster-cluster-ClusterEncryption20230907115908788900000006]
+module.eks.aws_eks_cluster.this[0]: Refreshing state... [id=scaling-test-cluster]
+module.eks.data.tls_certificate.this[0]: Reading...
+module.eks.time_sleep.this[0]: Refreshing state... [id=2023-09-07T14:15:33Z]
+module.eks.data.aws_eks_addon_version.this["coredns"]: Reading...
+module.eks.data.aws_eks_addon_version.this["vpc-cni"]: Reading...
+module.eks.aws_iam_role_policy_attachment.cluster_encryption[0]: Refreshing state... [id=scaling-test-cluster-cluster-20230907115851578400000003-20230907115909436900000007]
+module.eks.data.tls_certificate.this[0]: Read complete after 0s [id=eae3d1a78da36d265617d0e58ee6c9f6db23c834]
+module.eks.aws_iam_openid_connect_provider.oidc_provider[0]: Refreshing state... [id=arn:aws:iam::559347283443:oidc-provider/oidc.eks.eu-west-1.amazonaws.com/id/2240F9915BD9FAF2FAC79E0800991A81]
+module.eks.data.aws_eks_addon_version.this["coredns"]: Read complete after 0s [id=coredns]
+module.eks.data.aws_eks_addon_version.this["vpc-cni"]: Read complete after 0s [id=vpc-cni]
+module.eks.aws_eks_addon.this["coredns"]: Refreshing state... [id=scaling-test-cluster:coredns]
+module.karpenter.data.aws_iam_policy_document.irsa_assume_role[0]: Reading...
+module.karpenter.data.aws_iam_policy_document.irsa_assume_role[0]: Read complete after 0s [id=662459654]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+-/+ destroy and then create replacement
+ <= read (data resources)
+
+Terraform will perform the following actions:
+
+  # module.eks.aws_eks_addon.this["coredns"] is tainted, so must be replaced
+-/+ resource "aws_eks_addon" "this" {
+      ~ arn                  = "arn:aws:eks:eu-west-1:559347283443:addon/scaling-test-cluster/coredns/dac5380a-1bea-7541-0b2d-efee8fa2b9e2" -> (known after apply)
+      + configuration_values = (known after apply)
+      ~ created_at           = "2023-09-07T14:38:07Z" -> (known after apply)
+      ~ id                   = "scaling-test-cluster:coredns" -> (known after apply)
+      ~ modified_at          = "2023-09-07T14:38:16Z" -> (known after apply)
+      - tags                 = {} -> null
+      ~ tags_all             = {} -> (known after apply)
+        # (5 unchanged attributes hidden)
+
+        # (1 unchanged block hidden)
+    }
+
+  # module.eks.aws_eks_addon.this["vpc-cni"] will be created
+  + resource "aws_eks_addon" "this" {
+      + addon_name           = "vpc-cni"
+      + addon_version        = "v1.14.0-eksbuild.3"
+      + arn                  = (known after apply)
+      + cluster_name         = "scaling-test-cluster"
+      + configuration_values = (known after apply)
+      + created_at           = (known after apply)
+      + id                   = (known after apply)
+      + modified_at          = (known after apply)
+      + resolve_conflicts    = "OVERWRITE"
+      + tags_all             = (known after apply)
+
+      + timeouts {}
+    }
+
+  # module.eks.kubernetes_config_map_v1_data.aws_auth[0] will be created
+  + resource "kubernetes_config_map_v1_data" "aws_auth" {
+      + data          = (known after apply)
+      + field_manager = "Terraform"
+      + force         = true
+      + id            = (known after apply)
+
+      + metadata {
+          + name      = "aws-auth"
+          + namespace = "kube-system"
+        }
+    }
+
+  # module.karpenter.data.aws_iam_policy_document.irsa[0] will be read during apply
+  # (config refers to values not yet known)
+ <= data "aws_iam_policy_document" "irsa" {
+      + id   = (known after apply)
+      + json = (known after apply)
+
+      + statement {
+          + actions   = [
+              + "ec2:CreateFleet",
+              + "ec2:CreateLaunchTemplate",
+              + "ec2:CreateTags",
+              + "ec2:DescribeAvailabilityZones",
+              + "ec2:DescribeImages",
+              + "ec2:DescribeInstanceTypeOfferings",
+              + "ec2:DescribeInstanceTypes",
+              + "ec2:DescribeInstances",
+              + "ec2:DescribeLaunchTemplates",
+              + "ec2:DescribeSecurityGroups",
+              + "ec2:DescribeSpotPriceHistory",
+              + "ec2:DescribeSubnets",
+              + "pricing:GetProducts",
+            ]
+          + resources = [
+              + "*",
+            ]
+        }
+      + statement {
+          + actions   = [
+              + "ec2:DeleteLaunchTemplate",
+              + "ec2:TerminateInstances",
+            ]
+          + resources = [
+              + "*",
+            ]
+
+          + condition {
+              + test     = "StringEquals"
+              + values   = [
+                  + "scaling-test-cluster",
+                ]
+              + variable = "ec2:ResourceTag/karpenter.sh/discovery"
+            }
+        }
+      + statement {
+          + actions   = [
+              + "ec2:RunInstances",
+            ]
+          + resources = [
+              + "arn:aws:ec2:*:559347283443:launch-template/*",
+            ]
+
+          + condition {
+              + test     = "StringEquals"
+              + values   = [
+                  + "scaling-test-cluster",
+                ]
+              + variable = "ec2:ResourceTag/karpenter.sh/discovery"
+            }
+        }
+      + statement {
+          + actions   = [
+              + "ec2:RunInstances",
+            ]
+          + resources = [
+              + "arn:aws:ec2:*:559347283443:instance/*",
+              + "arn:aws:ec2:*:559347283443:network-interface/*",
+              + "arn:aws:ec2:*:559347283443:security-group/*",
+              + "arn:aws:ec2:*:559347283443:spot-instances-request/*",
+              + "arn:aws:ec2:*:559347283443:subnet/*",
+              + "arn:aws:ec2:*:559347283443:volume/*",
+              + "arn:aws:ec2:*::image/*",
+              + "arn:aws:ec2:*::snapshot/*",
+            ]
+        }
+      + statement {
+          + actions   = [
+              + "ssm:GetParameter",
+            ]
+          + resources = [
+              + "arn:aws:ssm:*:*:parameter/aws/service/*",
+            ]
+        }
+      + statement {
+          + actions   = [
+              + "eks:DescribeCluster",
+            ]
+          + resources = [
+              + "arn:aws:eks:*:559347283443:cluster/scaling-test-cluster",
+            ]
+        }
+      + statement {
+          + actions   = [
+              + "iam:PassRole",
+            ]
+          + resources = [
+              + (known after apply),
+            ]
+        }
+      + statement {
+          + actions   = [
+              + "sqs:DeleteMessage",
+              + "sqs:GetQueueAttributes",
+              + "sqs:GetQueueUrl",
+              + "sqs:ReceiveMessage",
+            ]
+          + resources = [
+              + (known after apply),
+            ]
+        }
+    }
+
+  # module.karpenter.data.aws_iam_policy_document.queue[0] will be read during apply
+  # (config refers to values not yet known)
+ <= data "aws_iam_policy_document" "queue" {
+      + id   = (known after apply)
+      + json = (known after apply)
+
+      + statement {
+          + actions   = [
+              + "sqs:SendMessage",
+            ]
+          + resources = [
+              + (known after apply),
+            ]
+          + sid       = "SqsWrite"
+
+          + principals {
+              + identifiers = [
+                  + "events.amazonaws.com",
+                  + "sqs.amazonaws.com",
+                ]
+              + type        = "Service"
+            }
+        }
+    }
+
+  # module.karpenter.aws_cloudwatch_event_rule.this["health_event"] will be created
+  + resource "aws_cloudwatch_event_rule" "this" {
+      + arn            = (known after apply)
+      + description    = "Karpenter interrupt - AWS health event"
+      + event_bus_name = "default"
+      + event_pattern  = jsonencode(
+            {
+              + detail-type = [
+                  + "AWS Health Event",
+                ]
+              + source      = [
+                  + "aws.health",
+                ]
+            }
+        )
+      + id             = (known after apply)
+      + is_enabled     = true
+      + name           = (known after apply)
+      + name_prefix    = "KarpenterHealthEvent-"
+      + tags           = {
+          + "ClusterName" = "scaling-test-cluster"
+          + "Environment" = "dev"
+          + "Terraform"   = "true"
+        }
+      + tags_all       = {
+          + "ClusterName" = "scaling-test-cluster"
+          + "Environment" = "dev"
+          + "Terraform"   = "true"
+        }
+    }
+
+  # module.karpenter.aws_cloudwatch_event_rule.this["instance_rebalance"] will be created
+  + resource "aws_cloudwatch_event_rule" "this" {
+      + arn            = (known after apply)
+      + description    = "Karpenter interrupt - EC2 instance rebalance recommendation"
+      + event_bus_name = "default"
+      + event_pattern  = jsonencode(
+            {
+              + detail-type = [
+                  + "EC2 Instance Rebalance Recommendation",
+                ]
+              + source      = [
+                  + "aws.ec2",
+                ]
+            }
+        )
+      + id             = (known after apply)
+      + is_enabled     = true
+      + name           = (known after apply)
+      + name_prefix    = "KarpenterInstanceRebalance-"
+      + tags           = {
+          + "ClusterName" = "scaling-test-cluster"
+          + "Environment" = "dev"
+          + "Terraform"   = "true"
+        }
+      + tags_all       = {
+          + "ClusterName" = "scaling-test-cluster"
+          + "Environment" = "dev"
+          + "Terraform"   = "true"
+        }
+    }
+
+  # module.karpenter.aws_cloudwatch_event_rule.this["instance_state_change"] will be created
+  + resource "aws_cloudwatch_event_rule" "this" {
+      + arn            = (known after apply)
+      + description    = "Karpenter interrupt - EC2 instance state-change notification"
+      + event_bus_name = "default"
+      + event_pattern  = jsonencode(
+            {
+              + detail-type = [
+                  + "EC2 Instance State-change Notification",
+                ]
+              + source      = [
+                  + "aws.ec2",
+                ]
+            }
+        )
+      + id             = (known after apply)
+      + is_enabled     = true
+      + name           = (known after apply)
+      + name_prefix    = "KarpenterInstanceStateChange-"
+      + tags           = {
+          + "ClusterName" = "scaling-test-cluster"
+          + "Environment" = "dev"
+          + "Terraform"   = "true"
+        }
+      + tags_all       = {
+          + "ClusterName" = "scaling-test-cluster"
+          + "Environment" = "dev"
+          + "Terraform"   = "true"
+        }
+    }
+
+  # module.karpenter.aws_cloudwatch_event_rule.this["spot_interupt"] will be created
+  + resource "aws_cloudwatch_event_rule" "this" {
+      + arn            = (known after apply)
+      + description    = "Karpenter interrupt - EC2 spot instance interruption warning"
+      + event_bus_name = "default"
+      + event_pattern  = jsonencode(
+            {
+              + detail-type = [
+                  + "EC2 Spot Instance Interruption Warning",
+                ]
+              + source      = [
+                  + "aws.ec2",
+                ]
+            }
+        )
+      + id             = (known after apply)
+      + is_enabled     = true
+      + name           = (known after apply)
+      + name_prefix    = "KarpenterSpotInterrupt-"
+      + tags           = {
+          + "ClusterName" = "scaling-test-cluster"
+          + "Environment" = "dev"
+          + "Terraform"   = "true"
+        }
+      + tags_all       = {
+          + "ClusterName" = "scaling-test-cluster"
+          + "Environment" = "dev"
+          + "Terraform"   = "true"
+        }
+    }
+
+  # module.karpenter.aws_cloudwatch_event_target.this["health_event"] will be created
+  + resource "aws_cloudwatch_event_target" "this" {
+      + arn            = (known after apply)
+      + event_bus_name = "default"
+      + id             = (known after apply)
+      + rule           = (known after apply)
+      + target_id      = "KarpenterInterruptionQueueTarget"
+    }
+
+  # module.karpenter.aws_cloudwatch_event_target.this["instance_rebalance"] will be created
+  + resource "aws_cloudwatch_event_target" "this" {
+      + arn            = (known after apply)
+      + event_bus_name = "default"
+      + id             = (known after apply)
+      + rule           = (known after apply)
+      + target_id      = "KarpenterInterruptionQueueTarget"
+    }
+
+  # module.karpenter.aws_cloudwatch_event_target.this["instance_state_change"] will be created
+  + resource "aws_cloudwatch_event_target" "this" {
+      + arn            = (known after apply)
+      + event_bus_name = "default"
+      + id             = (known after apply)
+      + rule           = (known after apply)
+      + target_id      = "KarpenterInterruptionQueueTarget"
+    }
+
+  # module.karpenter.aws_cloudwatch_event_target.this["spot_interupt"] will be created
+  + resource "aws_cloudwatch_event_target" "this" {
+      + arn            = (known after apply)
+      + event_bus_name = "default"
+      + id             = (known after apply)
+      + rule           = (known after apply)
+      + target_id      = "KarpenterInterruptionQueueTarget"
+    }
+
+  # module.karpenter.aws_iam_instance_profile.this[0] will be created
+  + resource "aws_iam_instance_profile" "this" {
+      + arn         = (known after apply)
+      + create_date = (known after apply)
+      + id          = (known after apply)
+      + name        = (known after apply)
+      + name_prefix = "Karpenter-scaling-test-cluster-"
+      + path        = "/"
+      + role        = (known after apply)
+      + tags        = {
+          + "Environment" = "dev"
+          + "Terraform"   = "true"
+        }
+      + tags_all    = {
+          + "Environment" = "dev"
+          + "Terraform"   = "true"
+        }
+      + unique_id   = (known after apply)
+    }
+
+  # module.karpenter.aws_iam_policy.irsa[0] will be created
+  + resource "aws_iam_policy" "irsa" {
+      + arn         = (known after apply)
+      + description = "Karpenter IAM role for service account"
+      + id          = (known after apply)
+      + name        = (known after apply)
+      + name_prefix = "KarpenterIRSA-scaling-test-cluster-"
+      + path        = "/"
+      + policy      = (known after apply)
+      + policy_id   = (known after apply)
+      + tags        = {
+          + "Environment" = "dev"
+          + "Terraform"   = "true"
+        }
+      + tags_all    = {
+          + "Environment" = "dev"
+          + "Terraform"   = "true"
+        }
+    }
+
+  # module.karpenter.aws_iam_role.irsa[0] will be created
+  + resource "aws_iam_role" "irsa" {
+      + arn                   = (known after apply)
+      + assume_role_policy    = jsonencode(
+            {
+              + Statement = [
+                  + {
+                      + Action    = "sts:AssumeRoleWithWebIdentity"
+                      + Condition = {
+                          + StringEquals = {
+                              + "oidc.eks.eu-west-1.amazonaws.com/id/2240F9915BD9FAF2FAC79E0800991A81:aud" = "sts.amazonaws.com"
+                              + "oidc.eks.eu-west-1.amazonaws.com/id/2240F9915BD9FAF2FAC79E0800991A81:sub" = "system:serviceaccount:karpenter:karpenter"
+                            }
+                        }
+                      + Effect    = "Allow"
+                      + Principal = {
+                          + Federated = "arn:aws:iam::559347283443:oidc-provider/oidc.eks.eu-west-1.amazonaws.com/id/2240F9915BD9FAF2FAC79E0800991A81"
+                        }
+                    },
+                ]
+              + Version   = "2012-10-17"
+            }
+        )
+      + create_date           = (known after apply)
+      + description           = "Karpenter IAM role for service account"
+      + force_detach_policies = true
+      + id                    = (known after apply)
+      + managed_policy_arns   = (known after apply)
+      + max_session_duration  = 3600
+      + name                  = (known after apply)
+      + name_prefix           = "KarpenterIRSA-scaling-test-cluster-"
+      + path                  = "/"
+      + tags                  = {
+          + "Environment" = "dev"
+          + "Terraform"   = "true"
+        }
+      + tags_all              = {
+          + "Environment" = "dev"
+          + "Terraform"   = "true"
+        }
+      + unique_id             = (known after apply)
+    }
+
+  # module.karpenter.aws_iam_role.this[0] will be created
+  + resource "aws_iam_role" "this" {
+      + arn                   = (known after apply)
+      + assume_role_policy    = jsonencode(
+            {
+              + Statement = [
+                  + {
+                      + Action    = "sts:AssumeRole"
+                      + Effect    = "Allow"
+                      + Principal = {
+                          + Service = "ec2.amazonaws.com"
+                        }
+                      + Sid       = "EKSNodeAssumeRole"
+                    },
+                ]
+              + Version   = "2012-10-17"
+            }
+        )
+      + create_date           = (known after apply)
+      + force_detach_policies = true
+      + id                    = (known after apply)
+      + managed_policy_arns   = (known after apply)
+      + max_session_duration  = 3600
+      + name                  = (known after apply)
+      + name_prefix           = "Karpenter-scaling-test-cluster-"
+      + path                  = "/"
+      + tags                  = {
+          + "Environment" = "dev"
+          + "Terraform"   = "true"
+        }
+      + tags_all              = {
+          + "Environment" = "dev"
+          + "Terraform"   = "true"
+        }
+      + unique_id             = (known after apply)
+    }
+
+  # module.karpenter.aws_iam_role_policy_attachment.irsa[0] will be created
+  + resource "aws_iam_role_policy_attachment" "irsa" {
+      + id         = (known after apply)
+      + policy_arn = (known after apply)
+      + role       = (known after apply)
+    }
+
+  # module.karpenter.aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"] will be created
+  + resource "aws_iam_role_policy_attachment" "this" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
+      + role       = (known after apply)
+    }
+
+  # module.karpenter.aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"] will be created
+  + resource "aws_iam_role_policy_attachment" "this" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"
+      + role       = (known after apply)
+    }
+
+  # module.karpenter.aws_iam_role_policy_attachment.this["arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"] will be created
+  + resource "aws_iam_role_policy_attachment" "this" {
+      + id         = (known after apply)
+      + policy_arn = "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"
+      + role       = (known after apply)
+    }
+
+  # module.karpenter.aws_sqs_queue.this[0] will be created
+  + resource "aws_sqs_queue" "this" {
+      + arn                               = (known after apply)
+      + content_based_deduplication       = false
+      + deduplication_scope               = (known after apply)
+      + delay_seconds                     = 0
+      + fifo_queue                        = false
+      + fifo_throughput_limit             = (known after apply)
+      + id                                = (known after apply)
+      + kms_data_key_reuse_period_seconds = (known after apply)
+      + max_message_size                  = 262144
+      + message_retention_seconds         = 300
+      + name                              = "Karpenter-scaling-test-cluster"
+      + name_prefix                       = (known after apply)
+      + policy                            = (known after apply)
+      + receive_wait_time_seconds         = 0
+      + redrive_allow_policy              = (known after apply)
+      + redrive_policy                    = (known after apply)
+      + sqs_managed_sse_enabled           = true
+      + tags                              = {
+          + "Environment" = "dev"
+          + "Terraform"   = "true"
+        }
+      + tags_all                          = {
+          + "Environment" = "dev"
+          + "Terraform"   = "true"
+        }
+      + url                               = (known after apply)
+      + visibility_timeout_seconds        = 30
+    }
+
+  # module.karpenter.aws_sqs_queue_policy.this[0] will be created
+  + resource "aws_sqs_queue_policy" "this" {
+      + id        = (known after apply)
+      + policy    = (known after apply)
+      + queue_url = (known after apply)
+    }
+
+Plan: 21 to add, 0 to change, 1 to destroy.
+
+Warning: Argument is deprecated
+
+  with module.eks.aws_eks_addon.this["vpc-cni"],
+  on .terraform/modules/eks/main.tf line 392, in resource "aws_eks_addon" "this":
+ 392:   resolve_conflicts        = try(each.value.resolve_conflicts, "OVERWRITE")
+
+The "resolve_conflicts" attribute can't be set to "PRESERVE" on initial
+resource creation. Use "resolve_conflicts_on_create" and/or
+"resolve_conflicts_on_update" instead
+
+(and one more similar warning elsewhere)
+
+─────────────────────────────────────────────────────────────────────────────
+
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.
